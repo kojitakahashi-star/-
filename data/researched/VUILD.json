@@ -1,0 +1,14 @@
+{
+  "company_name": "VUILD株式会社",
+  "headquarters_location": "〒210-0851 神奈川県川崎市川崎区日進町3-4 unico 1F-A",
+  "num_locations": 1,
+  "locations_detail": "自社拠点は神奈川県川崎市の本社のみ。ただし自社拠点とは別に、3D木材加工機「ShopBot」を設置した加工パートナーが全国に245箇所以上あり(2024年9月時点)、オンラインプラットフォーム「EMARF」を通じて分散型のものづくりネットワークを構築している。",
+  "industry": "建築テック業(デジタルファブリケーション・木材加工プラットフォーム)",
+  "business_description": "「建築の民主化」を掲げ、デジタルファブリケーション技術を用いた設計・製造・施工を展開する建築系スタートアップ。2017年11月設立、資本金1億円、従業員27名。ShopBot Japan(3D木材加工機の輸入販売)、EMARF(全国のShopBot加工パートナーと連携したオーダーメイド家具・部材製作プラットフォーム)、NESTING(テンプレート化住宅部材キットの販売)、VUILD PlaceLab(公共空間のプレイスメイキング)、VUILD ARCHITECTS(木造とコンクリートのハイブリッド建築など先進的な設計施工)の5事業を展開。",
+  "products": "3D木材加工機「ShopBot」、オーダーメイド家具・木製部材(EMARF経由)、テンプレート化住宅キット「NESTING」、建築設計・施工サービス、公共空間デザイン",
+  "processing": "2D/3Dデータを用いたCNCルーター(ShopBot)による木材切削加工、5軸マシニングセンタ(Biesse)を用いた木造・木質建築部材の加工、全国のShopBot加工パートナーと連携した分散型・地産地消型の加工ネットワーク運営",
+  "features": "創業者・秋吉浩気氏の「誰もが作り手になる」というビジョンのもと、デジタルファブリケーション技術で建築・木工の民主化を目指す建築テック企業。自社工場に閉じず、全国のShopBot所有者をネットワーク化した自律分散型のものづくり体制を構築している点が特徴。Good Design Gold Award(2020年)など受賞多数。",
+  "strengths": "全国245拠点以上のShopBot加工パートナーネットワークにより、都市と地方の非対称性を縮小し「半径5km」規模での地産地消のものづくりを実現できる分散型プラットフォーム。設計から加工・施工までデジタルデータで一気通貫に扱える技術力。ShopBot販売から加工受託(EMARF)、住宅キット(NESTING)、公共空間開発、建築設計・施工まで事業領域を横断した一貫対応力。",
+  "source_urls": "https://vuild.co.jp/\nhttps://vuild.co.jp/company/\nhttps://vuild.co.jp/services/\nhttps://shopbot.vuild.co.jp/\nhttps://architects.vuild.co.jp/about/\nhttps://ideasforgood.jp/2024/11/15/vuild/",
+  "researched_at": "2026-07-23"
+}
