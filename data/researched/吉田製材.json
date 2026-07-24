@@ -9,6 +9,11 @@
   "processing": "製材から加工までの自社一貫生産、1本単位でのオーダーメイド製材・加工、国土交通省認定の不燃処理加工(不燃材厚み12mm~・準不燃材厚み10mm~)",
   "features": "創業100年超、木材産地・吉野に近い立地を活かした吉野杉・吉野桧の専門店。製材から加工までを自社一貫で行う生産体制。",
   "strengths": "国土交通省認定の不燃木材「むくふねん」による公共施設・大型商業施設向けの豊富な納材実績。様々な形状・寸法の製品を1本から製造できる柔軟な対応力。吉野産地に近い立地を活かした良質な吉野杉・吉野桧の調達力。",
-  "source_urls": "https://www.yoshidaseizai.co.jp/\nhttps://www.yoshino-sugi.jp/\nhttps://www.ipros.jp/company/detail/2077415/\nhttps://miyakosomagi-e.net/ichiran/832/",
-  "researched_at": "2026-07-23"
+  "source_urls": "https://www.yoshidaseizai.co.jp/\nhttps://www.yoshino-sugi.jp/\nhttps://www.ipros.jp/company/detail/2077415/\nhttps://miyakosomagi-e.net/ichiran/832/\nhttps://www.yoshidaseizai.co.jp/hunen/hunen_index.html\nhttps://www.yoshidaseizai.co.jp/hunen/hunen_gohan_index.html\nhttps://www.yoshidaseizai.co.jp/column/certification.html\nhttps://www.yoshino-sugi.jp/html/product/other/hunen.html\nhttps://www.yoshino-sugi.jp/html/product/other/hunengohan.html\nhttps://www.yoshino-sugi.jp/html/product/other/hunen_maintenance.html\nhttps://www.ipros.jp/catalog/detail/452382/\nhttps://www.ipros.com/product/detail/2001020774/\nhttps://www.seinokyo.jp/ninteidb/pub/details/?d=108310",
+  "researched_at": "2026-07-24",
+  "fireproof_materials": "「むくふねん」は国土交通大臣認定の不燃木材で、「不燃材料」と「準不燃材料」の2区分で認定を取得している(いずれも杉・桧の無垢材)。厚みの目安は、不燃材料が杉:12mm~300mm/桧:12mm~150mm、準不燃材料が杉・桧共通で10mm~150mm。なお別製品として、構造用針葉樹合板に不燃薬剤を含浸させた下地材・化粧材向けの「ふねん合板」があり、こちらは不燃材料として大臣認定番号NM-1596(厚み12mm、1820×910×12mm)およびNM-1597(厚み28mm、1820×910×28mm)を取得している(むくふねんとは別製品)。難燃材料としての認定区分については公開情報からは確認できず。",
+  "wood_species": "標準対応樹種は奈良県吉野産の無垢の桧(吉野桧)と杉(吉野杉)の2種で、いずれも国土交通省の不燃・準不燃認定を取得済み。桧・杉以外の樹種による不燃認定取得や不燃処理対応の具体的な実績・記載は公式サイト等の公開情報からは確認できず(製材メーカーとしてオーダーメイド品の相談は受け付けているが、他樹種での不燃認定取得を裏付ける情報はない)。",
+  "fireproof_paint_combination": "国土交通省の不燃・準不燃認定の対象は基本的に無塗装品であり、塗装品として個別に認定を取得しているものではない。塗装を行う場合は、無塗装品の認定証・データと使用する塗料のデータシートをセットで提供し、事前に施工先の建築確認申請の審査機関(建築主事等)に確認する運用となっている。推奨塗料としては白華(材表面に白い結晶が浮き出る現象)の抑制効果がある浸透タイプの木材保護塗料「キシラデコールUA」(大阪ガスケミカル製)が案内されているが、これは認定上の指定塗料ではなく参考的な推奨に留まる。認定と一体化した塗装・塗料の組み合わせ(認定番号付きの塗装済み仕様)は公開情報からは確認できず。",
+  "certified_substrate_combination": "「むくふねん」自体(無垢材)について、国土交通大臣認定番号および下地材との組み合わせ仕様(石膏ボード等の下地材種別・厚みとの認定上の組み合わせ)を具体的に示す公開情報は確認できなかった。関連製品の「ふねん合板」(下地材・化粧材向けの不燃針葉樹合板)については大臣認定番号NM-1596(12mm)・NM-1597(28mm)を確認できたが、これはむくふねん(無垢の不燃木材)とは別の合板製品であり、むくふねん自体の下地材認定組み合わせの詳細は公開情報からは確認できず。",
+  "fireproof_product_paint_names": "自社の不燃木材商品名として「むくふねん」(桧・杉、無垢材、不燃材料/準不燃材料)、「ふねん合板」(構造用針葉樹合板に不燃薬剤を含浸、大臣認定番号NM-1596・NM-1597、下地材・化粧材向け)、「でこぼこパネル」(不燃・準不燃木材の羽目板・内装壁パネル)を確認。不燃塗料については、吉田製材が自社で製造・販売している不燃塗料・防炎処理剤は公開情報からは確認できず。むくふねんの塗装仕上げ時に推奨塗料として案内されている「キシラデコールUA」(大阪ガスケミカル株式会社製、白華抑制効果のある浸透タイプ木材保護塗料)はあるが、これは他社製品であり吉田製材自社の不燃塗料ではない。"
 }

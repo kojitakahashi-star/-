@@ -27,17 +27,28 @@ REQUIRED_FIELDS = [
     "researched_at",
 ]
 
+# 不燃工場・メーカー向けの追加項目(不燃特化のリサーチが無い企業では省略可)
+OPTIONAL_FIELDS = [
+    "fireproof_materials",
+    "wood_species",
+    "fireproof_paint_combination",
+    "certified_substrate_combination",
+    "fireproof_product_paint_names",
+]
+
 
 def load_record(json_path: Path) -> dict:
     data = json.loads(json_path.read_text(encoding="utf-8"))
     missing = [f for f in REQUIRED_FIELDS if f not in data]
     if missing:
         raise ValueError(f"Missing fields in {json_path}: {missing}")
+    for f in OPTIONAL_FIELDS:
+        data.setdefault(f, None)
     return data
 
 
 def upsert(conn: sqlite3.Connection, record: dict):
-    columns = REQUIRED_FIELDS
+    columns = REQUIRED_FIELDS + OPTIONAL_FIELDS
     placeholders = ", ".join(["?"] * len(columns))
     updates = ", ".join(f"{c}=excluded.{c}" for c in columns if c != "company_name")
     sql = f"""
