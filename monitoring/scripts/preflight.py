@@ -43,13 +43,19 @@ def main():
     else:
         print(f"OK  対象企業: {companies['total']}社 / {companies['batch_count']}バッチ")
 
+    token = os.environ.get("SLACK_BOT_TOKEN", "").strip()
     webhook = os.environ.get("SLACK_WEBHOOK_URL", "").strip()
-    if webhook:
-        print("OK  経路B（Incoming Webhook）: SLACK_WEBHOOK_URL 設定済み")
+    if token:
+        print("OK  経路1（アプリ名義・bot token）: SLACK_BOT_TOKEN 設定済み → 通知が鳴ります")
+    elif webhook:
+        print("OK  経路2（アプリ名義・Webhook）: SLACK_WEBHOOK_URL 設定済み → 通知が鳴ります")
+        print("    ※ スレッド返信は使えないため、長い回は連投になります")
     else:
-        print("--  経路B（Incoming Webhook）: 未設定")
-        print("    経路A（Slackコネクタ）が使えない場合、投稿できません。")
-        print("    その場合でも結果は pending.json に積まれ、次回に再通知されます。")
+        print("!!  経路1/2（アプリ名義の投稿）: どちらも未設定")
+        print("    SLACK_BOT_TOKEN も SLACK_WEBHOOK_URL も無いため、投稿できるのは")
+        print("    経路3（MCPコネクタ＝本人名義）だけです。本人名義の投稿では")
+        print("    自分宛メンションの通知が鳴らないので、実質「通知されない」状態です。")
+        ok = False
 
     pending = load_json(os.path.join(BASE, "state", "pending.json"), {})
     n_pending = len(pending.get("findings", []))
@@ -64,10 +70,12 @@ def main():
     print(f"OK  通知済み記録: {seen.get('count', 0)}件（最終更新 {seen.get('updated_at')}）")
 
     print()
-    print("経路A（Slackコネクタ）が使えるかは、slack_send_message ツールが")
-    print("利用可能かどうかで判断すること。使えなければ経路Bへ、それも駄目なら")
-    print("finalize.py --failed で積み残しに回す。")
+    print("投稿は 経路1/2（post_slack.py = アプリ名義）を最優先で使うこと。")
+    print("MCP の slack_send_message は本人名義になり通知が鳴らないため、")
+    print("最後の手段（記録目的）としてのみ使い、その旨を本文に明記する。")
 
+    # ここで落としても調査自体は続けられる（結果は pending に積まれる）。
+    # 「通知が鳴らない状態で走らせている」ことを実行者に気付かせるための非ゼロ終了。
     sys.exit(0 if ok else 1)
 
 
