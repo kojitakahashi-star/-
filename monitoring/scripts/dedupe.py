@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""リサーチで拾った動きを state/seen.json と突合し、新規分だけを出力する。
+"""リサーチで拾った動きを state と突合し、今回通知すべき分だけを出力する。
 
 usage:
-    python3 monitoring/scripts/dedupe.py findings.json [--commit]
+    python3 monitoring/scripts/dedupe.py findings.json [--no-pending]
 
 findings.json の形式:
     {"run_date": "YYYY-MM-DD", "findings": [ {...}, ... ]}
@@ -20,8 +20,12 @@ findings.json の形式:
     source_type    HP / 公式SNS / イベントページ / お知らせ / 社員SNS / メディア
     source_urls    参照URL（配列）
 
---commit を付けたときだけ state/seen.json を更新する。
-付けなければ判定結果を出力するだけ（ドライラン）。
+出力される「今回通知すべき分」= 前回までに配信できなかった積み残し（pending）
+                                + 今回新しく見つかった分（seen に無いもの）
+
+**このスクリプトは state を書き換えない。**
+state の更新は Slack 投稿の成否が確定したあとに finalize.py が行う。
+投稿前に「通知済み」にしてしまうと、投稿に失敗した動きが永久に埋もれるため。
 """
 import argparse
 import hashlib
@@ -29,15 +33,12 @@ import json
 import os
 import re
 import sys
-from datetime import date, datetime, timedelta
+from datetime import date
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE_DIR = os.path.join(BASE, "state")
 SEEN_PATH = os.path.join(STATE_DIR, "seen.json")
-
-# 一度通知した動きを覚えておく期間。イベントは会期後しばらくで話題が尽きるため、
-# 1年強を過ぎたキーは落として state を肥大させない。
-RETENTION_DAYS = 400
+PENDING_PATH = os.path.join(STATE_DIR, "pending.json")
 
 REQUIRED = ("company", "type", "title")
 
@@ -68,39 +69,25 @@ def finding_key(f):
     return hashlib.sha1("|".join(parts).encode("utf-8")).hexdigest()[:16]
 
 
-def load_seen():
-    if not os.path.exists(SEEN_PATH):
-        return {}
-    with open(SEEN_PATH, encoding="utf-8") as f:
-        return json.load(f).get("entries", {})
-
-
-def save_seen(entries, run_date):
-    os.makedirs(STATE_DIR, exist_ok=True)
-    cutoff = (datetime.strptime(run_date, "%Y-%m-%d").date() - timedelta(days=RETENTION_DAYS)).isoformat()
-    kept = {k: v for k, v in entries.items() if v.get("first_seen", run_date) >= cutoff}
-    payload = {
-        "updated_at": run_date,
-        "retention_days": RETENTION_DAYS,
-        "count": len(kept),
-        "entries": dict(sorted(kept.items())),
-    }
-    with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-        f.write("\n")
-    return len(entries) - len(kept)
+def load_json(path, default):
+    if not os.path.exists(path):
+        return default
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("findings")
-    ap.add_argument("--commit", action="store_true", help="state/seen.json を更新する")
-    ap.add_argument("--out", help="新規分の書き出し先（既定: <findings>.new.json）")
+    ap.add_argument(
+        "--no-pending",
+        action="store_true",
+        help="前回の積み残しを合流させない（通常は指定しない）",
+    )
+    ap.add_argument("--out", help="出力先（既定: <findings>.new.json）")
     args = ap.parse_args()
 
-    with open(args.findings, encoding="utf-8") as f:
-        data = json.load(f)
-
+    data = load_json(args.findings, {})
     run_date = data.get("run_date") or date.today().isoformat()
     findings = data.get("findings", [])
 
@@ -109,42 +96,47 @@ def main():
         if missing:
             sys.exit(f"findings[{i}]: 必須項目が空です: {missing}")
 
-    seen = load_seen()
-    new, dup = [], []
-    # 同一実行内での重複（HPとSNSで同じ動きを二重に拾う）もここで潰す。
-    within_run = set()
+    seen = load_json(SEEN_PATH, {}).get("entries", {})
+    pending_doc = load_json(PENDING_PATH, {})
+    pending = [] if args.no_pending else pending_doc.get("findings", [])
+
+    out_findings = []
+    used = set()
+
+    # 積み残しを先に載せる。前回配信できなかったものを取りこぼさないため。
+    for f in pending:
+        key = f.get("_key") or finding_key(f)
+        if key in used:
+            continue
+        used.add(key)
+        f["_key"] = key
+        f.setdefault("first_seen", pending_doc.get("updated_at") or run_date)
+        f["_carried_over"] = True
+        out_findings.append(f)
+
+    fresh, dup = 0, 0
     for f in findings:
         key = finding_key(f)
-        if key in seen or key in within_run:
-            dup.append(f)
+        if key in seen or key in used:
+            dup += 1
             continue
-        within_run.add(key)
+        used.add(key)
         f["_key"] = key
         f["first_seen"] = run_date
-        new.append(f)
+        out_findings.append(f)
+        fresh += 1
 
     out_path = args.out or args.findings.replace(".json", "") + ".new.json"
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump({"run_date": run_date, "findings": new}, f, ensure_ascii=False, indent=2)
+        json.dump({"run_date": run_date, "findings": out_findings}, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
-    pruned = 0
-    if args.commit:
-        for f in new:
-            seen[f["_key"]] = {
-                "company": f["company"],
-                "type": f["type"],
-                "title": f["title"],
-                "first_seen": run_date,
-            }
-        pruned = save_seen(seen, run_date)
-
-    print(f"取得: {len(findings)}件 / 新規: {len(new)}件 / 既報: {len(dup)}件")
-    if args.commit:
-        print(f"state/seen.json 更新（{RETENTION_DAYS}日超過で {pruned}件を削除）")
-    else:
-        print("ドライラン（--commit 未指定のため state は未更新）")
-    print(f"新規分: {out_path}")
+    carried = len(out_findings) - fresh
+    print(f"取得: {len(findings)}件 / 新規: {fresh}件 / 既報: {dup}件 / 前回積み残し: {carried}件")
+    if carried:
+        print(f"  ※ 前回配信できなかった {carried}件を合流させました（失敗 {pending_doc.get('failed_runs', 0)}回目）")
+    print(f"今回通知すべき分: {len(out_findings)}件 -> {out_path}")
+    print("state は未更新。投稿後に finalize.py を必ず実行すること。")
 
 
 if __name__ == "__main__":

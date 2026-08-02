@@ -19,7 +19,12 @@ git fetch origin claude/company-event-monitoring-system-ahte64
 git checkout claude/company-event-monitoring-system-ahte64
 git pull origin claude/company-event-monitoring-system-ahte64
 python3 monitoring/scripts/build_companies.py
+python3 monitoring/scripts/preflight.py
 ```
+
+`preflight.py` は配信経路と積み残しの状況を表示する。115社の調査には30〜60分かかるので、
+**調べ始める前に**ここで確認しておく。あわせて `slack_send_message` ツールが
+使えるか（経路Aが生きているか）をこの時点で確かめること。
 
 `monitoring/config.json` に通知先・通知範囲・調査期間が入っている。必ず読むこと。
 
@@ -140,18 +145,21 @@ python3 monitoring/scripts/build_companies.py
 
 ---
 
-## 4. 既報との突合
+## 4. 既報との突合＋積み残しの合流
 
 ```bash
-python3 monitoring/scripts/dedupe.py <findings.json> --commit
+python3 monitoring/scripts/dedupe.py <findings.json>
 ```
 
-`monitoring/state/seen.json` と突合し、**前回までに通知済みの動きを除外**する。
-新規分だけが `<findings>.new.json` に出る。`--commit` で state を更新する。
+`state/seen.json`（通知済み）と突合して重複を落とし、`state/pending.json`
+（前回配信できなかった積み残し）を合流させたものが `<findings>.new.json` に出る。
+
+**このコマンドは state を書き換えない。** 書き換えるのは手順6の finalize.py だけ。
+投稿前に「通知済み」にすると、投稿に失敗した動きが永久に埋もれるため、この順序を守る。
 
 ---
 
-## 5. Slack 投稿
+## 5. Slack 投稿（A → B の順に必ず試す）
 
 ```bash
 python3 monitoring/scripts/render_slack.py <findings>.new.json --scanned 115
@@ -159,44 +167,61 @@ python3 monitoring/scripts/render_slack.py <findings>.new.json --scanned 115
 
 `<findings>.new.slack.json` に `{"mention": bool, "messages": [...]}` が出る。
 
-投稿経路は2つある。**A が使えれば A、駄目なら B** の順で試す。
+**この2つを順に試し、どちらかが成功するまで諦めないこと。**
 
-### A. Slack コネクタ（MCP）が使える場合
+### 経路A: Slack コネクタ（MCP）— 第一候補
 
-`config.json` の `slack.channel_id` に対して `slack_send_message` で投稿する。
+`slack_send_message` ツールが使えるなら必ずこちらを使う（スレッド返信ができる）。
 
-- `messages[0]` をチャンネルに投稿する。
-- `messages[1]` 以降がある場合は、`messages[0]` の `ts` を `thread_ts` にしてスレッド返信で投稿する。
+- `messages[0]` を `config.json` の `slack.channel_id` に投稿する。
+- `messages[1]` 以降は、`messages[0]` の `ts` を `thread_ts` にしてスレッド返信で投稿する。
 - **本文はレンダリング結果をそのまま送る**（`<@...>` のメンションを消さない）。
 
-### B. Slack コネクタが無い場合（Incoming Webhook フォールバック）
+### 経路B: Incoming Webhook — Aが使えないときのフォールバック
 
-定期実行セッションには Slack コネクタが載らないことがある。その場合は Webhook を使う。
+`slack_send_message` が**ツール一覧に無い**、または呼んでエラーになったら、すぐBに切り替える。
 
 ```bash
 python3 monitoring/scripts/post_slack.py <findings>.new.slack.json
 ```
 
-環境変数 `SLACK_WEBHOOK_URL` が必要。未設定ならこのスクリプトは非ゼロ終了する。
+環境変数 `SLACK_WEBHOOK_URL` が必要。未設定なら非ゼロ終了する。
+Webhook はスレッドに繋げないので複数メッセージは連投になるが、届くことを優先する。
 
-### A も B も使えなかった場合
+### 判定
 
-**state をコミットせずに** レポート本文を `monitoring/reports/YYYY-MM-DD.md` として
-コミット＆プッシュし、投稿できなかった旨をセッションの最終出力に明記する。
-state を進めなければ、次回の実行で同じ動きを再通知できる。
-
-### 共通
+- **A か B のどちらかが成功した → 「配信成功」**（手順6へ）
+- **両方失敗した → 「配信失敗」**（手順6へ。積み残しに回るので次回リトライされる）
 
 `mention` が `false`（=新しい動きが0件）のときも投稿する。メンションは付かないので通知は飛ばない。
 「動いていない」ことも情報なので、静かに記録を残す。
 
 ---
 
-## 6. 記録をコミット
+## 6. 結果を state に反映してコミット（必ず実行する）
+
+### 配信成功した場合
 
 ```bash
-python3 monitoring/scripts/build_companies.py   # resolved_urls を反映した場合
-git add monitoring/state/seen.json monitoring/companies.tsv monitoring/companies.json
+python3 monitoring/scripts/finalize.py --delivered <findings>.new.json
+```
+
+通知した分を `seen.json` に記録し、`pending.json` を空にする。
+
+### 配信失敗した場合
+
+```bash
+python3 monitoring/scripts/finalize.py --failed <findings>.new.json
+```
+
+`seen.json` は触らず `pending.json` に積む。**次回の実行で自動的に合流して再通知される。**
+あわせてレポート本文を `monitoring/reports/YYYY-MM-DD.md` に保存しておく。
+
+### 共通（成功・失敗どちらでも）
+
+```bash
+python3 monitoring/scripts/build_companies.py   # resolved_urls を tsv に追記した場合
+git add monitoring/state monitoring/companies.tsv monitoring/companies.json monitoring/reports
 git commit -m "モニタリング YYYY-MM-DD: N社に動きを検知"
 git push -u origin claude/company-event-monitoring-system-ahte64
 ```
@@ -204,14 +229,19 @@ git push -u origin claude/company-event-monitoring-system-ahte64
 `resolved_urls` で公式サイトが判明した会社は、`monitoring/companies.tsv` の4列目に
 URLを追記してから `build_companies.py` を実行する。次回以降の調査が速く正確になる。
 
-state をコミットしないと次回に重複通知が出るため、**このコミットは必ず行う**。
+**このコミットは成否にかかわらず必ず行う。** state をコミットしないと、
+通知済み記録も積み残しも次回セッションに引き継がれない（実行環境は毎回作り直されるため）。
 
 ---
 
 ## トラブル時
 
-- Slack 投稿に失敗した → チャンネルID `C0BDAFB0X63` が正しいか確認。失敗しても state は
-  コミットせずに終わる（次回に再通知させるため）。順序として **投稿成功 → コミット** を守る。
-- エージェントが全滅した → 何もコミットせず、その旨だけ Slack に投稿する。
-- 実行時間が延びすぎる → 優先度 A/B（37社）を先に完了させ、C/D は次回に回す。
+- **A も B も使えない** → 手順6の `--failed` に回す。動きは pending に積まれ、
+  次回以降に持ち越されるので消えることはない。セッションの最終出力に
+  「Slackに投稿できなかった」ことと `pending.json` の件数を明記する。
+- **2回続けて配信失敗している** → finalize.py が警告を出す。Slackコネクタか
+  `SLACK_WEBHOOK_URL` のどちらかが必要なので、その旨を最終出力で強く伝える。
+- **エージェントが全滅した** → findings が空のまま先に進めない。state は一切変更せず、
+  その旨だけ Slack に投稿して終わる（次回が通常どおり走る）。
+- **実行時間が延びすぎる** → 優先度 A/B（37社）を先に完了させ、C/D は次回に回す。
   その場合 `--scanned` の値を実際に調べた社数に合わせ、投稿本文に持ち越した旨を追記する。

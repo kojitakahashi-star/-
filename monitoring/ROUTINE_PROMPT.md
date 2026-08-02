@@ -31,9 +31,16 @@ git pull origin claude/company-event-monitoring-system-ahte64
 - **WebSearch を主軸にすること。** 日本の企業サイトの多くは WebFetch を HTTP 403 で弾く（丹青社・船場・博展で確認済み）。403 を「情報がない」と判断しないこと。
 - 拾う動き: 出展 / 登壇 / 自社イベント / 受賞 / 新規プロジェクト実績。公開日が直近10日以内、または今後180日以内に開催予定のもの。
 - URLは WebFetch で開けたもの、または WebSearch の結果に出てきたものだけを書く。推測でURLや日付を組み立てないこと。見つからない場合は「見つからなかった」とする。捏造は絶対にしない。
-- 結果をまとめた findings.json を作り、`monitoring/scripts/dedupe.py <file> --commit` で既報（`monitoring/state/seen.json`）を除外し、`monitoring/scripts/render_slack.py` で整形する。
-- 整形結果を Slack チャンネル `C0BDAFB0X63`（#01-10_営業_claudeタスク確認テスト）に slack_send_message で投稿する。2通目以降は1通目の ts を thread_ts にしてスレッド返信する。本文の `<@U063SJG0N0L>` メンションは消さずにそのまま送ること。
-- **投稿が成功してから** `monitoring/state/seen.json`（および判明した公式URLを追記した companies.tsv / companies.json）をコミットし、`git push -u origin claude/company-event-monitoring-system-ahte64` する。投稿前にコミットしないこと（投稿に失敗した動きを「通知済み」にしないため）。
+- 調査を始める前に `monitoring/scripts/preflight.py` を実行し、配信経路と積み残しを確認する。
+- 結果をまとめた findings.json を作り、`monitoring/scripts/dedupe.py <file>` で既報を除外＋前回の積み残しを合流させ、`monitoring/scripts/render_slack.py <file>.new.json --scanned 115` で整形する。dedupe は state を書き換えない。
+- 投稿は **経路A → 経路B** の順に必ず試す。
+  - **経路A**: `slack_send_message` でチャンネル `C0BDAFB0X63`（#01-10_営業_claudeタスク確認テスト）に投稿。2通目以降は1通目の ts を thread_ts にしてスレッド返信する。本文の `<@U063SJG0N0L>` メンションは消さずにそのまま送ること。
+  - **経路B**: `slack_send_message` が使えない／失敗したら `monitoring/scripts/post_slack.py <file>.new.slack.json` を実行する（環境変数 `SLACK_WEBHOOK_URL` が必要）。
+- 投稿の成否を state に反映する。**これを飛ばさないこと。**
+  - 成功: `monitoring/scripts/finalize.py --delivered <file>.new.json`
+  - 両方失敗: `monitoring/scripts/finalize.py --failed <file>.new.json`（seen は触らず pending に積む。次回に自動で再通知される）。あわせてレポートを `monitoring/reports/YYYY-MM-DD.md` に保存する。
+- 成否にかかわらず `monitoring/state` 等をコミットし、`git push -u origin claude/company-event-monitoring-system-ahte64` する。実行環境は毎回作り直されるため、コミットしないと記録が引き継がれない。
+- 両方失敗した場合は、セッションの最終出力に「Slackに投稿できなかったこと」と pending の件数を明記する。
 
 新しい動きが0件でも、メンションなしの1行サマリを同じチャンネルに投稿してください。
 プルリクエストは作成しないでください。
