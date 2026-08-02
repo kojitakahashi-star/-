@@ -1,0 +1,37 @@
+{
+  "slack": {
+    "channel_id": "C0BDAFB0X63",
+    "channel_name": "#01-10_営業_claudeタスク確認テスト",
+    "mention_user_id": "U063SJG0N0L",
+    "mention_display_name": "高橋幸司"
+  },
+  "schedule": {
+    "description": "2日に1回 / 日本時間 朝7時ごろ",
+    "cron_utc": "55 21 */2 * *",
+    "timezone_note": "UTC 21:55 = JST 翌日 06:55"
+  },
+  "scope": {
+    "notify_types": [
+      "出展",
+      "登壇",
+      "自社イベント",
+      "受賞",
+      "新規プロジェクト実績"
+    ],
+    "notify_types_note": "ユーザー選択: 「イベント+新規プロジェクト実績」",
+    "lookback_days": 10,
+    "future_horizon_days": 180,
+    "sources": [
+      "公式HP（お知らせ/ニュース/プレスリリース）",
+      "公式イベント・セミナーページ",
+      "公式SNS（X / Instagram / Facebook / LinkedIn / YouTube / note）",
+      "社員個人のSNS・登壇告知",
+      "外部イベント公式サイトの出展社・登壇者一覧",
+      "業界メディア（PR TIMES、日経クロステック、建設通信新聞、商業施設新聞 等）"
+    ]
+  },
+  "run": {
+    "batch_size": 10,
+    "max_parallel_agents": 12
+  }
+}

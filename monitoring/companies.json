@@ -1,0 +1,933 @@
+{
+  "total": 115,
+  "batch_size": 10,
+  "batch_count": 12,
+  "priority_counts": {
+    "A": 7,
+    "B": 30,
+    "C": 18,
+    "D": 60
+  },
+  "companies": [
+    {
+      "name": "株式会社乃村工藝社",
+      "business_cards": 95,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "株式会社船場",
+      "business_cards": 56,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "株式会社ノムラメディアス",
+      "business_cards": 54,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "株式会社丹青社",
+      "business_cards": 46,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "三井デザインテック株式会社",
+      "business_cards": 44,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "株式会社エイムクリエイツ",
+      "business_cards": 37,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "株式会社博展",
+      "business_cards": 25,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "A",
+      "batch": 1
+    },
+    {
+      "name": "富士ビジネス株式会社",
+      "business_cards": 18,
+      "category": "オフィス移転コンサル",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 1
+    },
+    {
+      "name": "阪急阪神不動産株式会社",
+      "business_cards": 17,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 1
+    },
+    {
+      "name": "三井不動産レジデンシャル株式会社",
+      "business_cards": 16,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 1
+    },
+    {
+      "name": "株式会社スペース",
+      "business_cards": 16,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "株式会社パーク・コーポレーション",
+      "business_cards": 14,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "株式会社日建設計",
+      "business_cards": 14,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "鹿島建設株式会社",
+      "business_cards": 14,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "株式会社竹中工務店",
+      "business_cards": 13,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "清水建設株式会社",
+      "business_cards": 13,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "東京建物株式会社",
+      "business_cards": 12,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "髙島屋スペースクリエイツ株式会社",
+      "business_cards": 12,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "大日本印刷株式会社",
+      "business_cards": 11,
+      "category": "オーナー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "株式会社三越伊勢丹プロパティ・デザイン",
+      "business_cards": 11,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 2
+    },
+    {
+      "name": "株式会社東急Re・デザイン",
+      "business_cards": 11,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "東急不動産株式会社",
+      "business_cards": 10,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社ヴィス",
+      "business_cards": 10,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社翔洋",
+      "business_cards": 9,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "ジーク株式会社",
+      "business_cards": 8,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社デザインアーク",
+      "business_cards": 8,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社文祥堂",
+      "business_cards": 8,
+      "category": "オフィス移転コンサル",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "積水ハウス株式会社",
+      "business_cards": 8,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社ベネフィットライン",
+      "business_cards": 7,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "三井不動産株式会社",
+      "business_cards": 6,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 3
+    },
+    {
+      "name": "株式会社NTTファシリティーズ",
+      "business_cards": 6,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "株式会社イヨベ工芸社",
+      "business_cards": 6,
+      "category": "家具メーカー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "株式会社コスモスイニシア",
+      "business_cards": 6,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "株式会社良品計画",
+      "business_cards": 6,
+      "category": "オーナー",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "SL&Aジャパン株式会社",
+      "business_cards": 5,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "UDS株式会社",
+      "business_cards": 5,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "株式会社JR東日本建築設計",
+      "business_cards": 5,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "B",
+      "batch": 4
+    },
+    {
+      "name": "アイリスチトセ株式会社",
+      "business_cards": 4,
+      "category": "オフィス移転コンサル",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 4
+    },
+    {
+      "name": "株式会社J.フロント建装",
+      "business_cards": 4,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 4
+    },
+    {
+      "name": "株式会社イリア",
+      "business_cards": 4,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 4
+    },
+    {
+      "name": "株式会社ラックランド",
+      "business_cards": 4,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社丹青TDC",
+      "business_cards": 4,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社小林工芸社",
+      "business_cards": 4,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社白水社",
+      "business_cards": 4,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "ユニオンテック株式会社",
+      "business_cards": 3,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社メック・デザイン・インターナショナル",
+      "business_cards": 3,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社秀光",
+      "business_cards": 3,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "東急電鉄株式会社",
+      "business_cards": 2,
+      "category": "デベロッパー",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社SKM設計計画事務所",
+      "business_cards": 2,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社パルコスペースシステムズ",
+      "business_cards": 2,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 5
+    },
+    {
+      "name": "株式会社三菱地所設計",
+      "business_cards": 2,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 6
+    },
+    {
+      "name": "株式会社綜企画設計",
+      "business_cards": 2,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 6
+    },
+    {
+      "name": "株式会社ビーツ",
+      "business_cards": 1,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 6
+    },
+    {
+      "name": "株式会社丹青ディスプレイ",
+      "business_cards": 1,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 6
+    },
+    {
+      "name": "株式会社近創",
+      "business_cards": 1,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "C",
+      "batch": 6
+    },
+    {
+      "name": "イオンディライト株式会社",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 6
+    },
+    {
+      "name": "インターライフホールディングス株式会社",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 6
+    },
+    {
+      "name": "クロノバデザイン株式会社",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.chronoba.com/",
+      "priority": "D",
+      "batch": 6
+    },
+    {
+      "name": "タカラスペースデザイン株式会社",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.takara-s-d.com/",
+      "priority": "D",
+      "batch": 6
+    },
+    {
+      "name": "ナカノフドー建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 6
+    },
+    {
+      "name": "プラス株式会社",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "三井住友建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "五洋建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.penta-ocean.co.jp/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "住商インテリアインターナショナル株式会社",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://interior-i.jp/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "大成建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "朝日エティック株式会社",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.etic.co.jp/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "未来図建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://tokyo-miraiz.com/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "東亜建設工業株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.toa-const.co.jp/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "東京不動産管理株式会社",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "東洋建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.toyo-const.co.jp/",
+      "priority": "D",
+      "batch": 7
+    },
+    {
+      "name": "株式会社C.P.O設計",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://cpoplan.co.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社GOOD PLACE",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社NIPPO",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.nippo-c.co.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アダル",
+      "business_cards": 0,
+      "category": "家具メーカー",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アルコデザインワークス",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "https://www.arcodw.co.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アルス",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://arusunet.co.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アルテリア",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.arterior.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アルファーテクノ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://alphatechno.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社アーバンプラン",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://urban-plan.com/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社オカムラ",
+      "business_cards": null,
+      "category": "家具メーカー",
+      "hp_url": "https://www.okamura.co.jp/",
+      "priority": "D",
+      "batch": 8
+    },
+    {
+      "name": "株式会社グッドライフ",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "https://goodlifes.jp/",
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社コクヨ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社サンリフォーム",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.sunreform.jp/",
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社シー・エー・リーディング",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://ca-leading.com/",
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社ジェイアール西日本ビルト",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社ドラフト",
+      "business_cards": 0,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社ノムラアークス",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社ピーエス三菱",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社フジタ",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社フジヤ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.fujiya-net.co.jp/",
+      "priority": "D",
+      "batch": 9
+    },
+    {
+      "name": "株式会社ムラヤマ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.murayama.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社リムズ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://limbs-gr.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社リリカラ",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社久米設計",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "https://www.kumesekkei.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社交建設計",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "https://www.koken-archi.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社奥村組",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社安藤・間",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社岡野建築設計事務所",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "https://okano-a.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社平成建設",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.heiseikensetu.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社東京建創",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": "https://www.tokyokenso.co.jp/",
+      "priority": "D",
+      "batch": 10
+    },
+    {
+      "name": "株式会社東宝映像美術",
+      "business_cards": null,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社清和ビジネス",
+      "business_cards": null,
+      "category": "オフィス移転コンサル",
+      "hp_url": "https://seiwab.co.jp/",
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社熊谷組",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社福田組",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社長谷工コーポレーション",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社阪急建装",
+      "business_cards": 0,
+      "category": "内装/空間プロデュース会社",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社類設計室",
+      "business_cards": 0,
+      "category": "設計事務所",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "株式会社高松コンストラクショングループ",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "綜合デザイン株式会社",
+      "business_cards": null,
+      "category": "設計事務所",
+      "hp_url": "http://www.sogodesign.co.jp/",
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "若築建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.wakachiku.co.jp/",
+      "priority": "D",
+      "batch": 11
+    },
+    {
+      "name": "西松建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 12
+    },
+    {
+      "name": "野村不動産パートナーズ株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": "https://www.nomura-partners.co.jp/",
+      "priority": "D",
+      "batch": 12
+    },
+    {
+      "name": "鉄建建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 12
+    },
+    {
+      "name": "飛島建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 12
+    },
+    {
+      "name": "髙松建設株式会社",
+      "business_cards": null,
+      "category": "ゼネコン",
+      "hp_url": null,
+      "priority": "D",
+      "batch": 12
+    }
+  ]
+}
