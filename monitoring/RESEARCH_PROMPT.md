@@ -61,7 +61,18 @@ python3 monitoring/scripts/build_companies.py
 > - `site:prtimes.jp "<会社名>"`
 > - `"<会社名>" X（旧Twitter） OR note 登壇`
 >
-> 既知の `hp_url` があればそこを起点に、お知らせ/イベント/実績ページを直接取得する。
+> **重要: WebSearch を主軸にすること。**
+> 日本の企業サイトの多くは bot を弾くため、WebFetch が **HTTP 403 で失敗する**
+> （検証済み: tanseisha.co.jp / semba1008.co.jp / hakuten.co.jp はいずれも403）。
+> WebFetch が通らないことを「情報がない」と判断しないこと。次の順で取りにいく。
+>
+> 1. **WebSearch**（主軸）— 検索エンジンは各社サイトを巡回済みなので、
+>    お知らせページの中身が要約として返る。日付・イベント名はここから取れることが多い。
+> 2. **WebFetch を試す** — 通ればより正確。403 なら諦めて次へ。
+> 3. **転載先を狙う** — PR TIMES（prtimes.jp）、digitalpr.jp、@Press、業界メディアは
+>    fetch できることが多い。同じリリースが載っていないか探す。
+>
+> 既知の `hp_url` があればそこを起点に、お知らせ/イベント/実績ページを検索・取得する。
 > `hp_url` が空なら検索で公式サイトを特定し、確定できたらそのURLも返す。
 >
 > **拾う条件（いずれか）**
@@ -81,7 +92,10 @@ python3 monitoring/scripts/build_companies.py
 > 公開日が判然としないが明らかに新着（新着一覧の先頭付近など）なら含めてよい。
 >
 > **厳守事項**
-> - URL は実際に開いて存在を確認したものだけを書く。**URLを推測で組み立てない。**
+> - `source_urls` に書いてよいのは **(a) WebFetch で実際に開けたURL** か
+>   **(b) WebSearch の結果に出てきたURL** のどちらかだけ。
+>   **自分でURLを組み立てない**（`.../news/2026/08/` のような推測パスは禁止）。
+>   403で開けなくても、検索結果に出たURLなら実在が確認できているので使ってよい。
 > - 日付が確認できないときは `date` を `"日付不明"` とする。**推測日を書かない。**
 > - 会社名は渡されたリストの表記をそのまま使う（後段の突合キーになる）。
 > - 社名が似ている別会社（例: 丹青社 / 丹青TDC / 丹青ディスプレイ）を取り違えない。
@@ -145,13 +159,36 @@ python3 monitoring/scripts/render_slack.py <findings>.new.json --scanned 115
 
 `<findings>.new.slack.json` に `{"mention": bool, "messages": [...]}` が出る。
 
+投稿経路は2つある。**A が使えれば A、駄目なら B** の順で試す。
+
+### A. Slack コネクタ（MCP）が使える場合
+
 `config.json` の `slack.channel_id` に対して `slack_send_message` で投稿する。
 
 - `messages[0]` をチャンネルに投稿する。
 - `messages[1]` 以降がある場合は、`messages[0]` の `ts` を `thread_ts` にしてスレッド返信で投稿する。
 - **本文はレンダリング結果をそのまま送る**（`<@...>` のメンションを消さない）。
-- `mention` が `false`（=新しい動きが0件）のときも投稿する。メンションは付かないので通知は飛ばない。
-  「動いていない」ことも情報なので、静かに記録を残す。
+
+### B. Slack コネクタが無い場合（Incoming Webhook フォールバック）
+
+定期実行セッションには Slack コネクタが載らないことがある。その場合は Webhook を使う。
+
+```bash
+python3 monitoring/scripts/post_slack.py <findings>.new.slack.json
+```
+
+環境変数 `SLACK_WEBHOOK_URL` が必要。未設定ならこのスクリプトは非ゼロ終了する。
+
+### A も B も使えなかった場合
+
+**state をコミットせずに** レポート本文を `monitoring/reports/YYYY-MM-DD.md` として
+コミット＆プッシュし、投稿できなかった旨をセッションの最終出力に明記する。
+state を進めなければ、次回の実行で同じ動きを再通知できる。
+
+### 共通
+
+`mention` が `false`（=新しい動きが0件）のときも投稿する。メンションは付かないので通知は飛ばない。
+「動いていない」ことも情報なので、静かに記録を残す。
 
 ---
 
