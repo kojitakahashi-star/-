@@ -106,11 +106,23 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 
 ### テンプレートで使えるプレースホルダ
 
-`{header}` `{sender_company}` `{sender_name}` `{sender_email}` `{sender_tel}` `{sender_url}`
-`{company}` `{department}` `{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
-`{purpose}` `{talked_about}` `{scheduling_url}` `{extra}` `{signature}`
+`{header}` `{company}` `{department}`
+`{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
+`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{extra}` `{signature}`
 
-`{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
+- `{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
+- `defaults.sender` の項目はすべて `{sender_<キー>}` で使えます（`{sender_company}` `{sender_name}` `{sender_short_name}` `{sender_email}` `{sender_mobile}` `{sender_tel}` `{sender_address}` `{sender_url}` など）。
+- `defaults` に文字列項目を足せば、そのキー名でそのままプレースホルダになります（`impact_report_url` がこの仕組み）。
+
+## テンプレートの種類
+
+| ファイル | 内容 |
+| --- | --- |
+| `templates/apo_mail_short.txt` | **既定**。お礼 → イベント後に調べた内容 → インパクトレポート → 情報交換の打診 → 日程調整リンク。短く端的 |
+| `templates/apo_mail.txt` | 情報交換型のやや丁寧・長め |
+| `templates/apo_mail_formal.txt` | 打ち合わせ依頼型（かっちりした文面） |
+
+グループの `template` にパスを書けば、その宛先だけ別テンプレートで出せます。
 
 ## 登録済みのイベント
 

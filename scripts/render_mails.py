@@ -78,12 +78,6 @@ def render_group(group: dict, campaign: dict) -> dict:
     event = campaign.get("events", {}).get(group.get("event", ""), {})
 
     values = {
-        "sender_company": sender.get("company", ""),
-        "sender_name": sender.get("name", ""),
-        "sender_title": sender.get("title", ""),
-        "sender_email": sender.get("email", ""),
-        "sender_tel": sender.get("tel", ""),
-        "sender_url": sender.get("url", ""),
         "company": group.get("company", ""),
         "department": group.get("department", ""),
         "event_name": event.get("name", ""),
@@ -97,6 +91,14 @@ def render_group(group: dict, campaign: dict) -> dict:
         or defaults.get("scheduling_url", ""),
         "talked_about": group.get("talked_about", ""),
     }
+    # defaults.sender の各項目は {sender_xxx}、defaults の文字列項目は {xxx} で使える
+    for key, value in sender.items():
+        if isinstance(value, str):
+            values.setdefault(f"sender_{key}", value)
+    for key, value in defaults.items():
+        if isinstance(value, str):
+            values.setdefault(key, value)
+
     if values["event_date_jp"] and values["event_name"]:
         values["event_line"] = f"{values['event_date_jp']}の{values['event_name']}"
     else:

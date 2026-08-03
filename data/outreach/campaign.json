@@ -3,23 +3,39 @@
   "defaults": {
     "sender": {
       "company": "株式会社森未来",
-      "name": "<<要記入: 送信者氏名(例: 高橋 洸司)>>",
+      "name": "高橋 幸司",
+      "short_name": "高橋",
       "title": "",
       "email": "koji.takahashi@shin-mirai.co.jp",
-      "tel": "<<要記入: 電話番号>>",
+      "mobile": "08069972075",
+      "tel": "03-6453-9234",
+      "fax": "03-6453-9275",
+      "address": "〒108-0014 東京都港区芝5-27-6 泉田町ビル6F",
       "url": "https://shin-mirai.co.jp/"
     },
     "signature": [
-      "株式会社森未来",
-      "<<要記入: 部署 / 氏名>>",
-      "〒106-0032 東京都港区六本木",
-      "TEL: {sender_tel} / Mail: {sender_email}",
-      "{sender_url}"
+      "-----",
+      "株式会社森未来 高橋 幸司",
+      "MAIL：koji.takahashi@shin-mirai.co.jp",
+      "MOBILE：08069972075",
+      "",
+      "★eTREE主催・共催のイベント情報",
+      "今後の開催予定のイベントはこちら https://go.etree.jp/l/785863/2022-10-31/l7mvm",
+      "★森林・木材に関するイベントをお持ちの方へ",
+      "「森林と木材のイベントポータル」では無料で掲載を受け付けております。",
+      "▷ 掲載を申し込む（Googleフォーム https://docs.google.com/forms/d/e/1FAIpQLScEBeZVmqRCRcYWD2GC6bjlimFw6SAIvwEKS-fFiCJtCp-rCQ/viewform）",
+      "▷ イベントポータルとは？→詳しくはこちら https://www.etree.jp/content/11149",
+      "eTREE（森未来サービス）: https://www.etree.jp/",
+      "〒108-0014 東京都港区芝5-27-6 泉田町ビル6F",
+      "TEL：03-6453-9234",
+      "FAX：03-6453-9275",
+      "https://shin-mirai.co.jp/"
     ],
     "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
     "scheduling_url": "<<要記入: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
-    "template": "templates/apo_mail_short.txt"
+    "template": "templates/apo_mail_short.txt",
+    "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12"
   },
   "events": {
     "ev-fabcafe": {
@@ -329,14 +345,14 @@
         "y-yasuda@ria.co.jp"
       ],
       "cc": [],
-      "talked_about": "貴社が全国の市街地再開発やまちづくりを、企画から設計まで一貫して手がけられていること、近年は老朽化した再開発ビルの再生にも取り組まれていることを拝見しました。\n共用部やファサードの木質化、公共施設部分での国産材活用といった場面で、弊社の木材調達がお役に立てそうだと感じております。",
+      "talked_about": "イベントの後にあらためて御社に興味を持ち、拝見いたしました。\n全国の市街地再開発やまちづくりを、企画から設計まで一貫して手がけられていること、近年は老朽化した再開発ビルの再生にも取り組まれていることを知り、大変興味深く感じております。",
       "purpose": "",
       "scheduling_url": "",
       "subject": "",
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "公開情報(全国約300件の再開発実績・再開発ビル再生)をもとに記述。木材利用の公表事例は未確認のため断定表現は避けている。",
+      "note": "イベント後に調べた内容として記述(公開情報:全国約300件の市街地再開発実績、再開発ビル再生)。木材利用の公表事例は未確認のため言及していない。",
       "skip": false,
       "members": [
         {
