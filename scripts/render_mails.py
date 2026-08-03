@@ -91,7 +91,10 @@ def render_group(group: dict, campaign: dict) -> dict:
         "event_date_jp": jp_date(event.get("date", "")),
         "event_place": event.get("place", ""),
         "purpose": group.get("purpose") or defaults.get("purpose", ""),
-        "scheduling_url": group.get("scheduling_url") or defaults.get("scheduling_url", ""),
+        # 日程調整リンクは グループ > イベント > 既定 の順で採用する
+        "scheduling_url": group.get("scheduling_url")
+        or event.get("scheduling_url")
+        or defaults.get("scheduling_url", ""),
         "talked_about": group.get("talked_about", ""),
     }
     if values["event_date_jp"] and values["event_name"]:

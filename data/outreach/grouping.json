@@ -3,6 +3,7 @@
   "company_aliases": {
     "CCC": "カルチュア・コンビニエンス・クラブ株式会社"
   },
+  "_comment_to": "manual_groups の to を書くと、役職からの自動判定より優先して to にする(残りは cc)。",
   "manual_groups": [
     {
       "id": "union-tec",
@@ -11,6 +12,22 @@
         "s.ishigami@union-tec.jp",
         "m.kobayashi@union-tec.jp",
         "j.hahn@union-tec.jp"
+      ],
+      "to": [
+        "s.ishigami@union-tec.jp",
+        "m.kobayashi@union-tec.jp",
+        "j.hahn@union-tec.jp"
+      ]
+    },
+    {
+      "id": "socialinterior",
+      "label": "株式会社ソーシャルインテリア",
+      "emails": [
+        "kouta@socialinterior.com",
+        "chiaki@socialinterior.com"
+      ],
+      "to": [
+        "kouta@socialinterior.com"
       ]
     },
     {

@@ -16,29 +16,31 @@
       "TEL: {sender_tel} / Mail: {sender_email}",
       "{sender_url}"
     ],
-    "subject": "【{event_name}のお礼】{sender_company}よりお打ち合わせのお願い",
-    "purpose": "木材の調達・ご提案サービス",
+    "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
+    "purpose": "弊社で扱っている木材や納入事例",
     "scheduling_url": "<<要記入: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
     "template": "templates/apo_mail.txt"
   },
   "events": {
-    "ev-0729": {
-      "name": "<<要記入: イベント名(2026-07-29開催)>>",
+    "ev-fabcafe": {
+      "name": "FabCafe",
       "date": "2026-07-29",
       "place": "",
       "card_dates": [
         "2026-07-29"
       ],
-      "note": ""
+      "scheduling_url": "",
+      "note": "正式名称が決まっていれば name を差し替える(件名・本文にそのまま入る)"
     },
-    "ev-0803": {
-      "name": "<<要記入: イベント名(2026-08-03開催)>>",
+    "ev-designers-edge": {
+      "name": "デザイナーズエッジ",
       "date": "2026-08-03",
       "place": "",
       "card_dates": [
         "2026-08-03"
       ],
-      "note": ""
+      "scheduling_url": "",
+      "note": "正式名称が決まっていれば name を差し替える(件名・本文にそのまま入る)"
     }
   },
   "groups": [
@@ -47,7 +49,7 @@
       "label": "COMFORT STYLE Co., Ltd.",
       "company": "COMFORT STYLE Co., Ltd.",
       "department": "",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "saitoh@comfort-style.me"
       ],
@@ -76,7 +78,7 @@
       "label": "DeginsJP株式会社 / 建築デザインDiv. Degins Digital Design Div.",
       "company": "DeginsJP株式会社",
       "department": "建築デザインDiv. Degins Digital Design Div.",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "joe@degins.jp"
       ],
@@ -105,7 +107,7 @@
       "label": "TokyoLightingDesign合同会社",
       "company": "TokyoLightingDesign合同会社",
       "department": "",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "yano@tokyo.lighting"
       ],
@@ -134,14 +136,13 @@
       "label": "UNION TEC CO., LTD. / Beauty&Medical Clinic Div.",
       "company": "UNION TEC CO., LTD.",
       "department": "",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
+        "s.ishigami@union-tec.jp",
+        "m.kobayashi@union-tec.jp",
         "j.hahn@union-tec.jp"
       ],
-      "cc": [
-        "m.kobayashi@union-tec.jp",
-        "s.ishigami@union-tec.jp"
-      ],
+      "cc": [],
       "talked_about": "<<要記入: 当日話した内容>>",
       "purpose": "",
       "scheduling_url": "",
@@ -180,7 +181,7 @@
       "label": "カルチュア・コンビニエンス・クラブ株式会社 / 門真市立文化創造図書館KADOMADO",
       "company": "カルチュア・コンビニエンス・クラブ株式会社",
       "department": "",
-      "event": "ev-0729",
+      "event": "ev-fabcafe",
       "to": [
         "akito.kumiya@ccc.co.jp"
       ],
@@ -218,7 +219,7 @@
       "label": "クジラ株式会社",
       "company": "クジラ株式会社",
       "department": "",
-      "event": "ev-0729",
+      "event": "ev-fabcafe",
       "to": [
         "yuki-takaya@kujira.ltd"
       ],
@@ -256,7 +257,7 @@
       "label": "クジラ株式会社 / PR/ORDINARY",
       "company": "クジラ株式会社",
       "department": "PR/ORDINARY",
-      "event": "ev-0729",
+      "event": "ev-fabcafe",
       "to": [
         "mari-kitagawa@sekaihotel.jp"
       ],
@@ -285,7 +286,7 @@
       "label": "株式会社アルファーテクノ / 首都圏営業ユニット",
       "company": "株式会社アルファーテクノ",
       "department": "首都圏営業ユニット",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "tanaka-k@alphatechno.jp"
       ],
@@ -323,7 +324,7 @@
       "label": "株式会社アール・アイ・エー / 計画二部",
       "company": "株式会社アール・アイ・エー",
       "department": "計画二部",
-      "event": "ev-0729",
+      "event": "ev-fabcafe",
       "to": [
         "y-yasuda@ria.co.jp"
       ],
@@ -349,14 +350,16 @@
     },
     {
       "id": "socialinterior",
-      "label": "株式会社ソーシャルインテリア / FFEパートナーサービス部",
+      "label": "株式会社ソーシャルインテリア",
       "company": "株式会社ソーシャルインテリア",
-      "department": "FFEパートナーサービス部",
-      "event": "ev-0803",
+      "department": "",
+      "event": "ev-designers-edge",
       "to": [
+        "kouta@socialinterior.com"
+      ],
+      "cc": [
         "chiaki@socialinterior.com"
       ],
-      "cc": [],
       "talked_about": "<<要記入: 当日話した内容>>",
       "purpose": "",
       "scheduling_url": "",
@@ -373,29 +376,7 @@
           "title": "",
           "department": "FFEパートナーサービス部",
           "exchanged_on": "2026-08-03"
-        }
-      ]
-    },
-    {
-      "id": "socialinterior-2",
-      "label": "株式会社ソーシャルインテリア / プロジェクトマネジメント部",
-      "company": "株式会社ソーシャルインテリア",
-      "department": "プロジェクトマネジメント部",
-      "event": "ev-0803",
-      "to": [
-        "kouta@socialinterior.com"
-      ],
-      "cc": [],
-      "talked_about": "<<要記入: 当日話した内容>>",
-      "purpose": "",
-      "scheduling_url": "",
-      "subject": "",
-      "extra": "",
-      "template": "",
-      "greeting_override": [],
-      "note": "",
-      "skip": false,
-      "members": [
+        },
         {
           "email": "kouta@socialinterior.com",
           "name": "新妻 孔太",
@@ -410,7 +391,7 @@
       "label": "株式会社デザインスピリッツ",
       "company": "株式会社デザインスピリッツ",
       "department": "",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "moses.kawai@designspirits.co.jp"
       ],
@@ -439,7 +420,7 @@
       "label": "株式会社徳村組 / 建設事業本部 営業部",
       "company": "株式会社徳村組",
       "department": "建設事業本部 営業部",
-      "event": "ev-0803",
+      "event": "ev-designers-edge",
       "to": [
         "k_aoyagi@tokumura.co.jp"
       ],

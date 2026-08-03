@@ -59,8 +59,8 @@ DEFAULTS = {
         "TEL: {sender_tel} / Mail: {sender_email}",
         "{sender_url}",
     ],
-    "subject": "【{event_name}のお礼】{sender_company}よりお打ち合わせのお願い",
-    "purpose": "木材の調達・ご提案サービス",
+    "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
+    "purpose": "弊社で扱っている木材や納入事例",
     "scheduling_url": f"{TODO}: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
     "template": "templates/apo_mail.txt",
 }
@@ -76,6 +76,7 @@ def build_events(contacts: list[dict]) -> dict:
             "date": date,
             "place": "",
             "card_dates": [date],
+            "scheduling_url": "",
             "note": "",
         }
     return events
@@ -112,6 +113,7 @@ def group_contacts(contacts: list[dict], manual_groups: list[dict], group_by: st
             {
                 "id": manual["id"] if manual else "",
                 "label": label,
+                "manual": manual,
                 "members": [],
             },
         )
@@ -131,13 +133,22 @@ def group_contacts(contacts: list[dict], manual_groups: list[dict], group_by: st
             candidate = f"{group_id}-{suffix}"
             suffix += 1
         used_ids.add(candidate)
-        groups.append((candidate, bucket["label"], members))
+        groups.append((candidate, bucket["label"], members, bucket.get("manual")))
     return sorted(groups, key=lambda g: g[1])
 
 
-def make_group(group_id: str, label: str, members: list[dict], events: dict) -> dict:
+def make_group(
+    group_id: str,
+    label: str,
+    members: list[dict],
+    events: dict,
+    manual: dict | None = None,
+) -> dict:
     dates = [m["exchanged_on"] for m in members if m["exchanged_on"]]
     depts = {m["department"] for m in members}
+    emails = [m["email"] for m in members]
+    forced_to = [e.lower() for e in (manual or {}).get("to", []) if e.lower() in emails]
+    to = forced_to or [emails[0]]
     return {
         "id": group_id,
         "label": label,
@@ -145,8 +156,8 @@ def make_group(group_id: str, label: str, members: list[dict], events: dict) -> 
         # 部署表記が全員一致するときだけ宛名に出す(表記ゆれ混在なら会社名のみ)
         "department": depts.pop() if len(depts) == 1 else "",
         "event": event_for(dates, events),
-        "to": [members[0]["email"]],
-        "cc": [m["email"] for m in members[1:]],
+        "to": to,
+        "cc": [e for e in emails if e not in to],
         "talked_about": f"{TODO}: 当日話した内容>>",
         "purpose": "",
         "scheduling_url": "",
@@ -193,14 +204,19 @@ def main() -> int:
     existing = {} if args.force else (read_json(campaign_path, {}) or {})
     manual_groups = (read_json(GROUPING_PATH, {}) or {}).get("manual_groups", [])
 
-    events = existing.get("events") or build_events(contacts)
+    # 既存イベントで拾えていない名刺交換日があれば、新しいイベント枠だけを追加する
+    events = existing.get("events") or {}
+    covered = {d for ev in events.values() for d in ev.get("card_dates", [])}
     for event_id, event in build_events(contacts).items():
-        events.setdefault(event_id, event)
+        if not set(event["card_dates"]) & covered:
+            events[event_id] = event
 
     old_groups = {g["id"]: g for g in existing.get("groups", [])}
     groups = []
-    for group_id, label, members in group_contacts(contacts, manual_groups, args.group_by):
-        group = make_group(group_id, label, members, events)
+    for group_id, label, members, manual in group_contacts(
+        contacts, manual_groups, args.group_by
+    ):
+        group = make_group(group_id, label, members, events, manual)
         old = old_groups.get(group_id)
         if old:
             for field in EDITABLE_FIELDS:
