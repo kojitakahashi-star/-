@@ -19,7 +19,7 @@
     "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
     "scheduling_url": "<<要記入: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
-    "template": "templates/apo_mail.txt"
+    "template": "templates/apo_mail_short.txt"
   },
   "events": {
     "ev-fabcafe": {
@@ -329,14 +329,14 @@
         "y-yasuda@ria.co.jp"
       ],
       "cc": [],
-      "talked_about": "<<要記入: 当日話した内容>>",
+      "talked_about": "貴社が全国の市街地再開発やまちづくりを、企画から設計まで一貫して手がけられていること、近年は老朽化した再開発ビルの再生にも取り組まれていることを拝見しました。\n共用部やファサードの木質化、公共施設部分での国産材活用といった場面で、弊社の木材調達がお役に立てそうだと感じております。",
       "purpose": "",
       "scheduling_url": "",
       "subject": "",
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "",
+      "note": "公開情報(全国約300件の再開発実績・再開発ビル再生)をもとに記述。木材利用の公表事例は未確認のため断定表現は避けている。",
       "skip": false,
       "members": [
         {
