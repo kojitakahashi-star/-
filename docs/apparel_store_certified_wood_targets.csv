@@ -1,17 +1,15 @@
-No,企業名,区分,本社,店舗資材への認証材記載,優先度,アプローチ窓口,出典URL
-1,ゴールドウイン（THE NORTH FACE等）,Tier C,日本,記載なし。ただしサステナブル建築の新店(THE NORTH FACE Sphere原宿)を展開し木質志向が強い,★★★,店舗開発／サステナビリティ推進,https://www.apparel-mag.com/abm/news/4172
-2,オンワードHD／オンワードコーポレートデザイン,Tier C,日本,記載なし。グループに店舗デザイン施工会社を保有。木目什器を意匠に使用,★★★,オンワードCD経由,https://onward-cd.co.jp/sustainability/
-3,ユナイテッドアローズ,Tier C,日本,記載なし。CDPサプライヤーエンゲージメントAリスト2年連続,★★★,サステナビリティ推進／店舗開発,https://prtimes.jp/main/html/rd/p/000000475.000003197.html
-4,Marks & Spencer,Tier A,英国,2015年Property Wood Policyで全ての木質内装・建築・ディスプレイ材をFSC100%/Mix/リサイクルに限定,★（日本未展開）,英国本社（提案資料の証拠として活用）,https://uk.fsc.org/newsfeed/shops-fit-for-the-environment
-5,NEXT plc,Tier A,英国,Timber Sourcing Policyで店舗躯体・内装・什器の木質材を認証材に限定（熱帯材はFSCのみ）,★（日本未展開）,英国本社（提案資料の証拠として活用）,https://www.nextplc.co.uk/~/media/Files/N/Next-PLC-V2/documents/about-us/timber-sourcing-policy-2021.pdf
-6,adidas,Tier B,ドイツ,直営店の内装・建設でLEED/BREEAMを活用。FSCの明記は確認できず,★,日本法人リテール,https://report.adidas-group.com/2022/en/group-management-report-our-company/sustainability/environmental-impacts.html
-7,Chanel,Tier B,フランス,2024年末時点で316のLEED認証ブティック・拠点。製品容器にFSC認証木材チップ。店舗内装の認証材記載なし,★,日本法人ストアプランニング,https://www.chanel.com/puls-img/1758110433609-chanel-sustainability-performance-extract-2024-for-publication.pdf
-8,Burberry,Tier B,英国,FSC認証木製ハンガー・FSC認証紙。店舗内装の明記なし,★,日本法人,https://www.burberryplc.com/content/dam/burberryplc/corporate/2024-updates/environmental-and-social-responsibility.pdf
-9,Hermès,Tier B,フランス,オレンジボックスにFSC認証紙・100%再生段ボール。包装中心,★,日本法人,https://romestation.ca/blogs/news/eco-friendly-luxury-does-hermes-support-sustainable-practices
-10,アダストリア,Tier C,日本,記載なし。Sustainability Reportを継続発行。多ブランド×多店舗で標準什器の効果大,★,店舗開発／サステナビリティ,https://www.adastria.co.jp/archives/001/202112/10ce2a388164a2dfdd9149ad48769a6c5d334fa5d59cf175c514beaaed13b857.pdf
-11,ワールド,Tier C,日本,記載なし。店舗数・改装頻度が大きい,★,店舗開発,-（公開情報で該当記載を確認できず）
-12,TSIホールディングス,Tier C,日本,記載なし。サステナビリティ開示強化フェーズ,★,サステナビリティ推進,https://sustainability.tsi-holdings.com/
-13,三陽商会,Tier C,日本,記載なし。百貨店向け什器の切り替え提案が可能,★,店舗開発,-（公開情報で該当記載を確認できず）
-14,ベイクルーズ,Tier C,日本,記載なし。木質内装を多用する業態,★,店舗開発,-（公開情報で該当記載を確認できず）
-15,アーバンリサーチ,Tier C,日本,記載なし。環境活動の発信あり,★,店舗開発,-（公開情報で該当記載を確認できず）
-16,パルグループHD,Tier C,日本,記載なし。出店ペースが速い,★,店舗開発,-（公開情報で該当記載を確認できず）
+No,企業名,区分,本社,日本拠点・国内店舗,店舗資材への認証材記載,優先度,アプローチ窓口,出典URL
+1,ゴールドウイン（THE NORTH FACE等）,Tier C,日本,本社が日本。直営店を全国展開,記載なし。ただしサステナブル建築の新店(THE NORTH FACE Sphere原宿)を展開し木質志向が強い,★★★,店舗開発／サステナビリティ推進,https://www.apparel-mag.com/abm/news/4172
+2,オンワードHD／オンワードコーポレートデザイン,Tier C,日本,本社が日本。グループに店舗デザイン施工会社を保有,記載なし。木目什器を意匠に使用,★★★,オンワードCD経由,https://onward-cd.co.jp/sustainability/
+3,ユナイテッドアローズ,Tier C,日本,本社が日本。直営店を全国展開,記載なし。CDPサプライヤーエンゲージメントAリスト2年連続,★★★,サステナビリティ推進／店舗開発,https://prtimes.jp/main/html/rd/p/000000475.000003197.html
+4,アダストリア,Tier C,日本,本社が日本。多ブランド×多店舗,記載なし。Sustainability Reportを継続発行。標準什器の切替効果が大きい,★,店舗開発／サステナビリティ,https://www.adastria.co.jp/archives/001/202112/10ce2a388164a2dfdd9149ad48769a6c5d334fa5d59cf175c514beaaed13b857.pdf
+5,ワールド,Tier C,日本,本社が日本。店舗数・改装頻度が大きい,記載なし,★,店舗開発,-（公開情報で該当記載を確認できず）
+6,TSIホールディングス,Tier C,日本,本社が日本,記載なし。サステナビリティ開示強化フェーズ,★,サステナビリティ推進,https://sustainability.tsi-holdings.com/
+7,三陽商会,Tier C,日本,本社が日本。百貨店中心,記載なし。百貨店向け什器の切り替え提案が可能,★,店舗開発,-（公開情報で該当記載を確認できず）
+8,ベイクルーズ,Tier C,日本,本社が日本。木質内装を多用する業態,記載なし,★,店舗開発,-（公開情報で該当記載を確認できず）
+9,アーバンリサーチ,Tier C,日本,本社が日本,記載なし。環境活動の発信あり,★,店舗開発,-（公開情報で該当記載を確認できず）
+10,パルグループHD,Tier C,日本,本社が日本。出店ペースが速い,記載なし,★,店舗開発,-（公開情報で該当記載を確認できず）
+11,adidas,Tier B,ドイツ,日本法人あり。直営店を国内展開,直営店の内装・建設でLEED/BREEAMを活用。FSCの明記は確認できず,★,日本法人リテール,https://report.adidas-group.com/2022/en/group-management-report-our-company/sustainability/environmental-impacts.html
+12,Chanel,Tier B,フランス,日本法人あり。ブティックを国内展開,2024年末時点で316のLEED認証ブティック・拠点。製品容器にFSC認証木材チップ。店舗内装の認証材記載なし,★,日本法人ストアプランニング,https://www.chanel.com/puls-img/1758110433609-chanel-sustainability-performance-extract-2024-for-publication.pdf
+13,Burberry,Tier B,英国,日本法人あり。直営店を国内展開,FSC認証木製ハンガー・FSC認証紙。店舗内装の明記なし,★,日本法人,https://www.burberryplc.com/content/dam/burberryplc/corporate/2024-updates/environmental-and-social-responsibility.pdf
+14,Hermès,Tier B,フランス,日本法人あり。ブティックを国内展開,オレンジボックスにFSC認証紙・100%再生段ボール。包装中心,★,日本法人,https://romestation.ca/blogs/news/eco-friendly-luxury-does-hermes-support-sustainable-practices
