@@ -78,6 +78,7 @@ DEFAULTS = {
     "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12",
     "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
+    "meeting_duration": "30分～1時間",
     # 日程調整リンク(文字列 / リスト / {"label","url"} のリストが使える)
     "scheduling_url": [
         "https://calendar.app.google/uMg6sUAPWo4Jidts6",

@@ -108,7 +108,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 
 `{header}` `{company}` `{department}`
 `{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
-`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{extra}` `{signature}`
+`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{extra}` `{signature}`
 
 - `{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
 - `defaults.sender` の項目はすべて `{sender_<キー>}` で使えます（`{sender_company}` `{sender_name}` `{sender_short_name}` `{sender_email}` `{sender_mobile}` `{sender_tel}` `{sender_address}` `{sender_url}` など）。
