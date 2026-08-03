@@ -37,6 +37,7 @@ EDITABLE_FIELDS = (
     "scheduling_url",
     "meeting_duration",
     "meeting_style",
+    "scheduling_lead",
     "impact_report_url",
     "subject",
     "extra",
@@ -83,6 +84,7 @@ DEFAULTS = {
     "purpose": "弊社で扱っている木材や納入事例",
     "meeting_duration": "30分～1時間",
     "meeting_style": "オンラインでも、ご訪問でも構いません。",
+    "scheduling_lead": "下記のいずれのURLからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
     # 日程調整リンク(文字列 / リスト / {"label","url"} のリストが使える)
     "scheduling_url": [
         "https://calendar.app.google/uMg6sUAPWo4Jidts6",

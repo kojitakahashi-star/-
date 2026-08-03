@@ -100,6 +100,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | `scheduling_url` | 日程調整リンク。文字列 / リスト / `{"label","url"}` のリストが使える |
 | `meeting_duration` | 所要時間の表記（既定「30分～1時間」） |
 | `meeting_style` | 面談形式の一文（東京圏は訪問可、大阪はオンライン提案など） |
+| `scheduling_lead` | 日程調整リンクの前置き（既定は2本のURLどちらからでも予約可という案内） |
 | `subject` | 件名。空なら `defaults.subject` |
 | `extra` | 追記(添付の案内、紹介者の名前など) |
 | `template` | この宛先だけ別テンプレートを使う場合に指定 |
@@ -111,7 +112,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 
 `{header}` `{company}` `{department}`
 `{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
-`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{meeting_style}` `{extra}` `{signature}`
+`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{meeting_style}` `{scheduling_lead}` `{extra}` `{signature}`
 
 - `{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
 - `defaults.sender` の項目はすべて `{sender_<キー>}` で使えます（`{sender_company}` `{sender_name}` `{sender_short_name}` `{sender_email}` `{sender_mobile}` `{sender_tel}` `{sender_address}` `{sender_url}` など）。

@@ -12,7 +12,7 @@
 
 もしよろしければ、{meeting_duration}ほど情報交換のお時間をいただけないでしょうか。
 {meeting_style}
-下記より、ご都合のよい日時をお選びいただけますと幸いです。
+{scheduling_lead}
 {scheduling_url}
 {extra}
 大変お忙しいところ恐れ入りますが、ご確認いただけますと幸いです。
