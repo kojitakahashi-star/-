@@ -78,7 +78,11 @@ DEFAULTS = {
     "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12",
     "subject": "【{event_name}】ご挨拶のお礼と情報交換のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
-    "scheduling_url": f"{TODO}: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
+    # 日程調整リンク(文字列 / リスト / {"label","url"} のリストが使える)
+    "scheduling_url": [
+        "https://calendar.app.google/uMg6sUAPWo4Jidts6",
+        "https://calendar.app.google/4ingyZZWjcVKX6Pa6",
+    ],
     "template": "templates/apo_mail_short.txt",
 }
 

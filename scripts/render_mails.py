@@ -43,6 +43,26 @@ def jp_date(date: str) -> str:
     return f"{int(match.group(2))}月{int(match.group(3))}日"
 
 
+def scheduling_block(value) -> str:
+    """日程調整リンクを整形する。
+
+    文字列 / 文字列のリスト / {"label": ..., "url": ...} のリストを受け付ける。
+    複数ある場合は1行ずつ並べ、ラベルがあれば「ラベル：URL」の形にする。
+    """
+    if not value:
+        return ""
+    if isinstance(value, str):
+        return value
+    lines = []
+    for item in value:
+        if isinstance(item, dict):
+            label, url = item.get("label", ""), item.get("url", "")
+            lines.append(f"{label}：{url}" if label else url)
+        else:
+            lines.append(str(item))
+    return "\n".join(line for line in lines if line)
+
+
 def member_map(group: dict) -> dict[str, dict]:
     return {m["email"]: m for m in group.get("members", [])}
 
@@ -86,9 +106,11 @@ def render_group(group: dict, campaign: dict) -> dict:
         "event_place": event.get("place", ""),
         "purpose": group.get("purpose") or defaults.get("purpose", ""),
         # 日程調整リンクは グループ > イベント > 既定 の順で採用する
-        "scheduling_url": group.get("scheduling_url")
-        or event.get("scheduling_url")
-        or defaults.get("scheduling_url", ""),
+        "scheduling_url": scheduling_block(
+            group.get("scheduling_url")
+            or event.get("scheduling_url")
+            or defaults.get("scheduling_url", "")
+        ),
         "talked_about": group.get("talked_about", ""),
     }
     # defaults.sender の各項目は {sender_xxx}、defaults の文字列項目は {xxx} で使える
