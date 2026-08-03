@@ -1,0 +1,476 @@
+{
+  "campaign_id": "event-followup",
+  "defaults": {
+    "sender": {
+      "company": "株式会社森未来",
+      "name": "<<要記入: 送信者氏名(例: 高橋 洸司)>>",
+      "title": "",
+      "email": "koji.takahashi@shin-mirai.co.jp",
+      "tel": "<<要記入: 電話番号>>",
+      "url": "https://shin-mirai.co.jp/"
+    },
+    "signature": [
+      "株式会社森未来",
+      "<<要記入: 部署 / 氏名>>",
+      "〒106-0032 東京都港区六本木",
+      "TEL: {sender_tel} / Mail: {sender_email}",
+      "{sender_url}"
+    ],
+    "subject": "【{event_name}のお礼】{sender_company}よりお打ち合わせのお願い",
+    "purpose": "木材の調達・ご提案サービス",
+    "scheduling_url": "<<要記入: 日程調整リンク(例: https://timerex.net/s/xxxx)>>",
+    "template": "templates/apo_mail.txt"
+  },
+  "events": {
+    "ev-0729": {
+      "name": "<<要記入: イベント名(2026-07-29開催)>>",
+      "date": "2026-07-29",
+      "place": "",
+      "card_dates": [
+        "2026-07-29"
+      ],
+      "note": ""
+    },
+    "ev-0803": {
+      "name": "<<要記入: イベント名(2026-08-03開催)>>",
+      "date": "2026-08-03",
+      "place": "",
+      "card_dates": [
+        "2026-08-03"
+      ],
+      "note": ""
+    }
+  },
+  "groups": [
+    {
+      "id": "comfort-style",
+      "label": "COMFORT STYLE Co., Ltd.",
+      "company": "COMFORT STYLE Co., Ltd.",
+      "department": "",
+      "event": "ev-0803",
+      "to": [
+        "saitoh@comfort-style.me"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "saitoh@comfort-style.me",
+          "name": "齊藤 正弘",
+          "title": "代表取締役/CEO Interior Architect & Stylist 空間建築家×スタイリスト",
+          "department": "",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "degins",
+      "label": "DeginsJP株式会社 / 建築デザインDiv. Degins Digital Design Div.",
+      "company": "DeginsJP株式会社",
+      "department": "建築デザインDiv. Degins Digital Design Div.",
+      "event": "ev-0803",
+      "to": [
+        "joe@degins.jp"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "joe@degins.jp",
+          "name": "饒元 豪",
+          "title": "",
+          "department": "建築デザインDiv. Degins Digital Design Div.",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "tokyo",
+      "label": "TokyoLightingDesign合同会社",
+      "company": "TokyoLightingDesign合同会社",
+      "department": "",
+      "event": "ev-0803",
+      "to": [
+        "yano@tokyo.lighting"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "yano@tokyo.lighting",
+          "name": "矢野 大輔",
+          "title": "代表",
+          "department": "",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "union-tec",
+      "label": "UNION TEC CO., LTD. / Beauty&Medical Clinic Div.",
+      "company": "UNION TEC CO., LTD.",
+      "department": "",
+      "event": "ev-0803",
+      "to": [
+        "j.hahn@union-tec.jp"
+      ],
+      "cc": [
+        "m.kobayashi@union-tec.jp",
+        "s.ishigami@union-tec.jp"
+      ],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "j.hahn@union-tec.jp",
+          "name": "Jiwoo Hahn",
+          "title": "Assistant Designer",
+          "department": "Beauty & Medical Clinic Div. Beauty&Medical Dept 1./Design G2.",
+          "exchanged_on": "2026-08-03"
+        },
+        {
+          "email": "m.kobayashi@union-tec.jp",
+          "name": "Mikiaki Kobayashi",
+          "title": "Assistant Designer",
+          "department": "Beauty&Medical Clinic Div. Design, 1, Design 62.",
+          "exchanged_on": "2026-08-03"
+        },
+        {
+          "email": "s.ishigami@union-tec.jp",
+          "name": "Suika Ishigami",
+          "title": "Assistant Designer",
+          "department": "Beauty&Medical Clinic Div. Beauty&Medical Dept.1",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "ccc-kadomado",
+      "label": "カルチュア・コンビニエンス・クラブ株式会社 / 門真市立文化創造図書館KADOMADO",
+      "company": "カルチュア・コンビニエンス・クラブ株式会社",
+      "department": "",
+      "event": "ev-0729",
+      "to": [
+        "akito.kumiya@ccc.co.jp"
+      ],
+      "cc": [
+        "risa.wada@ccc.co.jp"
+      ],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "akito.kumiya@ccc.co.jp",
+          "name": "組谷 明豊",
+          "title": "館長",
+          "department": "ソーシャルデザイン事業本部 門真市立文化制造図書館KADOMADO",
+          "exchanged_on": "2026-07-29"
+        },
+        {
+          "email": "risa.wada@ccc.co.jp",
+          "name": "和田 梨沙",
+          "title": "",
+          "department": "ソーシャルデザイン本部 門真市立文化創造図書館KADOMADO 広報/イベント",
+          "exchanged_on": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "id": "kujira",
+      "label": "クジラ株式会社",
+      "company": "クジラ株式会社",
+      "department": "",
+      "event": "ev-0729",
+      "to": [
+        "yuki-takaya@kujira.ltd"
+      ],
+      "cc": [
+        "ayano-sakurai@kujira.ltd"
+      ],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "yuki-takaya@kujira.ltd",
+          "name": "髙谷 佑樹",
+          "title": "o布施支店長",
+          "department": "",
+          "exchanged_on": "2026-07-29"
+        },
+        {
+          "email": "ayano-sakurai@kujira.ltd",
+          "name": "櫻井 文乃",
+          "title": "デザイナー",
+          "department": "",
+          "exchanged_on": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "id": "sekaihotel",
+      "label": "クジラ株式会社 / PR/ORDINARY",
+      "company": "クジラ株式会社",
+      "department": "PR/ORDINARY",
+      "event": "ev-0729",
+      "to": [
+        "mari-kitagawa@sekaihotel.jp"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "mari-kitagawa@sekaihotel.jp",
+          "name": "北川 茉莉",
+          "title": "コーディネーター",
+          "department": "PR/ORDINARY",
+          "exchanged_on": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "id": "alphatechno",
+      "label": "株式会社アルファーテクノ / 首都圏営業ユニット",
+      "company": "株式会社アルファーテクノ",
+      "department": "首都圏営業ユニット",
+      "event": "ev-0803",
+      "to": [
+        "tanaka-k@alphatechno.jp"
+      ],
+      "cc": [
+        "s.katsumura@alphatechno.jp"
+      ],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "tanaka-k@alphatechno.jp",
+          "name": "田中 康治郎",
+          "title": "課長",
+          "department": "首都圏営業ユニット",
+          "exchanged_on": "2026-08-03"
+        },
+        {
+          "email": "s.katsumura@alphatechno.jp",
+          "name": "勝村 脩平",
+          "title": "課長代理",
+          "department": "首都圏営業ユニット",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "ria",
+      "label": "株式会社アール・アイ・エー / 計画二部",
+      "company": "株式会社アール・アイ・エー",
+      "department": "計画二部",
+      "event": "ev-0729",
+      "to": [
+        "y-yasuda@ria.co.jp"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "y-yasuda@ria.co.jp",
+          "name": "安田 優太",
+          "title": "副主任",
+          "department": "計画二部",
+          "exchanged_on": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "id": "socialinterior",
+      "label": "株式会社ソーシャルインテリア / FFEパートナーサービス部",
+      "company": "株式会社ソーシャルインテリア",
+      "department": "FFEパートナーサービス部",
+      "event": "ev-0803",
+      "to": [
+        "chiaki@socialinterior.com"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "chiaki@socialinterior.com",
+          "name": "後藤 千明",
+          "title": "",
+          "department": "FFEパートナーサービス部",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "socialinterior-2",
+      "label": "株式会社ソーシャルインテリア / プロジェクトマネジメント部",
+      "company": "株式会社ソーシャルインテリア",
+      "department": "プロジェクトマネジメント部",
+      "event": "ev-0803",
+      "to": [
+        "kouta@socialinterior.com"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "kouta@socialinterior.com",
+          "name": "新妻 孔太",
+          "title": "",
+          "department": "プロジェクトマネジメント部",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "designspirits",
+      "label": "株式会社デザインスピリッツ",
+      "company": "株式会社デザインスピリッツ",
+      "department": "",
+      "event": "ev-0803",
+      "to": [
+        "moses.kawai@designspirits.co.jp"
+      ],
+      "cc": [],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "moses.kawai@designspirits.co.jp",
+          "name": "河合 優吉",
+          "title": "代表",
+          "department": "",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    },
+    {
+      "id": "tokumura",
+      "label": "株式会社徳村組 / 建設事業本部 営業部",
+      "company": "株式会社徳村組",
+      "department": "建設事業本部 営業部",
+      "event": "ev-0803",
+      "to": [
+        "k_aoyagi@tokumura.co.jp"
+      ],
+      "cc": [
+        "s_endo@tokumura.co.jp"
+      ],
+      "talked_about": "<<要記入: 当日話した内容>>",
+      "purpose": "",
+      "scheduling_url": "",
+      "subject": "",
+      "extra": "",
+      "template": "",
+      "greeting_override": [],
+      "note": "",
+      "skip": false,
+      "members": [
+        {
+          "email": "k_aoyagi@tokumura.co.jp",
+          "name": "青柳 康平",
+          "title": "主任",
+          "department": "建設事業本部 営業部",
+          "exchanged_on": "2026-08-03"
+        },
+        {
+          "email": "s_endo@tokumura.co.jp",
+          "name": "遠藤 駿",
+          "title": "",
+          "department": "建設事業本部 営業部",
+          "exchanged_on": "2026-08-03"
+        }
+      ]
+    }
+  ]
+}

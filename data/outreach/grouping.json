@@ -1,0 +1,25 @@
+{
+  "_comment": "会社名の表記ゆれ統一と、手動でまとめたい/分けたいグループの定義。cards_import.py と campaign_init.py が参照する。",
+  "company_aliases": {
+    "CCC": "カルチュア・コンビニエンス・クラブ株式会社"
+  },
+  "manual_groups": [
+    {
+      "id": "union-tec",
+      "label": "UNION TEC CO., LTD. / Beauty&Medical Clinic Div.",
+      "emails": [
+        "s.ishigami@union-tec.jp",
+        "m.kobayashi@union-tec.jp",
+        "j.hahn@union-tec.jp"
+      ]
+    },
+    {
+      "id": "ccc-kadomado",
+      "label": "カルチュア・コンビニエンス・クラブ株式会社 / 門真市立文化創造図書館KADOMADO",
+      "emails": [
+        "akito.kumiya@ccc.co.jp",
+        "risa.wada@ccc.co.jp"
+      ]
+    }
+  ]
+}
