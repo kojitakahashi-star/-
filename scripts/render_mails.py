@@ -97,6 +97,10 @@ def render_group(group: dict, campaign: dict) -> dict:
     sender = defaults.get("sender", {})
     event = campaign.get("events", {}).get(group.get("event", ""), {})
 
+    def resolve(key: str):
+        """グループ > イベント > 既定 の順で値を採用する。"""
+        return group.get(key) or event.get(key) or defaults.get(key, "")
+
     values = {
         "company": group.get("company", ""),
         "department": group.get("department", ""),
@@ -104,13 +108,11 @@ def render_group(group: dict, campaign: dict) -> dict:
         "event_date": event.get("date", ""),
         "event_date_jp": jp_date(event.get("date", "")),
         "event_place": event.get("place", ""),
-        "purpose": group.get("purpose") or defaults.get("purpose", ""),
-        # 日程調整リンクは グループ > イベント > 既定 の順で採用する
-        "scheduling_url": scheduling_block(
-            group.get("scheduling_url")
-            or event.get("scheduling_url")
-            or defaults.get("scheduling_url", "")
-        ),
+        "purpose": resolve("purpose"),
+        "meeting_duration": resolve("meeting_duration"),
+        "meeting_style": resolve("meeting_style"),
+        "impact_report_url": resolve("impact_report_url"),
+        "scheduling_url": scheduling_block(resolve("scheduling_url")),
         "talked_about": group.get("talked_about", ""),
     }
     # defaults.sender の各項目は {sender_xxx}、defaults の文字列項目は {xxx} で使える
@@ -130,9 +132,9 @@ def render_group(group: dict, campaign: dict) -> dict:
     extra = (group.get("extra") or "").strip()
     values["extra"] = f"\n{fill(extra, values)}\n" if extra else ""
 
-    template_path = REPO_ROOT / (group.get("template") or defaults.get("template"))
+    template_path = REPO_ROOT / resolve("template")
     body = collapse_blank_lines(fill(template_path.read_text(encoding="utf-8"), values))
-    subject = fill(group.get("subject") or defaults.get("subject", ""), values)
+    subject = fill(resolve("subject"), values)
 
     todos = sorted(
         {

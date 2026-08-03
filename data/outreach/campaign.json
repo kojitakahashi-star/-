@@ -39,7 +39,8 @@
     ],
     "template": "templates/apo_mail_short.txt",
     "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12",
-    "meeting_duration": "30分～1時間"
+    "meeting_duration": "30分～1時間",
+    "meeting_style": "オンラインでも、ご訪問でも構いません。"
   },
   "events": {
     "ev-fabcafe": {
@@ -50,7 +51,8 @@
         "2026-07-29"
       ],
       "scheduling_url": "",
-      "note": "正式名称が決まっていれば name を差し替える(件名・本文にそのまま入る)"
+      "note": "正式名称が決まっていれば name を差し替える(件名・本文にそのまま入る)",
+      "meeting_style": "弊社は東京を拠点としており、ご訪問がかないにくいため、まずはオンラインでいかがでしょうか。"
     },
     "ev-designers-edge": {
       "name": "デザイナーズエッジ",

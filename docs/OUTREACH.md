@@ -93,10 +93,13 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | 項目 | 説明 |
 | --- | --- |
 | `event` | `events` のキー。イベントごとに文面の入口が変わる |
+| 共通項目の上書き | `purpose` `scheduling_url` `meeting_duration` `meeting_style` `impact_report_url` `subject` `template` は **グループ > イベント > `defaults`** の順で解決される。イベント単位で変えたいときは `events.<id>` に同じキーを書く |
 | `to` / `cc` | 同じ会社・部署の複数名を1通にまとめる際の振り分け。既定では役職が上の人が `to` |
 | `talked_about` | **当日話した内容**(担当者ごとに変える主役の部分)。改行可 |
 | `purpose` | 提案内容。空なら `defaults.purpose` |
-| `scheduling_url` | 日程調整リンク。空なら `events.<id>.scheduling_url` → `defaults.scheduling_url` の順で採用 |
+| `scheduling_url` | 日程調整リンク。文字列 / リスト / `{"label","url"}` のリストが使える |
+| `meeting_duration` | 所要時間の表記（既定「30分～1時間」） |
+| `meeting_style` | 面談形式の一文（東京圏は訪問可、大阪はオンライン提案など） |
 | `subject` | 件名。空なら `defaults.subject` |
 | `extra` | 追記(添付の案内、紹介者の名前など) |
 | `template` | この宛先だけ別テンプレートを使う場合に指定 |
@@ -108,7 +111,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 
 `{header}` `{company}` `{department}`
 `{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
-`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{extra}` `{signature}`
+`{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{meeting_style}` `{extra}` `{signature}`
 
 - `{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
 - `defaults.sender` の項目はすべて `{sender_<キー>}` で使えます（`{sender_company}` `{sender_name}` `{sender_short_name}` `{sender_email}` `{sender_mobile}` `{sender_tel}` `{sender_address}` `{sender_url}` など）。

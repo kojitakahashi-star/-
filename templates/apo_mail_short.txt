@@ -11,7 +11,7 @@
 {impact_report_url}
 
 もしよろしければ、{meeting_duration}ほど情報交換のお時間をいただけないでしょうか。
-オンラインでも、ご訪問でも構いません。
+{meeting_style}
 下記より、ご都合のよい日時をお選びいただけますと幸いです。
 {scheduling_url}
 {extra}
