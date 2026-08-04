@@ -111,6 +111,7 @@ def render_group(group: dict, campaign: dict) -> dict:
         "purpose": resolve("purpose"),
         "meeting_duration": resolve("meeting_duration"),
         "meeting_style": resolve("meeting_style"),
+        "exchange_word": resolve("exchange_word"),
         "scheduling_lead": resolve("scheduling_lead"),
         "impact_report_url": resolve("impact_report_url"),
         "scheduling_url": scheduling_block(resolve("scheduling_url")),

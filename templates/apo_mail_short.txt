@@ -10,7 +10,7 @@
 弊社の取り組みにつきましては、下記のインパクトレポートよりご覧いただけます。
 {impact_report_url}
 
-もしよろしければ、{meeting_duration}ほど情報交換のお時間をいただけないでしょうか。
+もしよろしければ、{meeting_duration}ほど{exchange_word}のお時間をいただけないでしょうか。
 {meeting_style}
 {scheduling_lead}
 {scheduling_url}
