@@ -47,6 +47,8 @@ EDITABLE_FIELDS = (
     "note",
     "skip",
     "gmail_draft_id",
+    "status",
+    "sent_on",
 )
 
 DEFAULTS = {
@@ -82,16 +84,16 @@ DEFAULTS = {
         "https://shin-mirai.co.jp/",
     ],
     "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12",
-    "subject": "【{event_name}】ご挨拶のお礼と{exchange_word}のお願い({sender_company})",
+    "subject": "【{event_date_slash} {event_name}】お礼と{exchange_word}のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
     "meeting_duration": "30分～1時間",
     "exchange_word": "情報交換",
     "meeting_style": "オンラインでも、ご訪問でも構いません。",
-    "scheduling_lead": "下記のいずれのURLからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
+    "scheduling_lead": "日程調整のリンクを2つご用意しております。下記のリンク1・リンク2のどちらからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
     # 日程調整リンク(文字列 / リスト / {"label","url"} のリストが使える)
     "scheduling_url": [
-        "https://calendar.app.google/uMg6sUAPWo4Jidts6",
-        "https://calendar.app.google/4ingyZZWjcVKX6Pa6",
+        {"label": "リンク1", "url": "https://calendar.app.google/uMg6sUAPWo4Jidts6"},
+        {"label": "リンク2", "url": "https://calendar.app.google/4ingyZZWjcVKX6Pa6"},
     ],
     "template": "templates/apo_mail_short.txt",
     # 全通に必ず入れる社内cc(宛名ブロックには出さない)

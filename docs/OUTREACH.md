@@ -109,12 +109,13 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | `greeting_override` | 宛名ブロックを完全に手書きしたいとき(行の配列) |
 | `skip` | `true` で対象外にする |
 | `gmail_draft_id` | Gmail下書きを作成済みの場合のID(二重作成を防ぐ・更新に使う) |
+| `status` / `sent_on` | `sent` を記録しておくと送信済みが分かる(送信後に下書きIDは無効になる) |
 | `members` | 参考情報(自動生成。氏名・役職・名刺交換日) |
 
 ### テンプレートで使えるプレースホルダ
 
 `{header}` `{company}` `{department}`
-`{event_name}` `{event_date}` `{event_date_jp}` `{event_place}`
+`{event_name}` `{event_date}` `{event_date_jp}`(7月31日) `{event_date_slash}`(7／31) `{event_place}`
 `{purpose}` `{talked_about}` `{scheduling_url}` `{impact_report_url}` `{meeting_duration}` `{meeting_style}` `{exchange_word}` `{scheduling_lead}` `{extra}` `{signature}`
 
 - `{header}` は「会社名 / 部署 / to の氏名 様 / (CC: cc の氏名 様)」を自動で組み立てます。
@@ -136,9 +137,11 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | イベントID | 名称 | 名刺交換日 | 対象グループ数 |
 | --- | --- | --- | --- |
 | `ev-fabcafe` | FabCafe | 2026-07-29（大阪の企業） | 4 |
-| `ev-designers-edge` | デザイナーズエッジ | 2026-08-03（東京の企業） | 8 |
+| `ev-designers-edge` | デザイナーズエッジ | 開催日 2026-07-31 / 名刺交換日 2026-08-03（東京の企業） | 8 |
 
 正式名称（例: 「DESIGNERS EDGE 2026」）が決まっている場合は `events.<id>.name` を書き換えるだけで、件名・本文の両方に反映されます。
+
+`date` は**イベント開催日**、`card_dates` は**Eightの名刺交換日**です。両者がずれる場合（デザイナーズエッジは開催7/31・登録8/3）は別々に持たせます。
 
 ## チャットで選択式に操作する
 

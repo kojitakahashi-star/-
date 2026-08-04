@@ -31,17 +31,23 @@
       "FAX：03-6453-9275",
       "https://shin-mirai.co.jp/"
     ],
-    "subject": "【{event_name}】ご挨拶のお礼と{exchange_word}のお願い({sender_company})",
+    "subject": "【{event_date_slash} {event_name}】お礼と{exchange_word}のお願い({sender_company})",
     "purpose": "弊社で扱っている木材や納入事例",
     "scheduling_url": [
-      "https://calendar.app.google/uMg6sUAPWo4Jidts6",
-      "https://calendar.app.google/4ingyZZWjcVKX6Pa6"
+      {
+        "label": "リンク1",
+        "url": "https://calendar.app.google/uMg6sUAPWo4Jidts6"
+      },
+      {
+        "label": "リンク2",
+        "url": "https://calendar.app.google/4ingyZZWjcVKX6Pa6"
+      }
     ],
     "template": "templates/apo_mail_short.txt",
     "impact_report_url": "https://speakerdeck.com/shinmirai/zhu-shi-hui-she-sen-wei-lai-inpakutorepoto2025-dot-12",
     "meeting_duration": "30分～1時間",
     "meeting_style": "オンラインでも、ご訪問でも構いません。",
-    "scheduling_lead": "下記のいずれのURLからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
+    "scheduling_lead": "日程調整のリンクを2つご用意しております。下記のリンク1・リンク2のどちらからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
     "exchange_word": "情報交換",
     "cc_always": [
       "marketing@shin-mirai.co.jp"
@@ -61,13 +67,13 @@
     },
     "ev-designers-edge": {
       "name": "デザイナーズエッジ",
-      "date": "2026-08-03",
+      "date": "2026-07-31",
       "place": "",
       "card_dates": [
         "2026-08-03"
       ],
       "scheduling_url": "",
-      "note": "正式名称が決まっていれば name を差し替える(件名・本文にそのまま入る)"
+      "note": "開催日は7/31。名刺交換日(Eightの登録日)は8/3のため card_dates は 2026-08-03 のまま。"
     }
   },
   "groups": [
@@ -98,7 +104,9 @@
           "department": "",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "draft",
+      "gmail_draft_id": "r-8970340140590446154"
     },
     {
       "id": "degins",
@@ -127,7 +135,9 @@
           "department": "建築デザインDiv. Degins Digital Design Div.",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "draft",
+      "gmail_draft_id": "r-550543364756937891"
     },
     {
       "id": "tokyo",
@@ -156,7 +166,9 @@
           "department": "",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "draft",
+      "gmail_draft_id": "r8242901097474512900"
     },
     {
       "id": "union-tec",
@@ -177,7 +189,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "3名ともtoで1通。お礼と『御三方の取り組みを知りたい』という主旨に絞った内容。",
+      "note": "3名ともtoで1通。お礼と『御三方の取り組みを知りたい』という主旨に絞った内容。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -201,7 +213,9 @@
           "department": "Beauty&Medical Clinic Div. Beauty&Medical Dept.1",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "ccc-kadomado",
@@ -222,7 +236,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "組谷館長をto、和田様(広報/イベント)をccにして1通。公開情報(CCCプレスリリース・kadomado.jp)より、2026年5月13日開館、図書館+文化会館+カフェ+こどもの学びの場の複合施設。",
+      "note": "組谷館長をto、和田様(広報/イベント)をccにして1通。公開情報(CCCプレスリリース・kadomado.jp)より、2026年5月13日開館、図書館+文化会館+カフェ+こどもの学びの場の複合施設。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -240,7 +254,8 @@
           "exchanged_on": "2026-07-29"
         }
       ],
-      "gmail_draft_id": "r-4740894215537818075"
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "kujira",
@@ -261,7 +276,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "髙谷様・櫻井様・北川様の3名を宛先(to)にまとめて1通。公開情報(kujira.ltd・全宅連・SEKAI HOTEL布施の記事)より。SEKAI HOTELは関連会社のため運営主体は断定していない。",
+      "note": "髙谷様・櫻井様・北川様の3名を宛先(to)にまとめて1通。公開情報(kujira.ltd・全宅連・SEKAI HOTEL布施の記事)より。SEKAI HOTELは関連会社のため運営主体は断定していない。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -286,7 +301,8 @@
           "exchanged_on": "2026-07-29"
         }
       ],
-      "gmail_draft_id": "r-2750849979683764560"
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "alphatechno",
@@ -306,7 +322,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "2名(田中様・勝村様)ともtoで1通。木材利用についての情報交換を主旨とした内容。",
+      "note": "2名(田中様・勝村様)ともtoで1通。木材利用についての情報交換を主旨とした内容。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -323,7 +339,9 @@
           "department": "首都圏営業ユニット",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "ria",
@@ -342,7 +360,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "イベント後に調べた内容として記述(公開情報:全国約300件の市街地再開発実績、再開発ビル再生)。木材利用の公表事例は未確認のため言及していない。",
+      "note": "イベント後に調べた内容として記述(公開情報:全国約300件の市街地再開発実績、再開発ビル再生)。木材利用の公表事例は未確認のため言及していない。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -353,7 +371,8 @@
           "exchanged_on": "2026-07-29"
         }
       ],
-      "gmail_draft_id": "r5926095113835345988"
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "socialinterior",
@@ -374,7 +393,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "新妻様をto、後藤様をccにして1通。特注・造作での協業可能性を前面に出した内容。",
+      "note": "新妻様をto、後藤様をccにして1通。特注・造作での協業可能性を前面に出した内容。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -391,7 +410,9 @@
           "department": "プロジェクトマネジメント部",
           "exchanged_on": "2026-08-03"
         }
-      ]
+      ],
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "designspirits",
@@ -410,7 +431,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "インパクトレポートを見ていただいた上で意見交換を打診する簡潔な内容。",
+      "note": "インパクトレポートを見ていただいた上で意見交換を打診する簡潔な内容。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -421,7 +442,9 @@
           "exchanged_on": "2026-08-03"
         }
       ],
-      "exchange_word": "意見交換"
+      "exchange_word": "意見交換",
+      "status": "sent",
+      "sent_on": "2026-08-04"
     },
     {
       "id": "tokumura",
@@ -442,7 +465,7 @@
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "インパクトレポートを見ていただいた上で意見交換を打診する簡潔な内容。公開情報が乏しいため会社の取り組みへの言及は入れていない。",
+      "note": "インパクトレポートを見ていただいた上で意見交換を打診する簡潔な内容。公開情報が乏しいため会社の取り組みへの言及は入れていない。 / 送信済み(送信時に本文は手直しされている)",
       "skip": false,
       "members": [
         {
@@ -460,7 +483,9 @@
           "exchanged_on": "2026-08-03"
         }
       ],
-      "exchange_word": "意見交換"
+      "exchange_word": "意見交換",
+      "status": "sent",
+      "sent_on": "2026-08-04"
     }
   ]
 }

@@ -36,6 +36,14 @@ def fill(text: str, values: dict[str, str]) -> str:
     return PLACEHOLDER.sub(lambda m: values.get(m.group(1), m.group(0)), text or "")
 
 
+def slash_date(date: str) -> str:
+    """件名用の日付表記(例: 2026-07-31 -> 7／31)。"""
+    match = re.match(r"(\d{4})-(\d{2})-(\d{2})", date or "")
+    if not match:
+        return date or ""
+    return f"{int(match.group(2))}／{int(match.group(3))}"
+
+
 def jp_date(date: str) -> str:
     match = re.match(r"(\d{4})-(\d{2})-(\d{2})", date or "")
     if not match:
@@ -107,6 +115,7 @@ def render_group(group: dict, campaign: dict) -> dict:
         "event_name": event.get("name", ""),
         "event_date": event.get("date", ""),
         "event_date_jp": jp_date(event.get("date", "")),
+        "event_date_slash": slash_date(event.get("date", "")),
         "event_place": event.get("place", ""),
         "purpose": resolve("purpose"),
         "meeting_duration": resolve("meeting_duration"),
