@@ -18,9 +18,11 @@
 ```
 db/schema.sql              テーブル定義
 db/companies.db            SQLiteデータベース本体
-data/researched/*.json      企業ごとのリサーチ結果(JSON)
+data/researched/*.json      企業(木材サプライヤー)ごとのリサーチ結果(JSON)
+data/prospects/*.json       アポ打診先(発注・設計側)ごとのリサーチ結果(JSON)
 scripts/init_db.py          DB初期化
 scripts/add_company.py      リサーチ結果JSONをDBに登録(UPSERT)
+scripts/add_prospect.py     アポ打診先JSONをDBに登録(UPSERT)
 scripts/query_company.py    DBの内容を一覧・詳細表示
 ```
 
@@ -65,6 +67,50 @@ python3 scripts/add_company.py data/researched/<会社名>.json
 python3 scripts/query_company.py                  # 一覧表示
 python3 scripts/query_company.py "<会社名>"        # 詳細表示
 ```
+
+## アポ打診先(prospects)
+
+木材の需要側(設計事務所・内装会社・デベロッパー)を、サプライヤーとは別テーブルで管理する。
+`prospects` テーブルには企業情報に加えて「木材との接点」(`wood_touchpoint`)と
+「打診メールの切り口」(`mail_angle`)を保持し、担当者は `prospect_contacts` テーブルに紐づける。
+
+`data/prospects/<会社名>.json` を以下の形式で作成する。
+
+```json
+{
+  "company_name": "会社名",
+  "headquarters_location": "本社所在地",
+  "num_locations": 14,
+  "locations_detail": "拠点の内訳",
+  "industry": "業種",
+  "business_description": "事業内容",
+  "wood_touchpoint": "木材との接点",
+  "mail_angle": "打診メールの切り口",
+  "features": "特徴",
+  "strengths": "強み",
+  "notes": "特記事項(社名変更・統合・要確認事項等)",
+  "source_urls": "参照元URL(改行区切り)",
+  "researched_at": "YYYY-MM-DD",
+  "contacts": [
+    { "contact_name": "担当者名", "email": "メールアドレス", "department": "部署", "title": "役職" }
+  ]
+}
+```
+
+```bash
+python3 scripts/add_prospect.py data/prospects/<会社名>.json
+```
+
+### 登録済みアポ打診先
+
+- 株式会社日建設計(東京都千代田区／担当2名)
+- 株式会社三菱地所設計(東京都千代田区／担当2名)
+- 株式会社船場(東京都港区／担当2名)
+- 株式会社スペース(東京都中央区／担当1名)
+- 髙島屋スペースクリエイツ株式会社(東京都中央区／担当1名)
+- 三井不動産レジデンシャル株式会社(東京都中央区／担当1名)
+- 株式会社ノムラメディアス(東京都港区／担当1名)
+- 株式会社パルコスペースシステムズ(2026年3月に株式会社J.フロントプライムスペースへ統合／担当1名)
 
 ## 登録済み企業
 
