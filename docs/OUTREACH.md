@@ -106,6 +106,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | `template` | この宛先だけ別テンプレートを使う場合に指定 |
 | `greeting_override` | 宛名ブロックを完全に手書きしたいとき(行の配列) |
 | `skip` | `true` で対象外にする |
+| `gmail_draft_id` | Gmail下書きを作成済みの場合のID(二重作成を防ぐ・更新に使う) |
 | `members` | 参考情報(自動生成。氏名・役職・名刺交換日) |
 
 ### テンプレートで使えるプレースホルダ

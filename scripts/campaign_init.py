@@ -45,6 +45,7 @@ EDITABLE_FIELDS = (
     "greeting_override",
     "note",
     "skip",
+    "gmail_draft_id",
 )
 
 DEFAULTS = {

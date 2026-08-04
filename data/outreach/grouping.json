@@ -34,6 +34,18 @@
       ]
     },
     {
+      "id": "alphatechno",
+      "label": "株式会社アルファーテクノ / 首都圏営業ユニット",
+      "emails": [
+        "tanaka-k@alphatechno.jp",
+        "s.katsumura@alphatechno.jp"
+      ],
+      "to": [
+        "tanaka-k@alphatechno.jp",
+        "s.katsumura@alphatechno.jp"
+      ]
+    },
+    {
       "id": "socialinterior",
       "label": "株式会社ソーシャルインテリア",
       "emails": [

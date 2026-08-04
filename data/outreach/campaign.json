@@ -235,7 +235,8 @@
           "department": "ソーシャルデザイン本部 門真市立文化創造図書館KADOMADO 広報/イベント",
           "exchanged_on": "2026-07-29"
         }
-      ]
+      ],
+      "gmail_draft_id": "r-4740894215537818075"
     },
     {
       "id": "kujira",
@@ -280,7 +281,8 @@
           "department": "",
           "exchanged_on": "2026-07-29"
         }
-      ]
+      ],
+      "gmail_draft_id": "r-2750849979683764560"
     },
     {
       "id": "alphatechno",
@@ -289,11 +291,10 @@
       "department": "首都圏営業ユニット",
       "event": "ev-designers-edge",
       "to": [
-        "tanaka-k@alphatechno.jp"
-      ],
-      "cc": [
+        "tanaka-k@alphatechno.jp",
         "s.katsumura@alphatechno.jp"
       ],
+      "cc": [],
       "talked_about": "イベントの後にあらためて御社に興味を持ち、拝見いたしました。\nオフィスの移転からレイアウト・内装工事、OA機器やオフィス家具までをワンストップで手がけられ、年間900件を超える施工実績をお持ちであることを知り、大変興味深く感じております。\nオフィスづくりにおける素材の選び方についても、ぜひお話を伺えますと幸いです。",
       "purpose": "",
       "scheduling_url": "",
@@ -347,7 +348,8 @@
           "department": "計画二部",
           "exchanged_on": "2026-07-29"
         }
-      ]
+      ],
+      "gmail_draft_id": "r5926095113835345988"
     },
     {
       "id": "socialinterior",
