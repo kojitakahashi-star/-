@@ -7,6 +7,7 @@
 > - きっかけ無しの新規打診（会社名・氏名・メールだけで作成）: [docs/COLD_OUTREACH.md](docs/COLD_OUTREACH.md)
 >
 > どちらも Claude に「アポメール作って」と伝えれば `apo-mail` スキルが手順どおり進めます。
+> 新しいチャットで実行するときに貼るプロンプト: [docs/PROMPT_APO_MAIL.md](docs/PROMPT_APO_MAIL.md)
 
 ## 保管している項目
 
