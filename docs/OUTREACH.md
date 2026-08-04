@@ -95,6 +95,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | `event` | `events` のキー。イベントごとに文面の入口が変わる |
 | 共通項目の上書き | `purpose` `scheduling_url` `meeting_duration` `meeting_style` `impact_report_url` `subject` `template` は **グループ > イベント > `defaults`** の順で解決される。イベント単位で変えたいときは `events.<id>` に同じキーを書く |
 | `to` / `cc` | 同じ会社・部署の複数名を1通にまとめる際の振り分け。既定では役職が上の人が `to` |
+| （社内cc） | `defaults.cc_always` に書いたアドレスは全通のccに自動で入る（宛名ブロックには出さない）。既定は `marketing@shin-mirai.co.jp` |
 | `talked_about` | **当日話した内容**(担当者ごとに変える主役の部分)。改行可 |
 | `purpose` | 提案内容。空なら `defaults.purpose` |
 | `scheduling_url` | 日程調整リンク。文字列 / リスト / `{"label","url"}` のリストが使える |

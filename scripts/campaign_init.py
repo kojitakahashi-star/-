@@ -94,6 +94,8 @@ DEFAULTS = {
         "https://calendar.app.google/4ingyZZWjcVKX6Pa6",
     ],
     "template": "templates/apo_mail_short.txt",
+    # 全通に必ず入れる社内cc(宛名ブロックには出さない)
+    "cc_always": ["marketing@shin-mirai.co.jp"],
 }
 
 

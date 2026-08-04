@@ -147,12 +147,18 @@ def render_group(group: dict, campaign: dict) -> dict:
     )
     unresolved = sorted(set(PLACEHOLDER.findall(body)) | set(PLACEHOLDER.findall(subject)))
 
+    # defaults.cc_always は全通に必ず入れる社内cc(宛名ブロックには出さない)
+    always_cc = [
+        e for e in defaults.get("cc_always", []) if e not in group.get("to", [])
+    ]
+    cc = list(dict.fromkeys(list(group.get("cc", [])) + always_cc))
+
     return {
         "id": group["id"],
         "label": group.get("label", ""),
         "event": group.get("event", ""),
         "to": group.get("to", []),
-        "cc": group.get("cc", []),
+        "cc": cc,
         "subject": subject,
         "body": body,
         "ready": not todos and not unresolved,

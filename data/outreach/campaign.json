@@ -42,7 +42,10 @@
     "meeting_duration": "30分～1時間",
     "meeting_style": "オンラインでも、ご訪問でも構いません。",
     "scheduling_lead": "下記のいずれのURLからでもご予約いただけますので、ご都合のよい日時をお選びいただけますと幸いです。",
-    "exchange_word": "情報交換"
+    "exchange_word": "情報交換",
+    "cc_always": [
+      "marketing@shin-mirai.co.jp"
+    ]
   },
   "events": {
     "ev-fabcafe": {
