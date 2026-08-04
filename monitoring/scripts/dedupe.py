@@ -85,7 +85,14 @@ def main():
         help="前回の積み残しを合流させない（通常は指定しない）",
     )
     ap.add_argument("--out", help="出力先（既定: <findings>.new.json）")
+    # 旧仕様では dedupe が state を更新していた。古い手順書やRoutineのプロンプトが
+    # --commit を付けて呼んでも落ちないよう、受け取るだけの無効オプションとして残す。
+    ap.add_argument("--commit", action="store_true", help=argparse.SUPPRESS)
     args = ap.parse_args()
+
+    if args.commit:
+        print("注意: --commit は廃止されました（このオプションは無視されます）。")
+        print("      state の更新は投稿後に finalize.py で行ってください。")
 
     data = load_json(args.findings, {})
     run_date = data.get("run_date") or date.today().isoformat()

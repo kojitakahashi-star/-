@@ -5,8 +5,8 @@ claude.ai → Routines で以下を設定する。既存の
 
 - **名前**: 企業イベント動向モニタリング（2日に1回）
 - **スケジュール**: 2日に1回 / 日本時間 朝7時ごろ（UTC cron `55 21 */2 * *`）
-- **完了通知**: **プッシュ通知とメールを ON にする** ← 現状これが実質の通知手段
-- **コネクタ**: Slack を有効にする（投稿記録用。ただし本人名義なのでメンション通知は鳴らない）
+- **コネクタ**: **Slack を必ず有効にする** ← これが無いと投稿できない
+- **完了通知**: プッシュ通知とメールを ON にしておくと、Slackを見ていなくても結果に気付ける
 - **プロンプト**: 以下の `---` の間をそのままコピーする
 
 ---
@@ -38,8 +38,8 @@ python3 monitoring/scripts/preflight.py
 
 ## 投稿
 
-- まず `python3 monitoring/scripts/post_slack.py <file>.new.slack.json` を試す（SLACK_BOT_TOKEN / SLACK_WEBHOOK_URL があればアプリ名義で投稿でき、メンション通知が鳴る）。
-- それが使えなければ `slack_send_message` でチャンネル `C0BDAFB0X63` に投稿する。2通目以降は1通目の ts を thread_ts にしてスレッド返信する。**この経路は本人名義の投稿になりメンション通知が鳴らない**ため、本文の先頭に「:warning: _この投稿は本人名義のため通知が鳴りません_」を必ず足すこと。
+- **経路1（本命）**: `slack_send_message` でチャンネル `C0BDAFB0X63` に投稿する。2通目以降は1通目の ts を thread_ts にしてスレッド返信する。本文の `<@U063SJG0N0L>` メンションは消さずにそのまま送ること。警告文などを足す必要はない。
+- **経路2（任意）**: 経路1が使えなかったら `python3 monitoring/scripts/post_slack.py <file>.new.slack.json` を試す（SLACK_BOT_TOKEN / SLACK_WEBHOOK_URL が設定されている場合のみ有効）。
 
 ## 投稿後（飛ばさないこと）
 
@@ -47,28 +47,25 @@ python3 monitoring/scripts/preflight.py
 - 全部失敗: `python3 monitoring/scripts/finalize.py --failed <file>.new.json`（seen は触らず pending に積む。次回の実行で自動的に再通知される）。あわせてレポートを `monitoring/reports/YYYY-MM-DD.md` に保存する。
 - 成否にかかわらず `monitoring/state` 等をコミットして `git push -u origin claude/company-event-monitoring-system-ahte64` する。
 
-## 最終出力（プッシュ通知・メールに載るので必ず書く）
+## 最終出力
 
-この Routine は完了通知が高橋さんのスマホとメールに届きます。Slackのメンション通知は現状鳴らないため、**この最終出力が実質の通知本文**です。次を簡潔に書いてください。
+完了通知（プッシュ／メール）に載るので、次を簡潔に書いてください。
 
 1. 何社調べて、何社に動きがあったか
 2. 動きがあった企業名と、その動きの一言要約（優先度A/Bの企業を先に）
-3. Slackへの投稿が成功したかどうか、鳴らない経路で投稿した場合はその旨
+3. Slackへの投稿が成功したかどうか
 
 新しい動きが0件でも、メンションなしの1行サマリをSlackに投稿してください。
 プルリクエストは作成しないでください。
 
 ---
 
-## 補足: Slackのメンション通知を鳴らせるようにするには
+## 補足: あとからプッシュ通知も鳴らしたくなったら
 
-現状ブロックされている理由は2つ（どちらも検証済み）。
+経路1（MCPコネクタ）は高橋さん本人の名義で投稿するため、自分宛メンションは
+Slack の仕様でプッシュ通知が鳴らない（チャンネルは未読になる）。
 
-1. MCPコネクタは高橋さん本人の名義で投稿するため、自分宛メンションは Slack の仕様で鳴らない。
-2. 実行環境から `slack.com` / `hooks.slack.com` へ出られない（組織のegressポリシーで CONNECT が 403）。
-   そのためアプリ名義で投稿する bot token / Webhook が使えない。
-
-**解消手順**: 組織のegressポリシーで `hooks.slack.com` を許可 → Slack で Incoming Webhook を発行
-→ 実行環境の環境変数 `SLACK_WEBHOOK_URL` に設定。コードは実装・テスト済みなので、
-これだけでアプリ名義の投稿に切り替わり、メンション通知が鳴るようになる。
-`slack.com` も許可できるなら `SLACK_BOT_TOKEN` の方がスレッド返信も使えて望ましい。
+鳴らしたい場合は、組織のegressポリシーで `hooks.slack.com` を許可 →
+Slack で Incoming Webhook を発行 → 実行環境の環境変数 `SLACK_WEBHOOK_URL` に設定。
+これだけで経路2（アプリ名義）に切り替わり、メンション通知が鳴るようになる。
+現在は `slack.com` / `hooks.slack.com` への接続が egress ポリシーで 403 のため使えない。
