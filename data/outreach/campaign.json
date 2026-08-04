@@ -244,19 +244,19 @@
       "department": "",
       "event": "ev-fabcafe",
       "to": [
-        "yuki-takaya@kujira.ltd"
+        "yuki-takaya@kujira.ltd",
+        "ayano-sakurai@kujira.ltd",
+        "mari-kitagawa@sekaihotel.jp"
       ],
-      "cc": [
-        "ayano-sakurai@kujira.ltd"
-      ],
-      "talked_about": "イベントの後にあらためて御社に興味を持ち、拝見いたしました。\n不動産・設計デザイン・施工をワンストップで手がけられていること、空き家を再生して街全体をホテルと見立てる「まちごとホテル」に取り組まれていることを知り、大変興味深く感じております。\n髙谷様は布施を拠点にされているとのことですので、商店街や地域に根ざした場づくりについてもお話を伺えますと幸いです。",
+      "cc": [],
+      "talked_about": "イベントの後にあらためて御社に興味を持ち、拝見いたしました。\n不動産・設計デザイン・施工をワンストップで手がけられていること、空き家を再生して街全体をホテルと見立てる「まちごとホテル」に取り組まれていることを知り、大変興味深く感じております。\n商店街の空き家を客室に変え、その土地の日常（ORDINARY）そのものを旅の体験として届けられている考え方にも、大変共感いたしました。\n地域に根ざした場づくりや素材の選び方について、ぜひお話を伺えますと幸いです。",
       "purpose": "",
       "scheduling_url": "",
       "subject": "",
       "extra": "",
       "template": "",
       "greeting_override": [],
-      "note": "公開情報(kujira.ltd・全宅連・プレスリリース)より。不動産×設計×施工のワンストップ、空き家再生のまちごとホテル。SEKAI HOTELは関連会社のため運営主体は断定していない。",
+      "note": "髙谷様・櫻井様・北川様の3名を宛先(to)にまとめて1通。公開情報(kujira.ltd・全宅連・SEKAI HOTEL布施の記事)より。SEKAI HOTELは関連会社のため運営主体は断定していない。",
       "skip": false,
       "members": [
         {
@@ -267,39 +267,17 @@
           "exchanged_on": "2026-07-29"
         },
         {
-          "email": "ayano-sakurai@kujira.ltd",
-          "name": "櫻井 文乃",
-          "title": "デザイナー",
-          "department": "",
-          "exchanged_on": "2026-07-29"
-        }
-      ]
-    },
-    {
-      "id": "sekaihotel",
-      "label": "クジラ株式会社 / PR/ORDINARY",
-      "company": "クジラ株式会社",
-      "department": "PR/ORDINARY",
-      "event": "ev-fabcafe",
-      "to": [
-        "mari-kitagawa@sekaihotel.jp"
-      ],
-      "cc": [],
-      "talked_about": "イベントの後にあらためて御社に興味を持ち、拝見いたしました。\nまちごとホテル「SEKAI HOTEL」を通じて、商店街の空き家を客室に変え、その土地の日常（ORDINARY）そのものを旅の体験として届けられている取り組みを知り、大変興味深く感じております。\n地域の魅力をどのように見つけ、どう伝えていかれているのか、ぜひお話を伺えますと幸いです。",
-      "purpose": "",
-      "scheduling_url": "",
-      "subject": "",
-      "extra": "",
-      "template": "",
-      "greeting_override": [],
-      "note": "公開情報(SEKAI HOTEL布施の記事・各種取材)より。ORDINARY=その土地の日常を体験価値とする考え方。北川様の肩書 PR/ORDINARY コーディネーターに合わせた内容。",
-      "skip": false,
-      "members": [
-        {
           "email": "mari-kitagawa@sekaihotel.jp",
           "name": "北川 茉莉",
           "title": "コーディネーター",
           "department": "PR/ORDINARY",
+          "exchanged_on": "2026-07-29"
+        },
+        {
+          "email": "ayano-sakurai@kujira.ltd",
+          "name": "櫻井 文乃",
+          "title": "デザイナー",
+          "department": "",
           "exchanged_on": "2026-07-29"
         }
       ]

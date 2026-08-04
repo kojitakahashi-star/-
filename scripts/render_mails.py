@@ -193,6 +193,10 @@ def main() -> int:
     if not args.check:
         outdir = REPO_ROOT / args.outdir
         outdir.mkdir(parents=True, exist_ok=True)
+        if only is None and args.event is None:
+            # 全件出力時は、統合や削除で消えたグループの古いファイルを残さない
+            for stale in outdir.glob("*.txt"):
+                stale.unlink()
         for mail in rendered:
             header = (
                 f"To: {', '.join(mail['to'])}\n"

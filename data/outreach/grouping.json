@@ -20,6 +20,20 @@
       ]
     },
     {
+      "id": "kujira",
+      "label": "クジラ株式会社",
+      "emails": [
+        "yuki-takaya@kujira.ltd",
+        "ayano-sakurai@kujira.ltd",
+        "mari-kitagawa@sekaihotel.jp"
+      ],
+      "to": [
+        "yuki-takaya@kujira.ltd",
+        "ayano-sakurai@kujira.ltd",
+        "mari-kitagawa@sekaihotel.jp"
+      ]
+    },
+    {
       "id": "socialinterior",
       "label": "株式会社ソーシャルインテリア",
       "emails": [

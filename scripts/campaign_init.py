@@ -251,7 +251,9 @@ def main() -> int:
                 if field in old:
                     group[field] = old[field]
             known = {m["email"] for m in group["members"]}
-            group["to"] = [e for e in old.get("to", []) if e in known] or group["to"]
+            # grouping.json で to を明示しているグループは、そちらを優先する
+            if not (manual or {}).get("to"):
+                group["to"] = [e for e in old.get("to", []) if e in known] or group["to"]
             group["cc"] = [
                 e for e in old.get("cc", []) if e in known and e not in group["to"]
             ]
