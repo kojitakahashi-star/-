@@ -10,7 +10,11 @@
 担当者リスト(1行1名 / タブ・カンマ区切り)
       │  scripts/cold_import.py
       ▼
-data/outreach/cold_campaign.json   ★宛先ごとの「ひとこと」を書く
+data/outreach/cold_campaign.json
+      │  ① 送付先企業をリサーチ → data/prospects/<会社名>.json
+      │     scripts/add_prospect.py    → db/companies.db の prospects テーブル
+      │  ② scripts/prospect_brief.py --brief でブリーフを確認(ここで方向性を決める)
+      │  ③ 宛先ごとの「ひとこと」(talked_about)を書く
       │  scripts/render_mails.py --campaign data/outreach/cold_campaign.json
       ▼
 out/cold_mails/<id>.txt            確認用
@@ -49,7 +53,27 @@ python3 scripts/cold_import.py data/outreach/cold_targets.tsv --append   # 追�
 - 同じメールアドレスの相手は、既に書いた内容を保持します（二重送信の防止）
 - 送信者情報・署名・日程調整リンク・社内ccは `campaign.json` の `defaults` から引き継ぎます
 
-### 3. 宛先ごとの「ひとこと」を書く
+### 3. 送付先企業をリサーチして把握する
+
+メールを書く前に、送る相手の会社を調べてから文面を決めます。
+
+```bash
+python3 scripts/prospect_brief.py --missing   # まだ調べていない会社
+python3 scripts/prospect_brief.py --brief     # 調べた内容の一覧(ブリーフ)
+```
+
+「リサーチかけて」と伝えれば、Claude が公開情報を調べて `data/prospects/<会社名>.json` に保存し、
+`db/companies.db` の `prospects` テーブルに登録します。保管する内容は、
+
+- 業種 / 所在地 / 事業内容 / 手がける領域（店舗・オフィス・ホテル等）/ 特徴・強み
+- **木材との接点**（木質化・木造の実績。見つからなければ「公開情報では確認できず」）
+- **メールで使う切り口**
+- **注意（未確認事項）** と **参照元URL**
+
+そのうえでチャットに会社ごとの要約表を出すので、内容と切り口を確認してから下書きに進みます
+（仕入先を保管している `companies` テーブルとは別テーブルなので混ざりません）。
+
+### 4. 宛先ごとの「ひとこと」を書く
 
 `cold_campaign.json` の `talked_about` が本文2段落目です。既定は会社名を差し込んだ汎用文:
 
@@ -57,7 +81,7 @@ python3 scripts/cold_import.py data/outreach/cold_targets.tsv --append   # 追�
 
 「調べて書いて」と伝えれば、Claude が各社の公開情報を調べて1〜2文に書き換えます（確認できない実績は書きません）。
 
-### 4. 本文を生成する
+### 5. 本文を生成する
 
 ```bash
 python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
@@ -65,7 +89,7 @@ python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
 python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json --check   # 検証のみ
 ```
 
-### 5. 下書きを作る
+### 6. 下書きを作る
 
 「下書き作って」と伝えれば、`out/cold_mails.json` から Gmail の下書きを作成します（**送信はしません**）。
 作成後は各グループに `gmail_draft_id` と `status` が記録され、次回は同じ下書きを更新します。

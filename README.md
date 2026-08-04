@@ -22,12 +22,15 @@
 ## 構成
 
 ```
-db/schema.sql              テーブル定義
+db/schema.sql              テーブル定義(companies: 仕入先 / prospects: 送付先)
 db/companies.db            SQLiteデータベース本体
 data/researched/*.json      企業ごとのリサーチ結果(JSON)
 scripts/init_db.py          DB初期化
 scripts/add_company.py      リサーチ結果JSONをDBに登録(UPSERT)
 scripts/query_company.py    DBの内容を一覧・詳細表示
+scripts/add_prospect.py     送付先企業のリサーチ結果JSONをDBに登録(UPSERT)
+scripts/prospect_brief.py   送付先企業のリサーチ状況・ブリーフを表示
+data/prospects/*.json       送付先企業のリサーチ結果(JSON)
 ```
 
 ## 使い方

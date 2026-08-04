@@ -35,16 +35,49 @@ python3 scripts/cold_import.py data/outreach/cold_targets.tsv --append # 追記
 
 同じメールアドレスの相手は既存の記入内容を保持する（二重に作らない）。
 
-### 3. 会社ごとに「ひとこと」を書く
+### 3. 送付先企業をリサーチする（下書きの前に必ず通す）
 
-`cold_campaign.json` の各グループの `talked_about` が本文2段落目になる。既定は会社名を差し込んだ汎用文なので、**WebSearch で各社の公開情報を調べ、1〜2文に書き換える**。書き方のルール:
+まず未リサーチの会社を確認する。
 
-- 事実として確認できたことだけ書く。確認できなければ汎用文のままにする（憶測で書かない）
+```bash
+python3 scripts/prospect_brief.py --campaign data/outreach/cold_campaign.json          # 状況一覧
+python3 scripts/prospect_brief.py --campaign data/outreach/cold_campaign.json --missing # 未リサーチのみ
+```
+
+未リサーチの会社は **1社ずつ WebSearch / WebFetch で調べ**、`data/prospects/<会社名>.json` に保存して DB に登録する。
+
+```bash
+python3 scripts/add_prospect.py data/prospects/<会社名>.json
+```
+
+JSON の項目は `scripts/add_prospect.py` の docstring 参照（業種・事業内容・手がける領域・特徴・**木材との接点**・**メールの切り口**・**注意(未確認事項)**・参照元URL・調査日）。
+
+リサーチのルール:
+
+- 公式サイトが 403 で取れないことがある。その場合は検索結果・プレスリリース・業界メディア・Wikipedia から拾い、**出典を `source_urls` に必ず残す**
+- 木材・木質化の実績が見つからないときは `wood_relevance` に「公開情報では確認できず」と書く。**あることにしてはいけない**
+- 受賞・取引先・グループ関係など裏が取りきれないものは `caution` に書いておく
+- 同じ会社に複数名いる場合、リサーチは会社単位（1回）でよい
+
+### 4. ブリーフを出して確認を取る
+
+```bash
+python3 scripts/prospect_brief.py --campaign data/outreach/cold_campaign.json --brief
+```
+
+チャットに**会社ごとの要約表**（業種／事業内容／木材との接点／メールで使う切り口）を出し、
+「この理解と切り口で書きます」と伝えて**ユーザーの確認を待つ**。ここで方向性を直せるようにするのが目的。
+
+### 5. 会社ごとに「ひとこと」を書く
+
+`cold_campaign.json` の各グループの `talked_about` が本文2段落目になる。リサーチの `talking_points` をもとに1〜2文で書く。
+
+- 事実として確認できたことだけ書く。確認できなければ既定の汎用文のままにする（憶測で書かない）
 - 参照した情報と、断定を避けた箇所は同じグループの `note` に残す
 - 「お役に立てそう」まで踏み込むかは相手次第。協業を狙う相手には入れてよい
 - `{company}` `{to_name}` などのプレースホルダが使える
 
-### 4. 本文を生成して確認する
+### 6. 本文を生成して確認する
 
 ```bash
 python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
@@ -53,13 +86,13 @@ python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
 
 `要記入` が 0 件になるまで直す。`--check` で検証のみ実行できる。
 
-### 5. Gmail の下書きを作る
+### 7. Gmail の下書きを作る
 
 `out/cold_mails.json` の各要素（`to` / `cc` / `subject` / `body`）をそのまま `mcp__Gmail__create_draft` に渡す。本文は1文字も変えずに渡すこと（署名まで含まれている）。
 
 作成後、`cold_campaign.json` の各グループに `gmail_draft_id` と `status: "draft"` を記録する。すでに `gmail_draft_id` があるグループは `create_draft` ではなく `mcp__Gmail__update_draft` を使う。送信済みの相手は `status: "sent"` にして `gmail_draft_id` を削除する（送信後のIDは無効になり "Message not a draft" で失敗する）。
 
-### 6. 結果を報告してコミットする
+### 8. 結果を報告してコミットする
 
 作成した下書きを宛先・件名の表で示し、本文は代表1通を提示する。判断に迷った点（公開情報が乏しかった会社など）は明示する。最後に `git add -A && git commit && git push -u origin <作業ブランチ>`。
 
@@ -73,6 +106,7 @@ python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
 | 日程調整リンク | `defaults.scheduling_url`（`{"label","url"}` のリストで「リンク1/リンク2」表記） |
 | 署名・送信者 | `campaign.json` の `defaults.sender` / `defaults.signature` |
 | 社内cc | `defaults.cc_always`（既定 `marketing@shin-mirai.co.jp`。宛名ブロックには出さない） |
+| リサーチ結果の修正 | `data/prospects/<会社名>.json` を直して `add_prospect.py` で再登録（UPSERT） |
 | 同じ会社の複数名を1通に | `to` に複数入れる（宛名も自動で連名になる）。名刺フォロー側は `grouping.json` の `manual_groups` |
 
 いずれも **グループ > イベント > `defaults`** の順で解決される。
@@ -80,5 +114,6 @@ python3 scripts/render_mails.py --campaign data/outreach/cold_campaign.json \
 ## やらないこと
 
 - 送信・送信予約（下書きの作成・更新まで）
+- リサーチとブリーフ確認を飛ばして下書きを作ること（「すぐ作って」と明示された場合を除く）
 - 公開情報で確認できない実績・受賞・取引関係を本文に書くこと
 - 宛名の敬称や社名の省略（正式名称＋「様」を守る）
