@@ -129,6 +129,7 @@ python3 scripts/render_mails.py --check          # 記入漏れチェックの�
 | `templates/apo_mail_short.txt` | **既定**。お礼 → イベント後に調べた内容 → インパクトレポート → 情報交換の打診 → 日程調整リンク。短く端的 |
 | `templates/apo_mail.txt` | 情報交換型のやや丁寧・長め |
 | `templates/apo_mail_formal.txt` | 打ち合わせ依頼型（かっちりした文面） |
+| `templates/cold_mail.txt` | きっかけ無しの新規打診用（→ [docs/COLD_OUTREACH.md](COLD_OUTREACH.md)） |
 
 グループの `template` にパスを書けば、その宛先だけ別テンプレートで出せます。
 

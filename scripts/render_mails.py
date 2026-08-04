@@ -138,6 +138,15 @@ def render_group(group: dict, campaign: dict) -> dict:
         values["event_line"] = f"{values['event_date_jp']}の{values['event_name']}"
     else:
         values["event_line"] = values["event_name"] or values["event_date_jp"]
+    # 宛先(to)の1人目の氏名。件名で「【〇〇様】」のように使う
+    members = member_map(group)
+    first_to = members.get((group.get("to") or [""])[0], {})
+    values["to_name"] = first_to.get("name", "")
+    values["to_last_name"] = values["to_name"].split(" ")[0] if values["to_name"] else ""
+
+    # 本文の一言の中でも {company} などのプレースホルダを使えるようにする
+    values["talked_about"] = fill(values["talked_about"], values)
+
     values["signature"] = fill("\n".join(defaults.get("signature", [])), values)
     values["header"] = build_header(group)
     extra = (group.get("extra") or "").strip()

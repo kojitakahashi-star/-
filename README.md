@@ -2,8 +2,11 @@
 
 指定した企業をディープリサーチし、結果を SQLite データベース (`db/companies.db`) に保管する仕組みです。
 
-> イベントで名刺交換した方へのアポ打診メールを、イベント別・担当者別にカスタマイズして作る仕組みは
-> [docs/OUTREACH.md](docs/OUTREACH.md) を参照してください。
+> アポ打診メールの下書き作成の仕組み:
+> - 名刺交換した方へのフォロー（イベント別・担当者別）: [docs/OUTREACH.md](docs/OUTREACH.md)
+> - きっかけ無しの新規打診（会社名・氏名・メールだけで作成）: [docs/COLD_OUTREACH.md](docs/COLD_OUTREACH.md)
+>
+> どちらも Claude に「アポメール作って」と伝えれば `apo-mail` スキルが手順どおり進めます。
 
 ## 保管している項目
 
