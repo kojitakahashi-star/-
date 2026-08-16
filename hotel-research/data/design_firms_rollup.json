@@ -1,0 +1,371 @@
+[
+  {
+    "firm": "UDS",
+    "count": 4,
+    "hotels": [
+      "京都グランベルホテル",
+      "ホテル エディット 横濱",
+      "ホテル・アンドルームス大阪本町",
+      "all day place shibuya"
+    ],
+    "avg_score": 3.0,
+    "representative": "代表取締役社長 中原典人(情報源により時点差あり、要再確認)",
+    "hq": "東京都渋谷区代々木2-28-7",
+    "url": "https://uds-net.co.jp/",
+    "specialty": "企画・設計・運営一体のホテル開発・運営",
+    "wood_level": "weak",
+    "wood_note": "木材・国産材利用に関する具体的な公式記述は確認できず",
+    "priority": "B",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "橋本夕紀夫デザインスタジオ",
+    "count": 4,
+    "hotels": [
+      "軽井沢プリンスホテル イースト(リニューアル)",
+      "ハタゴイン静岡吉田インター",
+      "五島リトリート ray by 温故知新",
+      "バンヤンツリー・東山 京都"
+    ],
+    "avg_score": 2.8,
+    "representative": "創業者・橋本夕紀夫氏は2022年3月死去。現体制不明",
+    "hq": "東京都渋谷区",
+    "url": "不明",
+    "specialty": "飲食店・ホテル・商業施設のインテリアデザイン",
+    "wood_level": "weak",
+    "wood_note": "自然素材を重視するデザイン哲学はあるが木材・国産材利用の具体的記述は確認できず。創業者死去により現体制不明",
+    "priority": "B",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "竹中工務店",
+    "count": 3,
+    "hotels": [
+      "三井ガーデンホテル日本橋プレミア",
+      "ハイアット リージェンシー 瀬良垣アイランド 沖縄",
+      "ザ ロイヤルパークホテル アイコニック 名古屋"
+    ],
+    "avg_score": 3.7,
+    "representative": "代表取締役社長 丁野成人(2026年1月就任)",
+    "hq": "大阪府大阪市中央区本町4-1-13",
+    "url": "https://www.takenaka.co.jp/",
+    "specialty": "総合建設業。大規模木造・都市木造の技術開発に注力",
+    "wood_level": "strong",
+    "wood_note": "国産木材利用促進・林業活性化を方針化。農水省と建築物木材利用促進協定(2022)。日本橋木造オフィスで国産木材1,100㎥超使用。「森林グランドサイクル」構想",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "乃村工藝社",
+    "count": 3,
+    "hotels": [
+      "青山グランドホテル",
+      "三井ガーデンホテル六本木プレミア",
+      "大阪ステーションホテル オートグラフコレクション"
+    ],
+    "avg_score": 2.3,
+    "representative": "代表取締役社長執行役員 奥本清孝",
+    "hq": "東京都港区台場2-3-4",
+    "url": "https://www.nomurakougei.co.jp/",
+    "specialty": "博物館・商業施設・イベント空間等のディスプレイ・空間デザイン大手",
+    "wood_level": "strong",
+    "wood_note": "浜松城・浜松こども館プロジェクトで同社初のFSC®プロジェクト認証取得支援を担当。グループでサステナビリティ委員会設置",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "三菱地所設計",
+    "count": 2,
+    "hotels": [
+      "星のや東京",
+      "ザ ロイヤルパークホテル アイコニック 那覇"
+    ],
+    "avg_score": 4.0,
+    "representative": "代表取締役社長 谷澤淳一",
+    "hq": "東京都千代田区丸の内2-5-1",
+    "url": "https://www.mjd.co.jp/",
+    "specialty": "組織系建築設計事務所(三菱地所完全子会社)",
+    "wood_level": "strong",
+    "wood_note": "「ザ ロイヤルパーク キャンバス 札幌大通公園」(2021年、国内初の高層ハイブリッド木造ホテル)で設計・監理を担当。木材量約1060㎥のうち8割強が北海道産木材(トドマツ・カラマツ・タモ)。三菱地所グループとして木材トレーサビリティ確保を目標化",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "山翠舎",
+    "count": 2,
+    "hotels": [
+      "voco Osaka Central",
+      "nol hakone myojindai"
+    ],
+    "avg_score": 5.0,
+    "representative": "代表取締役社長 山上浩明(3代目)",
+    "hq": "長野県長野市",
+    "url": "https://www.sansui-sha.co.jp/",
+    "specialty": "解体古民家由来の古材・古木を活用した店舗設計・施工",
+    "wood_level": "strong",
+    "wood_note": "古木として国内で初めてFSC CoC森林認証の国際基準を取得。voco Osaka Central・nol hakone myojindai等ホテル案件で木工事・什器製作を実施",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "隈研吾建築都市設計事務所",
+    "count": 2,
+    "hotels": [
+      "バンヤンツリー・東山 京都",
+      "カペラ京都"
+    ],
+    "avg_score": 3.0,
+    "representative": "代表 隈研吾",
+    "hq": "東京都港区南青山2-24-8",
+    "url": "https://kkaa.co.jp/",
+    "specialty": "木材を多用する「和」基調の建築デザインで著名な大手アトリエ系事務所",
+    "wood_level": "strong",
+    "wood_note": "新国立競技場で全国47都道府県の木材を軒庇に方角別配置。Fufu Naraで吉野杉を多用、大和棟の伝統技法を採用",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "東環境・建築研究所",
+    "count": 2,
+    "hotels": [
+      "星のや竹富島",
+      "星のや東京"
+    ],
+    "avg_score": 4.0,
+    "representative": "代表 東利恵",
+    "hq": "不明",
+    "url": "https://www.azuma-architects.com/",
+    "specialty": "ホテル・旅館建築を専門とする設計事務所",
+    "wood_level": "moderate",
+    "wood_note": "星のや竹富島・星のや東京等で地域伝統素材(赤瓦・石灰岩等)への強いこだわりを確認。木材の産地・国産材可否は未確認",
+    "priority": "A",
+    "confidence": "一部確認(Phase1-4のみ、Phase5未調査)"
+  },
+  {
+    "firm": "SUPPOSE DESIGN OFFICE",
+    "count": 2,
+    "hotels": [
+      "hotel koe tokyo",
+      "hotel sou"
+    ],
+    "avg_score": 2.5,
+    "representative": "共同代表 谷尻誠・吉田愛",
+    "hq": "広島県広島市・東京都",
+    "url": "https://suppose.jp/",
+    "specialty": "住宅・商業空間・ランドスケープ・プロダクトまで幅広いデザイン",
+    "wood_level": "weak",
+    "wood_note": "木材・国産材利用に関する具体的な公式記述は確認できず",
+    "priority": "B",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "STRICKLAND",
+    "count": 2,
+    "hotels": [
+      "ハイアット セントリック 銀座 東京",
+      "ザ・リッツ・カールトン福岡"
+    ],
+    "avg_score": 2.5,
+    "representative": "創設者・デザインプロデューサー 赤尾洋平",
+    "hq": "東京都港区西麻布(法人登記は世田谷区との情報もあり)",
+    "url": "https://www.strickland.jp/",
+    "specialty": "国内外ラグジュアリーホテルのインテリアデザイン",
+    "wood_level": "weak",
+    "wood_note": "「その土地の素材にこだわる」デザイン哲学の言及はあるが木材・国産材の具体的記述は確認できず",
+    "priority": "B",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "久米設計",
+    "count": 2,
+    "hotels": [
+      "フォーシーズンズホテル京都",
+      "ザ・リッツ・カールトン福岡"
+    ],
+    "avg_score": 2.5,
+    "representative": "代表取締役社長 藤澤進",
+    "hq": "東京都江東区潮見2-1-22",
+    "url": "https://www.kumesekkei.co.jp/",
+    "specialty": "組織系建築設計事務所(ホテル・文化施設・大学施設等)",
+    "wood_level": "weak",
+    "wood_note": "創業者考案の「久米式耐震木構造」の歴史的実績はあるが、現代の国産材・地域材活用の具体実績は未確認",
+    "priority": "B",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "日建設計",
+    "count": 1,
+    "hotels": [
+      "ザ・リッツ・カールトン京都"
+    ],
+    "avg_score": 2.0,
+    "representative": "代表取締役社長 大松敦",
+    "hq": "東京都千代田区飯田橋2-18-3",
+    "url": "https://www.nikken.co.jp/",
+    "specialty": "組織系総合建築設計事務所",
+    "wood_level": "strong",
+    "wood_note": "都市木造「木材会館」(2009)、住友林業と超高層木造「W350計画」共同研究、選手村ビレッジプラザで仮設木材の産地自治体還元を実施",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "大成建設",
+    "count": 1,
+    "hotels": [
+      "五島リトリート ray by 温故知新"
+    ],
+    "avg_score": 4.0,
+    "representative": "代表取締役社長 相川善郎(2024年5月時点、最新交代は未確認)",
+    "hq": "東京都新宿区",
+    "url": "https://www.taisei.co.jp/",
+    "specialty": "総合建設業。de'-TAISEI DESIGNは宿泊施設設計に強み",
+    "wood_level": "strong",
+    "wood_note": "耐火木材技術「T-WOOD TAIKA」シリーズ開発(2024年国交大臣認定)。大型木造床組ユニット開発。CO2固定効果を訴求する木質化戦略",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "芦沢啓治建築設計事務所",
+    "count": 1,
+    "hotels": [
+      "TRUNK(HOTEL) YOYOGI PARK"
+    ],
+    "avg_score": 1.0,
+    "representative": "代表 芦沢啓治",
+    "hq": "東京都(詳細住所は情報源により差異あり)",
+    "url": "https://keijidesign.com/",
+    "specialty": "建築・インテリア・家具・照明・プロダクトを横断する「クラフト」重視デザイン",
+    "wood_level": "strong",
+    "wood_note": "カリモク家具と協業し奥多摩産針葉樹を使う家具「MORIWA」を開発(2025年度グッドデザイン賞)。2011年から「石巻工房」を通じ地域材活用・地域産業支援を継続",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "オークヴィレッジ",
+    "count": 1,
+    "hotels": [
+      "湖里庵"
+    ],
+    "avg_score": 5.0,
+    "representative": "代表取締役社長 上野英二",
+    "hq": "岐阜県高山市清見町牧ヶ洞846",
+    "url": "https://www.oakv.co.jp/",
+    "specialty": "国産材・無垢材100%にこだわる木工房・木造建築(伝統工法・天然塗料)",
+    "wood_level": "strong",
+    "wood_note": "創業以来国産無垢材にこだわり植林・育林活動にも従事。湖里庵(滋賀)で木造建築を担当",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "清水建設",
+    "count": 1,
+    "hotels": [
+      "シックスセンシズ京都"
+    ],
+    "avg_score": 2.0,
+    "representative": "取締役社長 新村達也",
+    "hq": "東京都中央区京橋2-16-1",
+    "url": "https://www.shimz.co.jp/",
+    "specialty": "総合建設業。木質建築技術「シミズ・ハイウッド」",
+    "wood_level": "strong",
+    "wood_note": "群馬県川場村「清水めぐりの森」で植林・育林による木材資源循環プロジェクト。多摩産材等の国産材活用を計画中の木造ハイブリッドオフィス事例あり",
+    "priority": "S",
+    "confidence": "確認済み"
+  },
+  {
+    "firm": "HOSOO architecture",
+    "count": 1,
+    "hotels": [
+      "HOSOO RESIDENCE"
+    ],
+    "avg_score": 4.0,
+    "representative": "代表 細尾直久",
+    "hq": "京都府京都市",
+    "url": "https://hosoo-architecture.com/",
+    "specialty": "西陣織の意匠を活かした「工芸建築」",
+    "wood_level": "moderate",
+    "wood_note": "HOSOO RESIDENCEで木造2階建てを実現。西陣織という地域産業・工芸への親和性は非常に高いが、木材そのものの産地・調達方針は未確認",
+    "priority": "A",
+    "confidence": "一部確認(Phase1-4のみ、Phase5未調査)"
+  },
+  {
+    "firm": "光井純アンドアソシエーツ",
+    "count": 1,
+    "hotels": [
+      "三井ガーデンホテル六本木プレミア"
+    ],
+    "avg_score": 5.0,
+    "representative": "代表取締役 光井純",
+    "hq": "東京都品川区西五反田5-2-4",
+    "url": "不明(要再確認)",
+    "specialty": "大規模複合施設・空港ターミナル・オフィスビル・マスタープラン設計",
+    "wood_level": "weak",
+    "wood_note": "木材・国産材利用に関する具体的記述は確認できず",
+    "priority": "C",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "DDAA",
+    "count": 1,
+    "hotels": [
+      "all day place shibuya"
+    ],
+    "avg_score": 4.0,
+    "representative": "代表・建築家 元木大輔",
+    "hq": "東京都目黒区",
+    "url": "https://dskmtg.com/",
+    "specialty": "建築・都市計画・ランドスケープ・インテリア・プロダクト",
+    "wood_level": "weak",
+    "wood_note": "既存木造建築の再生活用事例(sukima Osaka)はあるが国産材・地域材調達方針は確認できず",
+    "priority": "C",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "内田デザイン研究所",
+    "count": 1,
+    "hotels": [
+      "HOTEL IL PALAZZO(リニューアル)"
+    ],
+    "avg_score": 1.0,
+    "representative": "所長 長谷部匡(創業者・内田繁は2016年逝去)",
+    "hq": "東京都渋谷区",
+    "url": "https://www.uchida-design.jp/",
+    "specialty": "インテリアデザイン、建築、家具、プロダクトデザイン",
+    "wood_level": "weak",
+    "wood_note": "ホテル・イル・パラッツォ(福岡)等創業者・内田繁氏の代表作あり。国産材・地域材利用の具体的方針は確認できず",
+    "priority": "C",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "フジワラテッペイアーキテクツラボ",
+    "count": 1,
+    "hotels": [
+      "扇芳閣(ヒノヤマラボ)"
+    ],
+    "avg_score": 1.0,
+    "representative": "主宰・建築家 藤原徹平",
+    "hq": "東京都渋谷区神宮前2-6-14",
+    "url": "https://fujiwalabo.com/",
+    "specialty": "実験的建築活動(公共建築・文化施設等)",
+    "wood_level": "weak",
+    "wood_note": "扇芳閣(旅館改修)の実績あり。木材・国産材利用に関する具体的記述は確認できず",
+    "priority": "C",
+    "confidence": "一部確認"
+  },
+  {
+    "firm": "ケース・リアル",
+    "count": 1,
+    "hotels": [
+      "亀の井別荘(湯の岳庵・五番館・七番館)"
+    ],
+    "avg_score": 4.0,
+    "representative": "主宰 二俣公一",
+    "hq": "福岡県福岡市中央区",
+    "url": "https://www.casereal.com/",
+    "specialty": "空間・インテリアデザイン、リノベーション、家具・プロダクトデザイン",
+    "wood_level": "weak",
+    "wood_note": "城崎温泉「三木屋」・別府「亀の井別荘」等、木造旅館の改修実績はあるが木材調達方針の具体的記述は未確認",
+    "priority": "C",
+    "confidence": "一部確認"
+  }
+]
