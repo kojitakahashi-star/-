@@ -36,8 +36,12 @@ function createDraftOnEdit(e) {
     if (!companyName || !personName || !email) return;
 
     try {
-      // Geminiで会社名・担当者名をリサーチし、件名フレーズと本文中盤を生成させる
-      const researched = researchWithGemini(companyName, personName);
+      // 高橋のGmail内（To/From/Ccのいずれかでこのアドレスが関わるスレッド）を検索し、
+      // 過去のやり取り履歴があれば要約しておく
+      const gmailHistory = getGmailHistorySummary(email);
+
+      // Geminiで会社名・担当者名をリサーチし、Gmail履歴も踏まえて件名フレーズと本文中盤を生成させる
+      const researched = researchWithGemini(companyName, personName, gmailHistory);
 
       // ▼ 件名（「相談」という言葉を使わずに生成）
       const subject = `【${companyName}・${personName}様】${researched.subjectPhrase}　森未来/髙橋`;
@@ -90,14 +94,59 @@ ${researchedMiddleBody}
 }
 
 /**
- * Gemini APIに会社名・担当者名を渡し、Web検索を使ってリサーチさせたうえで
+ * スクリプトを承認したアカウント（高橋）自身のGmailの中から、
+ * To・From・Ccのいずれかに指定のメールアドレスが含まれるスレッドを検索する。
+ *
+ * 注意：これは「高橋のメールボックスに実際に届いている」やり取りのみが対象。
+ * 他メンバーが高橋や共有アドレス(marketing@shin-mirai.co.jpなど)をCcに入れていれば
+ * ここで拾えるが、誰もCcしていない他メンバー単独のやり取りは対象外。
+ */
+function getGmailHistorySummary(email) {
+  if (!email) return "";
+
+  try {
+    const query = `(from:${email} OR to:${email} OR cc:${email})`;
+    const threads = GmailApp.search(query, 0, 5);
+    if (!threads || threads.length === 0) return "";
+
+    const summaries = threads.map(thread => {
+      const messages = thread.getMessages();
+      const lastMessage = messages[messages.length - 1];
+      const date = Utilities.formatDate(lastMessage.getDate(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+      const from = lastMessage.getFrom();
+      const to = lastMessage.getTo();
+      const cc = lastMessage.getCc();
+      const subject = thread.getFirstMessageSubject();
+      const snippet = lastMessage.getPlainBody().replace(/\s+/g, " ").trim().slice(0, 200);
+
+      return `(${date}) From:${from} / To:${to}${cc ? " / Cc:" + cc : ""}\n件名:「${subject}」\n内容抜粋:「${snippet}」`;
+    });
+
+    return summaries.join("\n\n");
+
+  } catch (err) {
+    // Gmail検索に失敗しても下書き作成自体は継続する（履歴なし扱い）
+    return "";
+  }
+}
+
+/**
+ * Gemini APIに会社名・担当者名・Gmail履歴を渡し、Web検索を使ってリサーチさせたうえで
  * 件名フレーズと本文中盤を生成させる。
  */
-function researchWithGemini(companyName, personName) {
+function researchWithGemini(companyName, personName, gmailHistory) {
   const apiKey = PropertiesService.getScriptProperties().getProperty("GEMINI_API_KEY");
   if (!apiKey) {
     throw new Error("GEMINI_API_KEYが未設定です。スクリプトプロパティに設定してください。");
   }
+
+  const historySection = gmailHistory
+    ? `【高橋のGmail内に見つかった、この担当者(または同アドレス)との過去のやり取り履歴】
+${gmailHistory}
+
+上記の履歴がある場合は、その内容を踏まえて「以前はご来社いただきありがとうございました」のような、
+その人ならではの一言を本文中盤の冒頭に自然に加えること。履歴の内容を不自然に詳しく書きすぎないこと。`
+    : `過去のやり取り履歴は見つからなかった。初めての連絡として通常どおり作成すること。`;
 
   const prompt = `あなたは法人営業のメール文面作成アシスタントです。
 まずWeb検索を使って、以下の会社・担当者について公開情報をリサーチしてください。
@@ -105,7 +154,9 @@ function researchWithGemini(companyName, personName) {
 会社名：${companyName}
 担当者名：${personName}様
 
-リサーチ結果を踏まえて、貴社が手がける空間デザイン・内装・インテリアにおける木材活用について情報交換を打診する営業メールの一部を作成してください。
+${historySection}
+
+リサーチ結果と過去のやり取り履歴(あれば)を踏まえて、貴社が手がける空間デザイン・内装・インテリアにおける木材活用について情報交換を打診する営業メールの一部を作成してください。
 
 【必ず守ること】
 - 「相談」という言葉は件名にも本文にも使わないこと
@@ -116,6 +167,7 @@ function researchWithGemini(companyName, personName) {
 【出力する2つの要素】
 1. 件名に使う20〜30字程度のフレーズ(会社名・担当者名は含めない)
 2. 本文の中盤にあたる2〜3段落。以下を必ず含める。
+   - (過去のやり取り履歴がある場合のみ)それを踏まえた冒頭の一言
    - 貴社の事業内容や特徴に触れつつ、貴社が手がける空間デザイン・インテリアにおける木材活用について情報交換したい旨
    - 弊社(株式会社森未来)が、開発行為で発生する伐採樹木の引き取り・製材・乾燥・家具什器造作の納品まで手掛けていること、不燃仕上げや加工の実現方法、職人との協働による空間づくり、営業時の木材を使ったコンセプト作りの壁打ちから積算・見積もりの効率化・適切な商品選定支援、全国の地域材調達から加工・製作納品までの一貫対応を行っていること
    - ${personName}様のお取り組みや木材活用における課題を伺いながら、お役に立てる点があればと考えている旨
