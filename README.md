@@ -66,6 +66,10 @@ python3 scripts/query_company.py                  # 一覧表示
 python3 scripts/query_company.py "<会社名>"        # 詳細表示
 ```
 
+## 関連の仕組み
+
+- [`gmail-draft-system/`](./gmail-draft-system) — スプレッドシートのチェックボックス操作でGmail下書きを自動作成する仕組み(Google Apps Script)
+
 ## 登録済み企業
 
 - 越井木材工業株式会社(大阪府大阪市)
