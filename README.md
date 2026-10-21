@@ -93,3 +93,22 @@ python3 scripts/query_company.py "<会社名>"        # 詳細表示
 - 吉野中央木材株式会社(奈良県吉野町)
 - 株式会社森未来(東京都港区)
 - トマト工業株式会社(岐阜県関市)
+
+---
+
+# タスク優先度管理
+
+`tasks/tasks.json` にタスクを保存し、締切と重要度から優先度を算出して `TASKS.md` に一覧を出力します。
+
+- 区分: 営業 / 認証コンサル / その他
+- 作業種類: 資料作成 / 打合せ・訪問 / 連絡・メール / 調査・リサーチ / 見積・契約 / 事務処理 / その他
+- 緊急度(締切までの日数): ⚫期限超過 / 🔴至急(1日以内) / 🟠緊急(3日以内) / 🟡今週中(7日以内) / 🟢余裕あり / 🔵締切なし
+- 優先度: 緊急度×2 + 重要度(高3・中2・低1) → S / A / B / C
+
+```bash
+python3 scripts/task_manager.py add "提案書作成" --due 2026-10-25 --category 営業 --work-type 資料作成 --importance 高
+python3 scripts/task_manager.py update 1 --due 2026-10-28
+python3 scripts/task_manager.py done 1
+python3 scripts/task_manager.py list      # ターミナルに優先度順で表示
+python3 scripts/task_manager.py render    # TASKS.md を今日基準で再生成
+```
