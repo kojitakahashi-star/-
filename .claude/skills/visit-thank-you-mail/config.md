@@ -6,11 +6,18 @@
 
 - 自社名: 株式会社森未来
 - 本文で名乗る名前: 高橋
-- 署名: Gmail の署名設定を使用(本文には書かない)
+- 署名: Gmail の署名設定を使用(本文には書かない。本文末尾は「高橋」で締める)
+- 過去のお礼メールの手本: Gmail で `subject:本日のお礼と資料送付、イベントのご案内` を検索
 
 ## eTREE 主催イベント
 
-- イベント一覧URL: https://etree.jp/  ← TODO: イベント一覧ページの正しいURLに置き換える
+- イベント一覧URL: https://www.etree.jp/content/event_notice/event_notice_cat/status/open/
+- 個別イベントURLの形: https://www.etree.jp/content/event_notice/<スラッグ>/ (例: morinomirai-28, gaisouwoodtour_2611)
+- 一覧ページが読めない環境では Gmail で探す(実績あり):
+  - `from:event@shin-mirai.co.jp newer_than:30d` … 事務局からの告知
+  - `今後開催・出展予定 イベントのご案内` … マーケ部の一斉案内(各イベントの日時・短縮URLがまとまっている)
+  - `from:noreply@peatix.com eTREE` … Peatix の新規公開通知
+- 注意: event@ の一斉配信メール内の go.etree.jp/e/... リンクは受信者ごとの計測付きなので、お礼メールに転記しない
 - イベント検索キーワード: eTREE 森未来 セミナー / eTREE 森未来 イベント / eTREE 木材 ウェビナー
 - 主催者として扱う名義: 株式会社森未来、eTREE
 
@@ -20,5 +27,10 @@
 
 | 資料名 | URL | 使う場面 |
 |---|---|---|
-| eTREE サービス紹介資料 | TODO | 初回訪問 |
+| 森未来会社概要資料(訪問先ごとに「<会社名>様_森未来会社概要資料」として複製) | Drive で会社名検索 | 初回訪問 |
 | 森林認証コンサルティング紹介資料 | TODO | 認証の相談 |
+
+## 既知の制約
+
+- 会社概要資料のスライドは大きく(約40枚)、Drive からの PDF 書き出しは「File too large」で失敗する。
+  その場合は「添付欄を空けて下書き(ユーザーが手動で PDF 添付)」か「相手に閲覧権限を付けてリンク」を選んでもらう。
