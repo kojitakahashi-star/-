@@ -1720,6 +1720,67 @@
   "_r": "S"
  },
  {
+  "name": "株式会社大建設計",
+  "input_name": "株式会社大建設計",
+  "category": "設計事務所",
+  "category_note": "1948年設立の組織設計事務所",
+  "employees": 356,
+  "employees_note": "単体・2018年9月時点（エン転職掲載。古い値）",
+  "revenue_oku": null,
+  "revenue_note": "検索で確認できず。設計監理売上かどうかも不明",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、売上も不明なため推定できない",
+  "spaces": [
+   "オフィス",
+   "商業",
+   "文化",
+   "公共",
+   "医療・福祉"
+  ],
+  "wood_status": "木材を主役にした事例は検索で見つからなかった（ヒットしたのは別会社の大建工業のウッドデザイン賞2023受賞）。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "設立1948年4月、資本金9,900万円、従業員356名（2018年9月）。公共・業務・商業施設、文化・教育・研究施設、保健・医療・福祉施設の設計監理、都市・地域計画、コンサル、海外業務",
+    "url": "https://employment.en-japan.com/comp-25641/",
+    "rel": "C"
+   },
+   {
+    "fact": "木材判定：「大建設計 木造 木材 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）。大建工業（建材メーカー）は別会社",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "最新の従業員数",
+   "年間案件数"
+  ],
+  "added_reason": "公共・商業・医療福祉・文化と手がける領域が広い組織設計事務所なのに、木材事例が見えない。領域ごとに木質化の提案先を広げられる。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード約12件（各事務所）（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 8,
+  "_known": 3,
+  "_total": 13.3,
+  "_rank": "S",
+  "_r": "S"
+ },
+ {
   "name": "株式会社コスモスイニシア",
   "input_name": "株式会社コスモスイニシア",
   "category": "デベロッパー",
@@ -3142,6 +3203,139 @@
   "_r": "A"
  },
  {
+  "name": "株式会社大林組",
+  "input_name": "株式会社大林組",
+  "category": "ゼネコン",
+  "category_note": "スーパーゼネコン",
+  "employees": 9386,
+  "employees_note": "単体・2025年3月末",
+  "revenue_oku": 16606.62,
+  "revenue_note": "単体・2025年3月期（連結2兆6,201億円）",
+  "annual_projects": 1600,
+  "projects_estimated": true,
+  "projects_basis": "単体売上1.66兆円÷平均案件規模約10億円と仮定＝約1,600件/年",
+  "spaces": [
+   "オフィス",
+   "商業",
+   "文化",
+   "公共",
+   "ホテル・宿泊",
+   "住宅",
+   "医療・福祉",
+   "工場・物流"
+  ],
+  "wood_status": "高層純木造耐火の「Port Plus（大林組横浜研修所、高さ44m・木材約2,000m3）」がウッドデザイン賞優秀賞（林野庁長官賞、2022年）。「Circular Timber Construction®」「OBAYASHI WOOD VISION」を掲げ、CLTメーカーのグループ化、国と建築物木材利用促進協定（2026年度末までに木造・木質化5件・9,000m3）を締結。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 1,
+   "space": 3,
+   "revenue": 3,
+   "projects": 3
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "単体売上高1,660,662百万円（2025年3月期、有価証券報告書）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W0FJ.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "単体従業員9,386名（2025年3月末）",
+    "url": "https://www.obayashi.co.jp/recruit/3minutes/",
+    "rel": "A"
+   },
+   {
+    "fact": "Port Plus 大林組横浜研修所（高層純木造耐火）",
+    "url": "https://www.obayashi.co.jp/works/detail/work_2753.html",
+    "rel": "A"
+   },
+   {
+    "fact": "OBAYASHI WOOD VISION / Circular Timber Construction",
+    "url": "https://www.obayashi.co.jp/woodvision/",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "年間案件数は推定",
+   "協定目標の達成状況"
+  ],
+  "added_reason": "木造に最も積極的なスーパーゼネコンの一つで、自社グループ内にサプライチェーン（CLT等）を持つため調達の伸びしろは限定的。ただし内装木質化・地域材調達など個別案件のコーディネート需要は大きい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード13件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 12,
+  "_known": 5,
+  "_total": 12,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "佐藤工業株式会社",
+  "input_name": "佐藤工業株式会社",
+  "category": "ゼネコン",
+  "category_note": "東京本社の総合建設会社（富山創業、約160年）。同名の福島県佐藤工業（戸田建設グループ）とは別",
+  "employees": 1164,
+  "employees_note": "単体・2025年6月末（就職サイト掲載値、連結1,533名）",
+  "revenue_oku": 1677,
+  "revenue_note": "単体・2025年6月期（連結1,823億円）",
+  "annual_projects": 330,
+  "projects_estimated": true,
+  "projects_basis": "単体売上1,677億円÷平均案件規模約5億円と仮定＝約330件/年（トンネル等土木比率が高い）",
+  "spaces": [
+   "文化",
+   "公共",
+   "オフィス",
+   "医療・福祉",
+   "工場・物流"
+  ],
+  "wood_status": "木造・国産材・木質化の事例は検索で確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": 1
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高 連結1,823億円・単体1,677億円（2025年6月期）、従業員 連結1,533名・単体1,164名",
+    "url": "https://job.mynavi.jp/28/pc/search/corp294/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "土木・建築二本柱、トンネル工事やアリーナ建設実績、海外事業",
+    "url": "https://job.career-tasu.jp/corp/00005373/",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "空間領域はアリーナ（文化）以外は総合建設業としての推定",
+   "年間案件数は推定"
+  ],
+  "added_reason": "中堅上位ゼネコンで木材事例が見当たらず、建築部門での木質化提案は白地。アリーナ等の大型施設で内装木質化の提案余地。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード7件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 12,
+  "_known": 5,
+  "_total": 12,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
   "category_note": "総合デベロッパー。オフィスビル・分譲マンション・ホテル・商業に加え、リフォーム「新築そっくりさん」も展開",
   "projects_estimated": true,
   "projects_basis": "新築そっくりさん累計受注15万棟超（1996年開始〜2021年、約25年）→年平均約6,000棟。ビル・マンション開発は別途（件数未確認）",
@@ -3545,6 +3739,140 @@
   "internal_sf": "001BV000002yrz0YAA",
   "internal_opp": "取引先登録あり・最終活動2026-10-22、進行中商談なし",
   "_src": "added_B.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 7,
+  "_known": 3,
+  "_total": 11.7,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社松田平田設計",
+  "input_name": "株式会社松田平田設計",
+  "category": "設計事務所",
+  "category_note": "1931年創業の組織設計事務所（建築設計監理・都市開発・コンサル）",
+  "employees": 386,
+  "employees_note": "単体・求人掲載時点（時点不明）。同じ求人サイトの別ページにある845名は人材紹介会社の数値なので使わない",
+  "revenue_oku": null,
+  "revenue_note": "売上高は検索で確認できず（非上場）。設計監理売上かどうかも不明",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、売上も不明なため推定できない",
+  "spaces": [
+   "オフィス",
+   "公共",
+   "文化"
+  ],
+  "wood_status": "木材を主役にした事例やウッドデザイン賞の受賞は検索で見つからなかった。代表実績は羽田空港・日産スタジアムなどの大型施設。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 2,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "1931年に松田軍平が開設。資本金6,000万円、従業員386名（求人掲載値）。羽田空港・横浜国際総合競技場などを実績に挙げる",
+    "url": "https://mid-tenshoku.com/job/j-44546346/",
+    "rel": "C"
+   },
+   {
+    "fact": "事業：建築設計監理（企画・基本・実施設計・監理・リニューアル）、都市開発、調査・コンサル。顧客は大手企業・各種官庁",
+    "url": "https://www.r-agent.com/company/78594/",
+    "rel": "C"
+   },
+   {
+    "fact": "本社は東京都港区元赤坂1-5-17、代表取締役は江本正和（国交省関東地方整備局の通知書）",
+    "url": "https://www.ktr.mlit.go.jp/ktr_content/content/000925651.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "木材判定：「松田平田設計 木造 木材 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高（非上場、検索で見つからない）",
+   "年間案件数",
+   "医療・ホテル・商業の実績（公式実績ページを未確認）",
+   "従業員数の時点"
+  ],
+  "added_reason": "官庁・大手企業の大型案件（空港・スタジアム・オフィス）を手がける老舗の組織設計事務所なのに、木材事例が見当たらない。公共建築木材利用促進法の対象になる官公庁案件で、木質化を提案できる余地が大きい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード2件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 7,
+  "_known": 3,
+  "_total": 11.7,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "昭和設計株式会社（大阪）",
+  "input_name": "株式会社昭和設計",
+  "category": "設計事務所",
+  "category_note": "1957年創業の大阪の組織設計事務所。建築と上下水道（土木）を事業の両輪とする。静岡県にも同名の建設コンサルタント（土木）があるが別会社。こちらは大阪の会社として記載",
+  "employees": 197,
+  "employees_note": "単体・2025年10月1日時点（求人サイト）",
+  "revenue_oku": 34.0,
+  "revenue_note": "単体・2025年10月時点の掲載値（求人サイト）。建築と上下水道（土木）の合算とみられ、建築の設計監理だけの売上ではない",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、平均単価も不明なため推定できない",
+  "spaces": [
+   "公共",
+   "土木インフラ"
+  ],
+  "wood_status": "木材を主役にした事例は検索で見つからなかった。確認できた実績の守口市よつば小学校は鉄筋コンクリート造（一部鉄骨造）。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": null,
+   "revenue": 2,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "昭和設計（大阪）：売上高34億円・従業員197名（2025年10月）、資本金6,000万円。1957年創業、建築と上下水道が事業の両輪（求人サイト掲載）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp228232/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "守口市よつば小学校の設計者は株式会社昭和設計（構造：鉄筋コンクリート造、一部鉄骨造）",
+    "url": "https://www.pref.osaka.lg.jp/documents/22131/p23-24.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "木材判定：2回検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "空間領域の全体像（公式実績を未確認のため space は null）",
+   "年間案件数",
+   "建築部門だけの売上",
+   "売上URLが大阪の昭和設計のページかどうか（検索要約上は大阪の会社の値）"
+  ],
+  "added_reason": "関西の学校・公共施設を手がける中堅の組織設計事務所。学校の木造化・木質化は自治体の需要が強いのに木材実績が見えず、関西での木材調達の提案先になる。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード約16件（本社・支社）（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
   "_ikey": null,
   "_iscore": 2,
   "_idata": {},
@@ -4267,6 +4595,68 @@
   "_r": "A"
  },
  {
+  "name": "株式会社フージャースホールディングス",
+  "input_name": "株式会社フージャースホールディングス",
+  "category": "デベロッパー",
+  "category_note": "分譲マンション（デュオヒルズ等）、シニア向けCCRC、不動産関連サービス",
+  "employees": 924,
+  "employees_note": "連結（転職サイト・企業DB掲載の最新期値）",
+  "revenue_oku": 921.53,
+  "revenue_note": "連結・2025年3月期（2026年3月期は1,385.79億円）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "年間供給戸数・棟数を検索で確認できず（CCRC引渡42戸のみ要約サイトで判明）",
+  "spaces": [
+   "住宅",
+   "医療・福祉"
+  ],
+  "wood_status": "木造・国産材・ウッドデザイン賞の事例は検索で確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 1,
+   "revenue": 3,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高92,153百万円・経常利益8,604百万円（2025年3月期、有価証券報告書）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W53C.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "売上高138,579百万円（2026年3月期、有価証券報告書）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100YB28.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "連結従業員数924名",
+    "url": "https://doda.jp/DodaFront/View/Company/j_id__10129825401/",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "年間供給戸数・棟数",
+   "ホテル事業の有無"
+  ],
+  "added_reason": "地方中核都市でのマンション・シニア住宅（CCRC）開発が多く、地域材・木の温もり訴求と相性が良いが木材事例は見当たらず伸びしろ大。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード3件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 9,
+  "_known": 4,
+  "_total": 11.2,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
   "name": "株式会社ジェイアール西日本ビルト",
   "input_name": "株式会社ジェイアール西日本ビルト",
   "category": "ゼネコン",
@@ -4586,6 +4976,71 @@
   "_r": "A"
  },
  {
+  "name": "いちご株式会社",
+  "input_name": "いちご株式会社",
+  "category": "デベロッパー",
+  "category_note": "「心築」（既存不動産の価値向上）、AM（いちごオフィス/ホテルREIT等）、ホテル、いちごオーナーズ、クリーンエネルギー",
+  "employees": 116,
+  "employees_note": "単体・2026年2月期（企業DB掲載値、要確認）",
+  "revenue_oku": 835.76,
+  "revenue_note": "連結・2025年2月期（2026年2月期は927億円余）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "心築物件の年間取得・改修件数の公開値を検索で確認できず",
+  "spaces": [
+   "オフィス",
+   "ホテル・宿泊",
+   "商業",
+   "住宅"
+  ],
+  "wood_status": "木造・国産材・ウッドデザイン賞の事例は検索で確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高83,576百万円（2025年2月期、有価証券報告書）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100VTII.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "事業は心築・AM・ホテル・いちごオーナーズ・クリーンエネルギーの5事業",
+    "url": "https://scouter.monex.co.jp/report/zaimu/2337",
+    "rel": "B"
+   },
+   {
+    "fact": "心築＝不動産に心を込めた価値向上",
+    "url": "https://j-reit.jp/download/brand_file/43_9922227272502.pdf",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "空間領域のうち商業・住宅は事業構成（オフィス/ホテルREITのスポンサー、心築）からの推定で個別確認はホテル・心築のみ",
+   "年間案件数",
+   "従業員数は単体/連結の区別不明確"
+  ],
+  "added_reason": "既存ビル・ホテルの改修（心築）が本業で、リノベ時の内装木質化は森未来の得意領域と合致。木材事例がなく伸びしろ大。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 9,
+  "_known": 4,
+  "_total": 11.2,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
   "name": "株式会社リムズ",
   "input_name": "株式会社リムズ",
   "category": "内装・空間プロデュース会社",
@@ -4635,6 +5090,289 @@
    ],
    "comm_score_hint": 2
   },
+  "_raw": 11,
+  "_known": 5,
+  "_total": 11,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "京浜急行電鉄株式会社",
+  "input_name": "京浜急行電鉄株式会社",
+  "category": "オーナー",
+  "category_note": "鉄道会社。駅・駅ナカ店舗・商業施設・ホテル・不動産を保有・運営",
+  "employees": 2907,
+  "employees_note": "2025年3月末（就職サイト掲載。単体か連結かは明記なし）",
+  "revenue_oku": 2938,
+  "revenue_note": "連結営業収益・2025年3月期（単体は未確認）",
+  "annual_projects": 150,
+  "projects_estimated": true,
+  "projects_basis": "公開値なし。駅（約70）、駅ナカ・沿線商業、ホテル（京急EXイン等）、賃貸ビルの改修・改装・テナント入替が合わせて年100〜200件程度と見た概算（各施設数は一般知識ベースで未検証）",
+  "spaces": [
+   "商業",
+   "ホテル・宿泊",
+   "オフィス",
+   "住宅"
+  ],
+  "wood_status": "木材を主役にした駅・ホテル・店舗の事例は検索で見つからなかった。北品川駅の新駅舎デザイン決定（連続立体交差化）の記事はあるが、木材への言及はない。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結営業収益2,938億円（293,860百万円、2025年3月期、前期比4.7%増）",
+    "url": "https://www2.jpx.co.jp/disc/90060/140120250508535311.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "営業収益2,938億円・従業員2,907名（2025年3月末）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp53108/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "京急北品川駅の新駅舎デザインが決定（泉岳寺〜品川〜新馬場の立体交差化）",
+    "url": "https://www.watch.impress.co.jp/docs/news/2115535.html",
+    "rel": "B"
+   },
+   {
+    "fact": "木材判定：「京急 木造 木材 国産材 駅舎 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "単体の従業員数・営業収益",
+   "施設数（駅・店舗・ホテル）と年間改装件数の公開値"
+  ],
+  "added_reason": "品川・羽田エリアの再開発や駅の改良が続く大手私鉄で、駅舎・駅ナカ・ホテルの更新が今後も多い。木材事例がまだ無く、駅の木質化（国産材を見せる駅）の最初の提案先になれる。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード8件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 11,
+  "_known": 5,
+  "_total": 11,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "南海電気鉄道株式会社",
+  "input_name": "南海電気鉄道株式会社",
+  "category": "オーナー",
+  "category_note": "鉄道会社。なんばエリアの商業施設・ホテル・オフィス・沿線不動産を保有・運営",
+  "employees": 2615,
+  "employees_note": "単体・2018年3月末（連結9,158人）。エン転職では2,977名（2023年3月）",
+  "revenue_oku": 2608,
+  "revenue_note": "連結営業収益・2025年3月期（前期比7.9%増、集計サイトの値）",
+  "annual_projects": 100,
+  "projects_estimated": true,
+  "projects_basis": "公開値なし。駅（約100）、なんばパークス等の商業施設テナント、ホテル、賃貸ビルの改修・改装が年100件前後と見た概算（施設数は一般知識ベースで未検証）",
+  "spaces": [
+   "商業",
+   "オフィス",
+   "ホテル・宿泊",
+   "住宅"
+  ],
+  "wood_status": "木材を主役にした駅・施設の事例は検索で見つからなかった（ヒットしたのは8300系車両のグッドデザイン賞2023のみで、木材とは無関係）。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結営業収益 約2,608億円（2025年3月期、前期比7.9%増）",
+    "url": "https://the-shashi.com/tse/9044/financials/sales/",
+    "rel": "C"
+   },
+   {
+    "fact": "従業員 単体2,615人・連結9,158人（2018年3月31日）",
+    "url": "https://www.nankai.co.jp/library/company/csr/kankyou_report/pdf/kankyo2018_all.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "従業員2,977名（2023年3月）",
+    "url": "https://employment.en-japan.com/comp-13163/",
+    "rel": "C"
+   },
+   {
+    "fact": "8300系車両がグッドデザイン賞2023を受賞（木材とは無関係）",
+    "url": "https://www.nankai.co.jp/lib/company/news/pdf/231005_1.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "木材判定：「南海電鉄 木造 木材 国産材 駅 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "最新の従業員数",
+   "施設数と年間改装件数の公開値"
+  ],
+  "added_reason": "沿線に和歌山・高野山という林業地を抱える私鉄で、紀州材を使った駅・施設の木質化は地域連携の取り組みとして打ち出しやすい。現状は木材事例が見当たらず伸びしろが大きい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード1件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 11,
+  "_known": 5,
+  "_total": 11,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "戸田建設株式会社",
+  "input_name": "戸田建設株式会社",
+  "category": "ゼネコン",
+  "category_note": "準大手ゼネコン（医療・教育施設に強み）",
+  "employees": 4315,
+  "employees_note": "単体・2025年3月期（就職サイト掲載値）",
+  "revenue_oku": 4753.68,
+  "revenue_note": "単体・2025年3月期（連結5,867億円）",
+  "annual_projects": 950,
+  "projects_estimated": true,
+  "projects_basis": "単体売上4,754億円÷平均案件規模約5億円と仮定＝約950件/年",
+  "spaces": [
+   "オフィス",
+   "商業",
+   "文化",
+   "公共",
+   "ホテル・宿泊",
+   "住宅",
+   "医療・福祉",
+   "工場・物流"
+  ],
+  "wood_status": "渋谷マルイ建替え（住友林業とJV、体積比約60%が木造の高層商業施設、2026年度開業目途）。2026年3月に農水省と建築物木材利用促進協定を締結し、プロポーザルでの木造・木質化提案と中高層木質混構造・純木造の技術開発を明記。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 1,
+   "space": 3,
+   "revenue": 3,
+   "projects": 2
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "単体売上高475,368百万円（2025年3月期、有価証券報告書）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W4H2.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "従業員4,315名（2025年3月期・単独）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp253/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "渋谷マルイ新築工事（戸田建設・住友林業JV）、体積比約60%木造",
+    "url": "https://nikkenren.com/publication/ACe/ce/ace2509/pdf/P32-37_202509.pdf",
+    "rel": "B"
+   },
+   {
+    "fact": "建築物木材利用促進協定締結（2026年3月27日、有効期間2030年12月末）",
+    "url": "https://www.rinya.maff.go.jp/j/riyou/kidukai/mokuri_kyoutei/zisseki.html",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "年間案件数は推定",
+   "協定の数値目標"
+  ],
+  "added_reason": "2026年3月に木材利用協定を結んだばかりで、プロポーザルでの木質化提案を明言。医療・教育施設に強く、内装木質化の調達・コーディネート需要が今後立ち上がる段階で森未来の参入余地が大きい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード20件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 11,
+  "_known": 5,
+  "_total": 11,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "前田建設工業株式会社",
+  "input_name": "前田建設工業株式会社",
+  "category": "ゼネコン",
+  "category_note": "準大手ゼネコン（インフロニア・ホールディングス傘下、土木に強み）",
+  "employees": 3361,
+  "employees_note": "単体・2025年3月時点（就職サイト掲載値）",
+  "revenue_oku": 4938,
+  "revenue_note": "単体・2025年3月期（就職サイト掲載値、インフロニア連結8,475億円）",
+  "annual_projects": 800,
+  "projects_estimated": true,
+  "projects_basis": "単体売上4,938億円（うち土木比率が高い）÷平均案件規模約6億円と仮定＝約800件/年",
+  "spaces": [
+   "オフィス",
+   "商業",
+   "公共",
+   "ホテル・宿泊",
+   "住宅",
+   "医療・福祉",
+   "工場・物流"
+  ],
+  "wood_status": "2024年11月に国（農水・経産・環境省）と建築物木材利用促進協定を締結し、2029年度までに木造・木質化建築25件・国産材10,000m3の目標。岩手県住田町役場（木造）の設計施工実績あり。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 1,
+   "space": 3,
+   "revenue": 3,
+   "projects": 2
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "単体売上4,938億円・従業員3,361名（2025年3月）",
+    "url": "https://job.mynavi.jp/27/pc/search/corp330/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "建築物木材利用促進協定：2029年度までに木造・木質化25件・国産材10,000m3",
+    "url": "https://www.env.go.jp/content/000267753.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "住田町役場庁舎（木造）の設計・施工",
+    "url": "https://www.nikkenren.com/publication/ACe/ce/ace1706/pdf/web_1706_042-045.pdf",
+    "rel": "B"
+   }
+  ],
+  "unknowns": [
+   "年間案件数は推定",
+   "空間領域は総合建設業としての一般的範囲で個別確認は庁舎のみ"
+  ],
+  "added_reason": "25件・10,000m3という具体的な国産材目標を国と約束しており、達成に向けた木材調達パートナーの需要が明確。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード7件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
   "_raw": 11,
   "_known": 5,
   "_total": 11,
@@ -4757,6 +5495,465 @@
   "_raw": 8,
   "_known": 4,
   "_total": 10.0,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "相鉄ホールディングス株式会社",
+  "input_name": "相鉄ホールディングス株式会社",
+  "category": "オーナー",
+  "category_note": "持株会社。グループで鉄道・ホテル（相鉄ホテルズ）・不動産・流通（相鉄ローゼン）を運営。施設の発注はグループ子会社（相鉄不動産、相鉄アーバンクリエイツ等）が担う",
+  "employees": null,
+  "employees_note": "検索で確認できず",
+  "revenue_oku": 2921.8,
+  "revenue_note": "連結営業収益・2025年3月期（持株会社単体は159.5億円）",
+  "annual_projects": 80,
+  "projects_estimated": true,
+  "projects_basis": "公開値なし。ホテル（相鉄フレッサイン等、数十施設）、スーパー（相鉄ローゼン、数十店）、駅（約25）、沿線不動産の新築・改装を合わせて年50〜100件程度と見た概算（施設数は一般知識ベースで未検証）",
+  "spaces": [
+   "商業",
+   "ホテル・宿泊",
+   "住宅",
+   "オフィス"
+  ],
+  "wood_status": "相鉄不動産がゆめが丘駅前で、1階RC造・2〜5階木造の混構造の複合ビル（賃貸住宅・診療所）を着工し、構造材の一部に国産材を使う。ホテル（渋谷計画はPRC造）では木造化は確認できず、木材事例は散発的。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 2,
+   "space": 3,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結営業収益2,921億7,800万円（2025年3月期、前期比8.2%増）、営業利益378億円",
+    "url": "https://www2.jpx.co.jp/disc/90030/081220260427512011_tse-acedjpsm-90030-20260428390030-ixbrl.htm",
+    "rel": "A"
+   },
+   {
+    "fact": "提出会社単体の営業収益15,951百万円（2025年3月期）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W0XK.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "増収増益で営業利益・最終利益とも過去最高（ホテルのインバウンド需要など）",
+    "url": "https://www.kanaloco.jp/news/economy/article-1167237.html",
+    "rel": "B"
+   },
+   {
+    "fact": "相鉄不動産がゆめが丘駅前に混構造（1階RC・2〜5階木造）の複合ビルを着工、構造材の一部に国産材",
+    "url": "https://newscast.jp/news/7179710",
+    "rel": "B"
+   },
+   {
+    "fact": "相鉄アーバンクリエイツが渋谷駅近くでホテルを開発（2027年12月完成予定、PRC造11階建て）",
+    "url": "https://www.kanaloco.jp/news/economy/article-1263450.html",
+    "rel": "B"
+   }
+  ],
+  "unknowns": [
+   "従業員数",
+   "施設数と年間改装件数の公開値"
+  ],
+  "added_reason": "グループ内で既に木造の混構造（ゆめが丘）を手がけており、木材への関心がある。ホテル・駅・沿線開発への横展開や、国産材の調達支援を提案しやすい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード2件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 10,
+  "_known": 5,
+  "_total": 10,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社ニトリホールディングス",
+  "input_name": "株式会社ニトリホールディングス",
+  "category": "オーナー",
+  "category_note": "家具・インテリア小売。自社店舗を大量に出店・運営",
+  "employees": 58799,
+  "employees_note": "2025年3月時点（就職サイト掲載。連結とみられる、パート含むか不明）",
+  "revenue_oku": 9289,
+  "revenue_note": "連結売上高・2025年3月期（928,950百万円）",
+  "annual_projects": 250,
+  "projects_estimated": true,
+  "projects_basis": "2027年3月期の計画が国内外で143店純増（国内61・海外82）。これに既存約1,000店（一般知識ベースの概数）の改装を10年サイクルとした年約100件を足して、年約250件と概算",
+  "spaces": [
+   "商業",
+   "工場・物流"
+  ],
+  "wood_status": "木造店舗・国産材を使った店舗やウッドデザイン賞は検索で見つからなかった（受賞しているのはグッドデザイン賞で、14年連続）。家具製品では木材を扱うが、店舗空間での木材事例はない。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 1,
+   "revenue": 3,
+   "projects": 1
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高928,950百万円（2025年3月期）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W5DK.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "売上高9,289億円（2025年3月期）、2027年3月期は国内外で143店純増（国内61・海外82）を計画",
+    "url": "https://www.ryutsuu.biz/company/nitorihd",
+    "rel": "B"
+   },
+   {
+    "fact": "従業員58,799名（2025年3月時点）",
+    "url": "https://job.career-tasu.jp/corp/00014589/?tcd=kkk_00014589",
+    "rel": "C"
+   },
+   {
+    "fact": "ニトリグループは2013年から14年連続でグッドデザイン賞を受賞（2026年度）",
+    "url": "https://resemom.jp/release/prtimes/20261015/220397.html",
+    "rel": "B"
+   },
+   {
+    "fact": "木材判定：「ニトリ 木材 国産材 木造 店舗 森林 ウッドデザイン賞」で検索したが、店舗の木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "国内総店舗数と年間改装件数の公開値",
+   "従業員数の範囲（連結・パート含むか）"
+  ],
+  "added_reason": "年100店を超える出店ペースで案件数が多い。家具の会社として木への親和性が高く、店舗の内装・什器を国産材で木質化する提案は、ブランドとサステナビリティの両面で訴求しやすい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード2件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 10,
+  "_known": 5,
+  "_total": 10,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "霞ヶ関キャピタル株式会社",
+  "input_name": "霞ヶ関キャピタル株式会社",
+  "category": "デベロッパー",
+  "category_note": "コンサルティング型デベロッパー兼ファンドマネージャー。物流（LOGI FLAG）、ホテル（fav/FAV LUX/seven x seven/BASE LAYER HOTEL）、ヘルスケア（ホスピス）、海外",
+  "employees": 349,
+  "employees_note": "単体・2025年8月期末",
+  "revenue_oku": 1637.56,
+  "revenue_note": "連結・2026年8月期（2025年8月期は964億円）",
+  "annual_projects": 25,
+  "projects_estimated": true,
+  "projects_basis": "ホテル累計50棟を2028年目標（年約8〜10棟）＋物流は年7件開発フェーズ移行・3件着工（2026年8月期）＋ホスピス等で年20〜30件程度と推定",
+  "spaces": [
+   "ホテル・宿泊",
+   "工場・物流",
+   "医療・福祉"
+  ],
+  "wood_status": "ホテル・物流とも木造・国産材の記載は検索で見つからず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 2,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結売上高1,637億5,600万円（2026年8月期、前期比69.7%増）、物流施設3棟竣工",
+    "url": "https://www.logi-today.com/1008320",
+    "rel": "B"
+   },
+   {
+    "fact": "単体従業員349名（2025年8月期末）",
+    "url": "https://finboard.jp/companies/JP:3498/workforce",
+    "rel": "C"
+   },
+   {
+    "fact": "2028年までに累計50棟のホテル開業を目指す",
+    "url": "https://hrmos.co/pages/kasumigaseki/jobs/03_03_07",
+    "rel": "C"
+   },
+   {
+    "fact": "ホテルブランドfav/FAV LUX/seven x seven、ヘルスケア（ホスピス）事業",
+    "url": "https://www.onecareer.jp/companies/95501",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "連結従業員数",
+   "年間開発件数は推定"
+  ],
+  "added_reason": "急成長中でホテルを年10棟近く新規開発しており、地方観光地のfav等で地域材の内装木質化はブランド価値に直結。木材事例ゼロで伸びしろ大。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード1件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 10,
+  "_known": 5,
+  "_total": 10,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社セレスポ",
+  "input_name": "株式会社セレスポ",
+  "category": "内装・空間プロデュース会社",
+  "category_note": "イベント制作・会場設営・運営（東証スタンダード）。創業は建築式典・会場施工",
+  "employees": 396,
+  "employees_note": "2025年3月31日時点（求人サイト掲載、2026年3月時点405名）",
+  "revenue_oku": 136.7,
+  "revenue_note": "2025年3月期（有報主要指標13,667,390千円）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開値なし・推定根拠となる件数/単価情報が検索で得られず",
+  "spaces": [
+   "文化",
+   "その他"
+  ],
+  "wood_status": "会場設営での木材・国産材活用事例は検索で見つからず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": 3,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高13,667,390千円（2025年3月期）",
+    "url": "https://edinetdb.jp/company/E04899/earnings/FY2025",
+    "rel": "B"
+   },
+   {
+    "fact": "従業員396名（2025年3月末）、405名（2026年3月末）、イベント会場施工から創業",
+    "url": "https://job.mynavi.jp/28/pc/search/corp56536/outline.html",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "年間案件数（イベント件数）",
+   "常設内装の実績"
+  ],
+  "added_reason": "式典・スポーツ・展示の会場設営を年間多数手がけ、仮設造作の木質化（国産材の演台・ブース・サイン等）で継続的な調達需要を作れる余地がある。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード3件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_G.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 8,
+  "_known": 4,
+  "_total": 10.0,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社内藤建築事務所",
+  "input_name": "株式会社内藤建築事務所",
+  "category": "設計事務所",
+  "category_note": "1942年創業、京都本社の組織設計事務所。医療福祉分野が中心",
+  "employees": null,
+  "employees_note": "検索で確認できず（求人サイトの845名は人材紹介会社の値なので使わない）",
+  "revenue_oku": null,
+  "revenue_note": "検索で確認できず。求人広告では「医療福祉分野で6年連続国内No.1の売上」とうたう（自社PRで第三者の裏付けなし）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、売上も不明。担当物件の規模は10〜200億円（求人）",
+  "spaces": [
+   "医療・福祉",
+   "公共"
+  ],
+  "wood_status": "木材を主役にした事例やウッドデザイン賞の受賞は検索で見つからなかった。実績は病院（小林市立病院、県立新加古川病院）や研究施設（京大iPS細胞研究所）が中心。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 1,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "医療福祉分野で6年連続国内No.1の売上をうたう組織系設計事務所（求人）。病院・養護老人ホーム・公共施設が中心。実績に京都大学iPS細胞研究所、小林市立病院、県立新加古川病院。担当物件は10〜200億円規模",
+    "url": "https://mid-tenshoku.com/job/j-44546441/",
+    "rel": "C"
+   },
+   {
+    "fact": "1942年創業、医療福祉分野に重点を置く組織設計事務所（求人）",
+    "url": "https://mid-tenshoku.com/job/j-44546412/",
+    "rel": "C"
+   },
+   {
+    "fact": "木材判定：「内藤建築事務所 木造 木材 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "従業員数",
+   "売上高",
+   "年間案件数"
+  ],
+  "added_reason": "医療福祉施設の設計で国内トップ級をうたい、案件は10〜200億円規模と大きい。病院・高齢者施設の内装木質化（ウェルビーイング訴求）は提案しやすく、木材実績が見えない分だけ伸びしろが大きい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード1件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 3,
+  "_total": 10.0,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社INA新建築研究所",
+  "input_name": "株式会社INA新建築研究所",
+  "category": "設計事務所",
+  "category_note": "1955年創立、東京都文京区白山。都市計画・建築設計監理・環境設計・コンサル・リノベーションが5本柱",
+  "employees": null,
+  "employees_note": "100人以上300人未満（比較ビズのレンジ表記、時点不明）。100名以上なので足切りには該当しない",
+  "revenue_oku": null,
+  "revenue_note": "検索で確認できず",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、売上も不明なため推定できない",
+  "spaces": [
+   "公共",
+   "住宅"
+  ],
+  "wood_status": "木材を主役にした事例やウッドデザイン賞の受賞は検索で見つからなかった。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 1,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "1955年創立。都市計画・都市開発、建築設計・監理、環境設計、コンサル、リノベーションが主要業務。公共建築・集合住宅に強み。従業員100〜300人未満、資本金5,000万〜1億円未満、代表は加藤朋行",
+    "url": "https://www.biz.ne.jp/corporation/13558/",
+    "rel": "C"
+   },
+   {
+    "fact": "木材判定：「INA新建築研究所 木造 木材 ウッドデザイン賞」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "正確な従業員数",
+   "年間案件数"
+  ],
+  "added_reason": "公共建築・集合住宅とリノベーションに強い。団地・公共施設の改修で内装を木質化する提案は入りやすく、木材実績が見えない分だけ伸びしろがある。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード1件（九州支店）（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 3,
+  "_total": 10.0,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "株式会社ゼンショーホールディングス",
+  "input_name": "株式会社ゼンショーホールディングス",
+  "category": "オーナー",
+  "category_note": "外食チェーン（すき家・はま寿司など）。直営とFCで約1.5万店",
+  "employees": 18742,
+  "employees_note": "連結・2025年3月末（就職サイト掲載）",
+  "revenue_oku": 12640.5,
+  "revenue_note": "連結売上高・2026年3月期（1,264,053百万円。2025年3月期は11,366.8億円）",
+  "annual_projects": 1100,
+  "projects_estimated": true,
+  "projects_basis": "有報に「1,042店舗出店、1,514店舗退店、期末14,947店舗（FC8,235含む）」の記載あり（年度は特定できず）。出店だけで年1,000件超、これに改装を足して年約1,100件と概算。ただし海外店とFCを含む",
+  "spaces": [
+   "商業",
+   "工場・物流"
+  ],
+  "wood_status": "すき家・はま寿司などで木造店舗・国産材を使った事例は検索で見つからなかった。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 1,
+   "revenue": 3,
+   "projects": 3
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結売上高1,264,053百万円（2026年3月期、前期比11.2%増）、2025年3月期は1,136,684百万円",
+    "url": "https://edinetdb.jp/company/E03291/earnings/FY2026",
+    "rel": "B"
+   },
+   {
+    "fact": "従業員18,742名（連結、2025年3月末）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp53759/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "1,042店舗出店・1,514店舗退店で14,947店舗（FC8,235店舗含む）。すき家2,650店（国内2,000）、はま寿司862店（国内664）（有報、年度は特定できず）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100TUZ5.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "木材判定：「ゼンショー すき家 木材 国産材 木造 店舗」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "国内だけの年間出店・改装件数",
+   "店舗の開発・設計体制（内製か外注か）"
+  ],
+  "added_reason": "年1,000店規模の出店・入替がある国内最大級の外食チェーンで、案件数は群を抜く。木材事例がまだ無いので、低層の標準店舗の木造化・内装の木質化を標準仕様にできれば、国産材の大口需要になる。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 10,
+  "_known": 5,
+  "_total": 10,
   "_rank": "A",
   "_r": "A"
  },
@@ -5243,6 +6440,205 @@
   "_total": 10.0,
   "_rank": "A",
   "_r": "A"
+ },
+ {
+  "name": "株式会社松村組",
+  "input_name": "株式会社松村組",
+  "category": "ゼネコン",
+  "category_note": "大阪発祥の総合建設会社。プライム ライフ テクノロジーズ（パナソニック・トヨタ・三井物産出資）グループ",
+  "employees": 447,
+  "employees_note": "時点不明（転職サイト掲載値、別サイトでは405名）",
+  "revenue_oku": null,
+  "revenue_note": "検索で確認できず（非上場）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "売上高不明のため推定不可",
+  "spaces": [
+   "公共",
+   "オフィス",
+   "商業",
+   "工場・物流",
+   "医療・福祉"
+  ],
+  "wood_status": "木造・国産材・ウッドデザイン賞の事例は検索で確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "従業員数447名",
+    "url": "https://doda.jp/DodaFront/View/CompanyJobs/j_id__00004966796/-pr__40/",
+    "rel": "C"
+   },
+   {
+    "fact": "庁舎・オフィス、商業施設、工場、医療・福祉施設、土木インフラを手がける総合建設会社",
+    "url": "https://www.geekly.co.jp/companys/data/3867/",
+    "rel": "C"
+   },
+   {
+    "fact": "事業内容：建設工事請負・設計監理、不動産、再エネ発電等",
+    "url": "https://www.r-agent.com/company/12728/",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高（非上場で未確認）",
+   "年間案件数"
+  ],
+  "added_reason": "PLTグループ（パナソニック・トヨタ系）として住宅・まちづくり連携があり、関西中心の庁舎・医療福祉案件で木質化提案余地。木材事例が見当たらず伸びしろ大。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 3,
+  "_total": 10.0,
+  "_rank": "A",
+  "_r": "A"
+ },
+ {
+  "name": "西日本鉄道株式会社",
+  "input_name": "西日本鉄道株式会社",
+  "category": "オーナー",
+  "category_note": "鉄道・バス・物流・不動産・ホテル事業。天神エリアの再開発（ONE FUKUOKA BLDG.）を主導",
+  "employees": 5009,
+  "employees_note": "単体・2026年5月末（出向者等を除く、マイナビ転職掲載）",
+  "revenue_oku": 4434.95,
+  "revenue_note": "連結営業収益・2025年3月期",
+  "annual_projects": 100,
+  "projects_estimated": true,
+  "projects_basis": "公開値なし。国内ホテル18施設、駅（約70）、天神・博多の商業施設、賃貸住宅・マンション、物流施設の新築・改装が年100件前後と見た概算（ホテル数以外は一般知識ベースで未検証）",
+  "spaces": [
+   "ホテル・宿泊",
+   "商業",
+   "オフィス",
+   "住宅",
+   "工場・物流"
+  ],
+  "wood_status": "木材を主役にした駅・ホテルの事例は検索で見つからなかった。地元の福岡県・福岡市は木造・木質化建築賞や地域産材の利用を推進しているが、西鉄の施設が対象かは未確認。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結営業収益443,495百万円（2025年3月期、前期比7.7%増）、営業利益266億円",
+    "url": "https://www2.jpx.co.jp/disc/90310/140120250508535325.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "従業員5,009名（2026年5月末、出向者等除く）、本社はONE FUKUOKA BLDG.",
+    "url": "https://tenshoku.mynavi.jp/company/137567/",
+    "rel": "C"
+   },
+   {
+    "fact": "西鉄ホテルグループは4ブランドで国内18施設",
+    "url": "https://www.knt.co.jp/yado/sp/chain_hotel/nishitetsu/",
+    "rel": "C"
+   },
+   {
+    "fact": "福岡県は県産木材を使った木質リノベーションや商業・オフィスビルの木造化を支援し、木造・木質化建築賞で表彰",
+    "url": "https://www.pref.fukuoka.lg.jp/uploaded/life/665562_61558910_misc.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "木材判定：「西鉄 木造 木材 国産材 九州産材 ホテル 駅 木質化」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "施設数（ホテル以外）と年間改装件数の公開値"
+  ],
+  "added_reason": "売上4,400億円規模で、ホテル・商業・住宅・物流と保有する空間が最も幅広い私鉄の一つ。九州産材の産地に近く、県も木質化を後押ししているので、九州産材を使ったホテル・駅の木質化を提案する好機。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 9,
+  "_known": 5,
+  "_total": 9,
+  "_rank": "B",
+  "_r": "B"
+ },
+ {
+  "name": "北野建設株式会社",
+  "input_name": "北野建設株式会社",
+  "category": "ゼネコン",
+  "category_note": "長野県本社の総合建設会社。グループにゴルフ場・ホテル事業",
+  "employees": 734,
+  "employees_note": "2025年3月末（就職サイト掲載値）",
+  "revenue_oku": 808.53,
+  "revenue_note": "2025年3月期（有価証券報告書の5年推移値、連結表記の掲載あり）",
+  "annual_projects": 160,
+  "projects_estimated": true,
+  "projects_basis": "売上808億円÷平均案件規模約5億円と仮定＝約160件/年",
+  "spaces": [
+   "公共",
+   "オフィス",
+   "ホテル・宿泊",
+   "商業"
+  ],
+  "wood_status": "長野県「信州の木」建築賞等の検索でも同社の木造事例は検出されず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 3,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高80,853百万円（2025年3月期）、建設事業が主、子会社5社（ゴルフ場・ホテル含む）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W59A.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "売上高808億円（連結）・従業員734名（2025年3月末）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp2717/outline.html",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "空間領域はホテル（グループ事業）以外は総合建設業としての推定",
+   "年間案件数は推定",
+   "木造実績は県内案件に埋もれている可能性"
+  ],
+  "added_reason": "森林県・長野の地場大手ゼネコンで県産材活用の政策追い風がある一方、目立つ木材事例がなく、県内公共・ホテル案件での地域材コーディネート需要が見込める。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 9,
+  "_known": 5,
+  "_total": 9,
+  "_rank": "B",
+  "_r": "B"
  },
  {
   "name": "株式会社平成建設",
@@ -6009,6 +7405,116 @@
   "_r": "B"
  },
  {
+  "name": "株式会社トータルメディア開発研究所",
+  "input_name": "株式会社トータルメディア開発研究所",
+  "category": "内装・空間プロデュース会社",
+  "category_note": "ミュージアム等の調査・構想・設計から展示・内装施工・運営まで手がける展示空間プロデュース会社（TOPPANグループ）",
+  "employees": 232,
+  "employees_note": "単体・2026年7月更新の企業DB値",
+  "revenue_oku": null,
+  "revenue_note": "売上高は検索で確認できず",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開値なし・推定根拠となる件数/単価情報が検索で得られず",
+  "spaces": [
+   "文化"
+  ],
+  "wood_status": "木材・国産材・木質展示の事例は検索で見つからず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "売上未確認だが従業員232名・資本金5億円で足切り非該当と判断（推定）",
+  "facts": [
+   {
+    "fact": "従業員232人、資本金5億円、設立1970年9月、本社千代田区紀尾井町",
+    "url": "https://cnavi.g-search.or.jp/detail/6010501009533.html",
+    "rel": "B"
+   },
+   {
+    "fact": "ミュージアム等の調査・構想・計画・設計から展示、空間演出、内装施工、施設運営まで。TOPPANグループ",
+    "url": "https://www.r-agent.com/company/78679/",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "年間案件数",
+   "企業PR館・公共施設など文化以外の領域の実績"
+  ],
+  "added_reason": "自治体・企業のミュージアム/展示施設は地域材活用の要望が出やすい分野で、木材事例が見えない同社には地域材展示・木質内装の調達支援を提案しやすい。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード2件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_G.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 5,
+  "_known": 3,
+  "_total": 8.3,
+  "_rank": "B",
+  "_r": "B"
+ },
+ {
+  "name": "株式会社シミズオクト",
+  "input_name": "株式会社シミズオクト",
+  "category": "内装・空間プロデュース会社",
+  "category_note": "コンサート・スポーツ・TV・展示会/博覧会の美術プラン・空間デザイン・設営を行う",
+  "employees": 1573,
+  "employees_note": "単体・企業DB値（時点不明）",
+  "revenue_oku": null,
+  "revenue_note": "売上高は検索で確認できず（関連会社 北海道シミズ24億円等は別法人）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開値なし・推定根拠となる件数/単価情報が検索で得られず",
+  "spaces": [
+   "文化",
+   "その他"
+  ],
+  "wood_status": "木材・国産材を主役にした展示/舞台の事例は検索で見つからず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "売上未確認だが従業員1,573名で足切り非該当と判断（推定）",
+  "facts": [
+   {
+    "fact": "従業員1,573名、創業1932年、イベント企画・設営、展示会・博覧会の美術プラン・空間デザイン",
+    "url": "https://cnavi.g-search.or.jp/detail/5011101009189.html",
+    "rel": "B"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "年間案件数",
+   "常設空間（内装）の実績"
+  ],
+  "added_reason": "従業員1,500名超の大手で展示会・博覧会の空間デザインを多数手がける。木材事例が見えず、仮設・展示造作の国産材化で大きな量が見込める。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード1件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_G.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
+  "_raw": 5,
+  "_known": 3,
+  "_total": 8.3,
+  "_rank": "B",
+  "_r": "B"
+ },
+ {
   "category_note": "百貨店持株会社。伊勢丹新宿本店・三越日本橋本店等の大型店と中小型店を保有運営",
   "projects_estimated": true,
   "projects_basis": "国内20店・海外23店＋中小型店約130店（2026年2月時点）。中小型店130÷改装サイクル7年≒19件、大型店43店×年2〜3件の部分（フロア）改装≒100件、計約120件/年と推定。2027年3月期は百貨店リモデル等に165億円を投資予定",
@@ -6065,6 +7571,72 @@
   "_raw": 8,
   "_known": 5,
   "_total": 8,
+  "_rank": "B",
+  "_r": "B"
+ },
+ {
+  "name": "株式会社大京",
+  "input_name": "株式会社大京",
+  "category": "デベロッパー",
+  "category_note": "オリックスグループ。分譲マンション「ライオンズ」の開発・販売（穴吹工務店と共同事業あり）",
+  "employees": 564,
+  "employees_note": "単体・2026年4月時点（就職サイト掲載値）",
+  "revenue_oku": 624.5,
+  "revenue_note": "単体・2026年3月期（官報決算まとめサイト掲載値、要一次確認）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "年間供給戸数・棟数の公開値を検索で確認できず（累計38万戸以上のみ判明）",
+  "spaces": [
+   "住宅"
+  ],
+  "wood_status": "グッドデザイン賞は複数年受賞（ザ・ライオンズ世田谷八幡山＝ZEH-M、ザ・ライオンズミレス蔵前等）だが、発表文に木材・国産材の記載なし。ウッドデザイン賞受賞も確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": 3,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "従業員数564名（2026年4月時点）、売上はグループ連結公開のため非公開との記載",
+    "url": "https://www.onecareer.jp/companies/89417",
+    "rel": "C"
+   },
+   {
+    "fact": "ライオンズブランドで累計38万戸以上を供給、累計供給戸数業界No.1（不動産経済研究所2023年12月末時点）",
+    "url": "https://www.r-agent.com/company/15003/",
+    "rel": "C"
+   },
+   {
+    "fact": "売上高624億5300万円（2026年3月期、前年比+5.68%）",
+    "url": "https://catr.jp/companies/c1342/59536",
+    "rel": "C"
+   },
+   {
+    "fact": "ザ・ライオンズ世田谷八幡山が2026年度グッドデザイン賞受賞（ZEH-M）",
+    "url": "https://digitalpr.jp/r/145848",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "年間供給戸数・棟数：検索で未確認",
+   "売上高はまとめサイトの官報値で一次資料未確認"
+  ],
+  "added_reason": "分譲マンション累計供給No.1で物件数・ブランド発信力が大きい一方、木材活用の公開事例が見当たらず、共用部・エントランス木質化やZEH訴求との組合せで提案余地が大きい。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 4,
+  "_total": 7.5,
   "_rank": "B",
   "_r": "B"
  },
@@ -6390,6 +7962,205 @@
   "_r": "C"
  },
  {
+  "name": "株式会社パン・パシフィック・インターナショナルホールディングス",
+  "input_name": "株式会社パン・パシフィック・インターナショナルホールディングス",
+  "category": "オーナー",
+  "category_note": "ドン・キホーテ、MEGAドン・キホーテ、アピタ・ピアゴ（ユニー）などを運営",
+  "employees": null,
+  "employees_note": "検索で確認できず",
+  "revenue_oku": 22467.6,
+  "revenue_note": "連結売上高・2025年6月期（2,246,758百万円）",
+  "annual_projects": 180,
+  "projects_estimated": true,
+  "projects_basis": "グループ約800店。改装サイクル8年とすると年約100件。これに新規出店（年数十件、2025年6月にもりんくう店・堺東駅前店などを開店）と、ピアゴから「食品強化型ドンキ」への業態転換（2035年6月期までに200〜300店、年20〜30件）を足して、年約180件と概算",
+  "spaces": [
+   "商業"
+  ],
+  "wood_status": "店舗での木材・国産材・木造の事例は検索で見つからなかった。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結売上高2,246,758百万円（2025年6月期）",
+    "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100WR05.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "グループで約800店舗を運営",
+    "url": "https://www.ryutsuu.biz/company/ppih",
+    "rel": "B"
+   },
+   {
+    "fact": "食品強化型ドンキを2026年6月期下期からピアゴの業態転換で始め、2035年6月期までに200〜300店。長期計画「Double Impact 2035」は売上高4.2兆円が目標",
+    "url": "https://www.j-cast.com/2025/12/13509965.html",
+    "rel": "B"
+   },
+   {
+    "fact": "2025年6月にドン・キホーテりんくう店（泉佐野市）を開店",
+    "url": "https://digitalpr.jp/r/111254",
+    "rel": "B"
+   },
+   {
+    "fact": "木材判定：「ドン・キホーテ PPIH 木材 国産材 木造 店舗 木質」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "従業員数",
+   "年間の出店・改装件数の公開値"
+  ],
+  "added_reason": "業態転換と改装が大量に続く流通最大手の一つで、売上規模は群を抜く。木材事例はゼロなので、食品強化型ドンキの新しい店舗デザインに木質化を組み込む提案の余地がある。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 5,
+  "_total": 6,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
+  "name": "平和不動産株式会社",
+  "input_name": "平和不動産株式会社",
+  "category": "デベロッパー",
+  "category_note": "証券取引所ビルの保有・賃貸、日本橋兜町・茅場町の再開発、ビル賃貸、REITのAM",
+  "employees": 118,
+  "employees_note": "単体・2026年6月時点（就職サイト掲載値）。2025年3月時点は103名",
+  "revenue_oku": 508.55,
+  "revenue_note": "連結・2026年3月期（2025年3月期は420.75億円）",
+  "annual_projects": 10,
+  "projects_estimated": true,
+  "projects_basis": "再開発・ビル賃貸・AMが中心で、新規開発・改修は兜町・茅場町エリア等で年数件〜十数件規模と推定（公開値なし）",
+  "spaces": [
+   "オフィス",
+   "商業"
+  ],
+  "wood_status": "兜町の木造ハイブリッドビル「KITOKI」（2022年竣工、SRCメガストラクチャー内に木造）がウッドデザイン賞2022・グッドデザイン賞2022・木材利用優良施設コンクール優秀賞・ウッドシティTOKYOモデル建築賞最優秀賞を受賞。同社初のWD賞で、事例は散発的。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 2,
+   "space": 1,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "売上高420.75億円・従業員103名（2025年3月31日現在）",
+    "url": "https://job.mynavi.jp/28/pc/search/corp37263/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "売上高508.55億円（2026年3月期）・従業員118名（2026年6月）",
+    "url": "https://www.onecareer.jp/companies/90910",
+    "rel": "C"
+   },
+   {
+    "fact": "KITOKIがウッドデザイン賞2022を受賞（同社初）",
+    "url": "https://ir.sse.or.jp/data/pdf/140120221006541483.pdf",
+    "rel": "A"
+   },
+   {
+    "fact": "KITOKIがウッドシティTOKYOモデル建築賞 最優秀賞（知事賞）受賞",
+    "url": "https://ir.sse.or.jp/data/pdf/140120230201598566.pdf",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "年間開発件数：公開値なし（推定）"
+  ],
+  "added_reason": "KITOKIで木造ハイブリッドの成功体験があり、兜町・茅場町再開発の次案件や保有ビル改修での木質化提案につなげやすい。案件数は少ないが1件あたりの発信力が高い。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 5,
+  "_total": 6,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
+  "name": "MIRARTHホールディングス株式会社",
+  "input_name": "MIRARTHホールディングス株式会社（旧タカラレーベン）",
+  "category": "デベロッパー",
+  "category_note": "持株会社。中核はタカラレーベン（分譲マンション「レーベン」、戸建）、ほかエネルギー（ACAクリーンエナジー）等",
+  "employees": null,
+  "employees_note": "検索で最新値を確認できず",
+  "revenue_oku": 1965.23,
+  "revenue_note": "連結・2025年3月期",
+  "annual_projects": 47,
+  "projects_estimated": true,
+  "projects_basis": "新築分譲マンション売上戸数2,339戸（2025年3月期）÷1棟平均約50戸と仮定＝約47棟/年",
+  "spaces": [
+   "住宅"
+  ],
+  "wood_status": "グッドデザイン賞（レーベン上田中央GALLDEA、2024年）や防災マンション「MIRARESI」関連の受賞はあるが、木造・国産材・ウッドデザイン賞の事例は確認できず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結売上高1,965億2,300万円、営業利益143億6,400万円（2025年3月期）、新築分譲マンション売上戸数2,339戸",
+    "url": "https://finance.logmi.jp/articles/381681/",
+    "rel": "B"
+   },
+   {
+    "fact": "2021年4月 再エネ事業ACAクリーンエナジー（旧レーベンクリーンエナジー）を子会社化",
+    "url": "https://irbank.net/E03997",
+    "rel": "B"
+   },
+   {
+    "fact": "レーベン上田中央GALLDEAが2024年グッドデザイン賞関連で紹介",
+    "url": "https://sokuho.jutaku-s.com/files/feature/js_20241217.pdf",
+    "rel": "B"
+   }
+  ],
+  "unknowns": [
+   "従業員数：最新値未確認",
+   "年間棟数は戸数からの推定",
+   "ホテル事業の有無未確認"
+  ],
+  "added_reason": "年2,000戸超を供給する大手マンションデベで木材事例が見当たらず、脱炭素・地方都市物件（上田等）での地域材活用提案の余地が大きい。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_F.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 6,
+  "_known": 5,
+  "_total": 6,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
   "name": "株式会社グッドライフ",
   "input_name": "株式会社グッドライフ（グッドライフ綜合デザイン）",
   "category": "内装・空間プロデュース会社",
@@ -6454,6 +8225,74 @@
   "_raw": 3,
   "_known": 3,
   "_total": 5.0,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
+  "name": "藤田観光株式会社",
+  "input_name": "藤田観光株式会社",
+  "category": "オーナー",
+  "category_note": "ホテル（ホテル椿山荘東京、ワシントンホテル、グレイスリー）・リゾート（箱根小涌園）を保有・運営",
+  "employees": 1638,
+  "employees_note": "2025年12月31日時点（就職サイト掲載。単体・連結の別は不明）",
+  "revenue_oku": 820,
+  "revenue_note": "連結売上高・2025年12月期（82,004百万円）",
+  "annual_projects": 20,
+  "projects_estimated": true,
+  "projects_basis": "公開値なし。全国59拠点（就職サイト）を改装サイクル7〜10年とすると年6〜8件、これに客室・宴会場などの部分改装を足して年20件程度と概算",
+  "spaces": [
+   "ホテル・宿泊",
+   "その他"
+  ],
+  "wood_status": "箱根ホテル小涌園（2023年建て替え）のロビーに県産杉を使い、小田原・箱根のヒノキ間伐材のオーナメントを飾る。「かながわ木づかい運動」に賛同。木材利用は散発的。",
+  "wood_estimated": false,
+  "scores": {
+   "wood": 2,
+   "space": 0,
+   "revenue": 3,
+   "projects": 0
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "連結売上高82,004百万円（2025年12月期、前期比7.6%増）",
+    "url": "https://www2.jpx.co.jp/disc/97220/081220260206550679_tse-acedjpsm-97220-20260212397220-ixbrl.htm",
+    "rel": "A"
+   },
+   {
+    "fact": "従業員1,638名（2025年12月31日）、全国59か所で展開",
+    "url": "https://job.mynavi.jp/28/pc/search/corp573/outline.html",
+    "rel": "C"
+   },
+   {
+    "fact": "箱根ホテル小涌園は老朽化で2018年に閉館し、2023年7月に全面建て替えで開業",
+    "url": "https://www.pref.kanagawa.jp/osirase/0612/business-location-support/success-stories/fujitakanko/",
+    "rel": "A"
+   },
+   {
+    "fact": "箱根ホテル小涌園：開業当初から「かながわ木づかい運動」に賛同し、ロビーに県産杉を使用。ヒノキ間伐材のオーナメントを設置（2024年11月の同社発表、検索要約による。個別リリースのURLは特定できず）",
+    "url": null,
+    "rel": "B"
+   }
+  ],
+  "unknowns": [
+   "拠点のうちホテル数",
+   "年間改装件数の公開値",
+   "従業員数が単体か連結か"
+  ],
+  "added_reason": "地域材を使う姿勢を既に示しているホテルオーナー（小涌園の県産杉）。2026年のグレイスリー札幌のように改装が続くので、各ホテルで地域材の木質化を提案しやすい。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 5,
+  "_known": 5,
+  "_total": 5,
   "_rank": "C",
   "_r": "C"
  },
@@ -6626,6 +8465,121 @@
    "leads": 0,
    "open": false
   },
+  "_raw": 3,
+  "_known": 3,
+  "_total": 5.0,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
+  "name": "株式会社TSP太陽",
+  "input_name": "株式会社TSP太陽",
+  "category": "内装・空間プロデュース会社",
+  "category_note": "展示会・博覧会・スポーツイベント等の企画・設計・施工・運営を行う総合イベント/空間会社",
+  "employees": 254,
+  "employees_note": "単体・2026年6月更新の企業DB値",
+  "revenue_oku": null,
+  "revenue_note": "売上高は検索で確認できず",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開値なし・推定根拠となる件数/単価情報が検索で得られず",
+  "spaces": [
+   "文化",
+   "その他"
+  ],
+  "wood_status": "木製ブース・国産材活用の事例は検索で見つからず。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "売上未確認だが従業員254名で足切り非該当と判断（推定）",
+  "facts": [
+   {
+    "fact": "従業員254人（企業DB、2026年6月更新）",
+    "url": "https://cnavi.g-search.or.jp/detail/1013201003703.html",
+    "rel": "B"
+   },
+   {
+    "fact": "イベントアーキテクチャ Creative Structures（HEXADOME M等）の日本独占販売代理店契約を締結",
+    "url": "https://prtimes.jp/main/html/rd/p/000000192.000056254.html",
+    "rel": "A"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "年間案件数",
+   "常設の内装施工の実績"
+  ],
+  "added_reason": "展示会ブース・博覧会パビリオンは仮設材の脱プラ・木質化ニーズが高まっており、木材事例が見えない同社に国産材ブース・リユース木材の調達を提案できる。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_G.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
+  "_raw": 3,
+  "_known": 3,
+  "_total": 5.0,
+  "_rank": "C",
+  "_r": "C"
+ },
+ {
+  "name": "丸善雄松堂株式会社",
+  "input_name": "丸善雄松堂株式会社",
+  "category": "内装・空間プロデュース会社",
+  "category_note": "学術情報サービスが主業だが、大学・官公庁の図書館・教室の建築/内装設備の設計施工を担う（丸善CHIホールディングス傘下）",
+  "employees": 3420,
+  "employees_note": "単体・2026年6月更新の企業DB値（全事業）",
+  "revenue_oku": null,
+  "revenue_note": "単体売上は検索で確認できず。親会社丸善CHIHD連結1,656億円（FY2025）",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開値なし・推定根拠となる件数/単価情報が検索で得られず",
+  "spaces": [
+   "公共"
+  ],
+  "wood_status": "図書館・教室の内装で木質化・国産材書架の事例は検索で見つからず（敦賀市TSURUGA BOOKS関与は確認、木質化の記載なし）。検索1回で木材事例を検出せず（推定）",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": 0,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "従業員3,420人（企業DB、2026年6月更新）",
+    "url": "https://cnavi.g-search.or.jp/detail/2010001034952.html",
+    "rel": "B"
+   },
+   {
+    "fact": "大学等・国公行政機関の図書館・教室等の建築及び内装設備の設計施工を丸善雄松堂が担当（有報要約）",
+    "url": "https://kitaishihon.com/company/3159/business",
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "単体売上高・内装設計施工部門の売上",
+   "年間施工件数",
+   "店舗内装事業との関係"
+  ],
+  "added_reason": "大学・自治体図書館の新築改修は木質化と相性が良く、公共建築物の木材利用促進の追い風もある。木材事例が見えない同社に国産材書架・木質内装の調達を提案できる。",
+  "internal_score": 0,
+  "internal_opp": "Salesforce取引先なし・リードなし",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_G.json",
+  "_ikey": null,
+  "_iscore": 0,
+  "_idata": {},
   "_raw": 3,
   "_known": 3,
   "_total": 5.0,
@@ -6825,6 +8779,62 @@
    "opp": "苫小牧ホテル案件一枚板（日建設計×住商インテリア）07.成約 ※商談名に記載",
    "open": false
   },
+  "_raw": 5,
+  "_known": 2,
+  "_total": 12.5,
+  "_rank": "A",
+  "_r": "保留（暫定A）"
+ },
+ {
+  "name": "株式会社横河建築設計事務所",
+  "input_name": "株式会社横河建築設計事務所",
+  "category": "設計事務所",
+  "category_note": "東京都品川区上大崎の組織設計事務所（建築設計・監理）",
+  "employees": null,
+  "employees_note": "100人以上300人未満（比較ビズのレンジ表記、時点不明）。100名以上なので足切りには該当しない",
+  "revenue_oku": null,
+  "revenue_note": "検索で確認できず",
+  "annual_projects": null,
+  "projects_estimated": false,
+  "projects_basis": "公開件数がなく、売上も不明なため推定できない",
+  "spaces": [],
+  "wood_status": "木造・木質・CLTの事例は検索で見つからなかった。",
+  "wood_estimated": true,
+  "scores": {
+   "wood": 3,
+   "space": null,
+   "revenue": null,
+   "projects": null
+  },
+  "cutoff": false,
+  "cutoff_reason": "",
+  "facts": [
+   {
+    "fact": "従業員数100人以上300人未満、本社は東京都品川区上大崎、事業は建築設計・監理（比較ビズ）",
+    "url": "https://www.biz.ne.jp/corporation/19493/",
+    "rel": "C"
+   },
+   {
+    "fact": "木材判定：「横河建築設計事務所 木造 木質 CLT 設計」で検索したが、木材事例を検出せず（推定）",
+    "url": null,
+    "rel": "C"
+   }
+  ],
+  "unknowns": [
+   "売上高",
+   "正確な従業員数",
+   "空間領域（実績を未確認）",
+   "年間案件数"
+  ],
+  "added_reason": "100名を超える中堅の組織設計事務所なのに木材事例が見えず、伸びしろが大きい。ただし得意領域・規模は追加確認が必要。",
+  "internal_score": 2,
+  "internal_opp": "Salesforce取引先なし／リード3件（名刺取込）",
+  "internal_sf": null,
+  "sf_new": true,
+  "_src": "added_E.json",
+  "_ikey": null,
+  "_iscore": 2,
+  "_idata": {},
   "_raw": 5,
   "_known": 2,
   "_total": 12.5,
